@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route, BrowserRouter } from "react-router-dom"
 import Layout from "pages/Layout/Layout"
 import Home from "pages/Home/Home"
 import Guide from "pages/Guide/Guide"
@@ -33,7 +33,8 @@ function App() {
 
   return (
     <HashRouter>
-      <QueryParamProvider adapter={ReactRouter6Adapter}>
+  {/* <BrowserRouter>  */}
+         <QueryParamProvider adapter={ReactRouter6Adapter}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -41,7 +42,6 @@ function App() {
             <Route path="/guide" element={<Guide />} />
             <Route path="/mypots" element={<MyPots />} />
             <Route path="/mypots/pot/:id" element={<Pot />} />
-
             <Route path="/login" element={<LoginForm />} />
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/account" element={<Account />} />
@@ -50,7 +50,9 @@ function App() {
           </Routes>
         </Layout>
       </QueryParamProvider>
-    </HashRouter>
+    {/* </BrowserRouter> */}
+ 
+   </HashRouter> 
   )
 }
 

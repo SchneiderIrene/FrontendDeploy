@@ -14,38 +14,28 @@ import {
 } from "./styles"
 import DayCard from "components/DayCard/DayCard"
 import { useEffect } from "react"
+import DemoDay from "components/DemoDay/DemoDay";
 
 function Pot() {
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
   const { id } = useParams()
   const pots = useAppSelector(potsSliceSelectors.potData)
-
-  const pot = pots.find(p => p.id === id?.toString())
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
   }, [])
 
-  useEffect(() => {
-    if (!pots.length) {
-      dispatch(potsSliceActions.potProfile())
-    }
-  }, [dispatch])
-
-  const deActivatePot = (id: string) => {
-    console.log(pot)
-
-    dispatch(potsSliceActions.deActivatePot(id))
-    console.log(pot)
-  }
 
   const activatePot = (id: string) => {
-    dispatch(potsSliceActions.activatePot(id))
+      dispatch(potsSliceActions.activatePot(id))
+  }
+
+  const deActivatePot = (id: string) => {
+      dispatch(potsSliceActions.deActivatePot(id))
   }
 
   return (
-    <PotWrapper>
+    <PotWrapper key={id}>
       <PotContainer>
         <ButtonContainer>
           <StyledP>
@@ -54,8 +44,8 @@ function Pot() {
             bist.
           </StyledP>
           <ButtonControl>
-            {!pot?.active && (
-              <Button
+            {!pots.find(p=>p.id == id)?.active && (
+              <Button 
                 name="Topf activieren"
                 bgColorIsRed
                 onButtonClick={() => id && activatePot(id)}
@@ -63,18 +53,21 @@ function Pot() {
             )}
           </ButtonControl>
         </ButtonContainer>
-        <DayCard />
+        <DemoDay/>
+        {/* <DayCard /> */}
         <ButtonContainer>
           <StyledP>
             Hast du Probleme beim Cannabisanbau? Möchtest du deinen <br /> Topf
             entfernen?
           </StyledP>
           <ButtonControl>
+            {pots.find(p=>p.id == id)?.active && (
             <Button
               name="Topf entfernen"
               bgColorIsRed
               onButtonClick={() => id && deActivatePot(id)}
             />
+            )}
           </ButtonControl>
         </ButtonContainer>
       </PotContainer>

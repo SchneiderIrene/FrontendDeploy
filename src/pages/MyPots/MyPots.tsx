@@ -48,11 +48,11 @@ function MyPots() {
 
   return (
     <MyPotsWrapper>
-      <PotsContainer>
+      <PotsContainer >
         {pots.map((pot: Pot, index: number) => (
           <LinkTopf to={`/mypots/pot/${pot.id}`}>
           <PotCard activ={pot.active} key={pot.id}>
-            <PotTitle>{`Topf ${index + 1}`}</PotTitle>
+            <PotTitle key={pot.id}>{`Topf ${index + 1}`}</PotTitle>
             <PotImage src={PotImg} alt="pot" />
           </PotCard>
           </LinkTopf>
