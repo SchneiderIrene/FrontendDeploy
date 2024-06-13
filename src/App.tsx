@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Layout from "pages/Layout/Layout"
 import Home from "pages/Home/Home"
 import Guide from "pages/Guide/Guide"
@@ -32,7 +32,7 @@ function App() {
   }, [isLogin])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <QueryParamProvider adapter={ReactRouter6Adapter}>
         <Layout>
           <Routes>
@@ -50,7 +50,7 @@ function App() {
           </Routes>
         </Layout>
       </QueryParamProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
