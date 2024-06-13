@@ -191,7 +191,7 @@ export const authSlice = createAppSlice({
     logOut: create.asyncThunk(
       async (_, thunkApi) => {
         try {
-          const response = await axios.get("/logout")
+          const response = await axios.get("/api/auth/logout")
           return response.data
         } catch (error) {
           if (error instanceof AxiosError) {
