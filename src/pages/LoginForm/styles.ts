@@ -12,7 +12,7 @@ export const LoginFormContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 481px;
+  width: 480px;
   height: 888px;
 `
 
@@ -59,7 +59,8 @@ export const LabelCheckBox = styled.label`
   color: rgba(55, 62, 58, 1);
   font-size: 18px;
   font-family: "DM Sans";
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 4px;
 
 `
 
@@ -68,6 +69,7 @@ export const PasswordForget = styled.a`
   font-size: 18px;
   font-family: "DM Sans";
   font-weight: 700;
+  margin-top: 4px;
 `
 
 export const TitleBox = styled.div`
@@ -83,8 +85,8 @@ export const TitleBox = styled.div`
 export const TitleLogin = styled.h3`
   font-family: "Inter";
   font-weight: 600;
-  font-size: 32px;
-  color: rgba(55, 62, 58, 1);
+  font-size: 28px;
+  color: #373E3A;
 `
 
 export const TextError = styled.p`
@@ -101,3 +103,19 @@ export const TextErrorServer = styled.p`
   font-weight: 500;
   position: absolute;
 `
+export const RegisterFormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; 
+  width: 480px;
+  margin-top: -300px;
+  `
+
+export const TitleRegister = styled.div`
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 28px;
+  color: #373E3A;
+  margin-bottom: 10px; 
+  `

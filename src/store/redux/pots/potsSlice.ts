@@ -45,7 +45,7 @@ export const potsSlice = createAppSlice({
           state.status = "success"
           console.log("Payload received:", action.payload);
           if (action.payload && action.payload.id) {
-          state.pots = state.pots.map((p)=>{
+          state.pots = state.pots.map((p)=>{ 
             if(p.id === action.payload.id){
               return action.payload
             }
@@ -98,6 +98,7 @@ export const potsSlice = createAppSlice({
         fulfilled: (state: PotsSliceState, action: any) => {
           state.status = "success"
           console.log("Payload received:", action.payload);
+
           if (action.payload && action.payload.id) {
           state.pots = state.pots.map((p)=>{
             if(p.id === action.payload.id){
@@ -158,6 +159,60 @@ export const potsSlice = createAppSlice({
         },
       },
     ),
+  instruction: create.asyncThunk(   async (id: string, thunkApi) => {
+    try {
+      console.log(id)
+      const response = await axios.post(`/${id}/instruction`)
+      console.log(response.data)
+
+      return response.data
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        if (error.response?.status === 500) {
+          return thunkApi.rejectWithValue({
+            message: "Server Error",
+            type: "server errors",
+          })
+        }
+        return thunkApi.rejectWithValue({
+          message: error?.response?.data.message,
+          type: "validation",
+        })
+      }
+    }
+  },
+  {
+    pending: (state: PotsSliceState) => {
+      state.status = "loading"
+      state.error = undefined
+    
+    },
+    fulfilled: (state: PotsSliceState, action: any) => {
+      state.status = "success"
+      console.log("Payload received:", action.payload);
+     
+     
+      if (action.payload && action.payload.id) {
+      state.pots = state.pots.map((p)=>{
+        if(p.id === action.payload.id){
+          return action.payload
+        }
+        console.log(action.payload);
+        
+        return p;
+      })
+    } else {
+      console.error("Unexpected payload format:", action.payload);
+    }
+
+    
+    },
+    rejected: (state: PotsSliceState, action: any) => {
+      console.log(action.payload)
+      state.status = "error"
+      state.error = action.payload.message
+    },
+  },)
   }),
   selectors: {
     potData: state => state.pots,

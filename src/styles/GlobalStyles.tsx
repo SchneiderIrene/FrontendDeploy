@@ -1,6 +1,9 @@
 import { Global, css } from '@emotion/react';
 
 const globalStyles = css`
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Merriweather&display=swap');
+
   * {
   box-sizing: border-box;
   }

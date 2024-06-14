@@ -50,14 +50,25 @@ function RegisterForm() {
       .required("E-Mail-Adresse ist erforderlich")
       .email("Muss eine gültige E-Mail-Adresse sein")
       .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Ungültige E-Mail"),
-    [FIELD_NAMES.PASSWORD]: Yup.string()
-      .required("Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer")
+      [FIELD_NAMES.PASSWORD]: Yup.string()
+      .required(
+        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer",
+      )
       .min(8, "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer")
-      .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/, "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer"),
-    [FIELD_NAMES.CHECKBOX]: Yup.boolean().oneOf(
+      .max(60, "Das Passwort darf maximal 60 Zeichen lang sein")
+      .matches(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer",
+      ),
+      [FIELD_NAMES.CHECKBOX]: Yup.boolean().oneOf(
       [true],
       "Checkbox muss akzeptiert werden",
     ),
+    [FIELD_NAMES.AGE_CHECKBOX]: Yup.boolean().oneOf(
+      [true],
+      "Du musst mindestens 18 Jahre alt sein",
+    ),
+
   })
   const formik = useFormik({
     initialValues: {
@@ -65,6 +76,7 @@ function RegisterForm() {
       [FIELD_NAMES.EMAIL]: "",
       [FIELD_NAMES.PASSWORD]: "",
       [FIELD_NAMES.CHECKBOX]: false,
+      [FIELD_NAMES.AGE_CHECKBOX]: false,
     } as RegisterFormValues,
     validationSchema: validationSchema,
     validateOnBlur: false,
@@ -162,6 +174,23 @@ function RegisterForm() {
               darauf, dass nach der Kontoerstellung dein Benutzername und deine
               E-Mail-Adresse nicht geändert werden können.
             </StyledH5>
+            <br />
+            <Label htmlFor="age-checkbox-id">
+              <input
+                type="checkbox"
+                id="age-checkbox-id"
+                name={FIELD_NAMES.AGE_CHECKBOX}
+                checked={formik.values.ageCheckbox}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <span>*Ich bin schon 18 Jahre alt.</span>
+            </Label>
+            {formik.errors.ageCheckbox && (
+              <CheckboxError style={{ color: "red" }}>
+                {formik.errors.ageCheckbox.toString()}
+              </CheckboxError>
+            )}<br />
             <br />
             <Label htmlFor="checbox-id">
               <input

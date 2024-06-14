@@ -6,41 +6,74 @@ import { LogoH } from "assets"
 export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; 
+  gap: 20px;
+  width: 100%;
   background-color: #fffeef;
+  min-height: 100vh; 
+  overflow: hidden; 
 `
 
 export const Header = styled.header`
   display: flex;
-  justify-content: end;
-  padding: 30px 70px;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: fit-content;
+  padding: 20px 0px;
+  margin: 0 auto;
+  height: 100px;
   background-color: #007132;
 `
 
+export const HeaderContentWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1280px; 
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0 40px; 
+  
+`
+
 export const NavContainerLink = styled.div`
-display: flex;
-gap: 40px;
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  gap: 40px;
+  transform: translateX(-50%);
+  text-decoration: none;
+`
+
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 20px;
+  color: #FFFEEF;
+  font-weight: 600;
+  &:hover {
+  text-decoration: none;
+  }
 `
 
 export const NavContainer = styled.nav`
   display: flex;
-  justify-content: center;
-  padding: 5px;
-  gap: 245px;
-  margin-left: 360px;
+  justify-content: end;
+  padding: 8px;
+   gap: 40px; 
+  flex: 1;
+  flex-grow: 1;
+  
 `
 
 export const HeaderLogoContainer = styled.div`
-  position: absolute;
-  left: 70px;
+  margin-left: -80px;
   width: 80px;
   cursor: pointer;
 `
 
 export const HeaderLogo = styled.img`
-  width: 100%;
+  width: 100px;
   height: 100%;
   object-fit: contain;
 `
@@ -53,37 +86,47 @@ export const Main = styled.main`
   display: flex;
   flex: 1;
   padding: 20px;
+  box-sizing: border-box; 
 `
 
 export const Footer = styled.footer`
   display: flex;
+  flex-direction: column;
   padding: 30px 70px;
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  color: #020e14;
+  color: #373E3A;
+`
+
+export const FooterContentWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px; 
+  margin: 0 auto;
 `
 
 export const FooterNavContainer = styled.nav`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
 `
 
-export const StyledNavLink = styled(NavLink)`
-  text-decoration: none;
-  font-size: 26px;
-  color: white;
-  &:hover {
-    text-decoration: underline;
-  }
-`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  font-size: 24px;
-  color: white;
+  font-size: 14px;
+  color: #373e3a;  
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 export const UserName = styled.div`
@@ -97,35 +140,37 @@ export const AccountContainer = styled.div`
 `
 
 export const StyledButton = styled.div`
+  /* margin-left: auto; 
+  margin-right: -100px; */
   width: 216px;
+   right: 0;
 `
+
 export const FooterContent = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;`
+  align-items: center;
+  `
 
-export const FooterLeftLink = styled(StyledLink)`
-  text-decoration: none;
+  export const FooterLeftLink = styled(StyledLink)`
   color: #373e3a;
   font-size: 14px;
-  display: inline-block;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid transparent;
 `
-
-// export const FooterRightLinks = styled.div`
-//   display: flex;
-//   gap: 20px;
-//   & > ${StyledLink} {
-//     color: #373e3a;
-//   }
-// `
-
 export const FooterText = styled.p`
   font-size: 14px;
   color: #373e3a;
   display: inline-block;
+`
+export const Copyright = styled.div`
+  color: #373E3A;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 500;
 `
 
 export const CopyrightText = styled.p`
