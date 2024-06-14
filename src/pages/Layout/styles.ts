@@ -81,7 +81,6 @@ export const HeaderLogo = styled.img`
 HeaderLogo.defaultProps = { src: LogoH }
 
 
-
 export const Main = styled.main`
   display: flex;
   flex: 1;
@@ -140,8 +139,6 @@ export const AccountContainer = styled.div`
 `
 
 export const StyledButton = styled.div`
-  /* margin-left: auto; 
-  margin-right: -100px; */
   width: 216px;
    right: 0;
 `

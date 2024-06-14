@@ -165,7 +165,7 @@ function Home() {
           </StyledP>
           <StyledP>
           <StyledSpan>02</StyledSpan> Wurde Cannabis legalisiert? Ab dem 1. April 2024 trat das Cannabis-Gesetz in Kraft, welches den Besitz und Anbau von Cannabis in Deutschland unter bestimmten Vorgaben für Erwachsene legalisiert.{' '}
-          <StyledLink to="https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/cannabisgesetz.html">
+          <StyledLink to="https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/cannabisgesetz.html" target="_blank">
           Mehr zu erfahren
           </StyledLink>
           <Icon6Styled src={Icon6} alt="Icon6" />

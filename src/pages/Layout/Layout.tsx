@@ -147,10 +147,10 @@ function Layout({ children }: LayoutProps) {
       <Footer>
       <FooterContentWrapper>
          <FooterNavContainer>
-          <FooterLeftLink to="/gesetzinfo">Gesetzliche Informationen</FooterLeftLink>
-          <FooterLeftLink to="/impressum">Datenschutz</FooterLeftLink>
-          <FooterLeftLink to="/nutzungsbedingungen">Nutzungsbedingungen</FooterLeftLink>
-          <FooterLeftLink to="/impressum">Impressum</FooterLeftLink>
+          <FooterLeftLink to="/legalInfo">Gesetzliche Informationen</FooterLeftLink>
+          <FooterLeftLink to="">Datenschutz</FooterLeftLink>
+          <FooterLeftLink to="">Nutzungsbedingungen</FooterLeftLink>
+          <FooterLeftLink to="">Impressum</FooterLeftLink>
         </FooterNavContainer>
         <Copyright>
           <p>Copyright © 2024 LeafGrow</p>
