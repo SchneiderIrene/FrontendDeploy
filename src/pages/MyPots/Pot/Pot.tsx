@@ -20,6 +20,7 @@ function Pot() {
   const dispatch = useAppDispatch()
   const { id } = useParams()
   const pots = useAppSelector(potsSliceSelectors.potData)
+  const navigate = useNavigate()
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
@@ -36,6 +37,8 @@ function Pot() {
 
   const deActivatePot = (id: string) => {
       dispatch(potsSliceActions.deActivatePot(id))
+      navigate(-1)
+      
   }
 
   return (
