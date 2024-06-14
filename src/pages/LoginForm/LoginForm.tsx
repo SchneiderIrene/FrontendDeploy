@@ -19,6 +19,8 @@ import {
   TitleBox,
   TitleContainer,
   TitleLogin,
+  RegisterFormWrapper,
+  TitleRegister,
 } from "./styles"
 import {
   authSliceActions,
@@ -126,7 +128,12 @@ const LoginForm = () => {
       </ButtonBox>
         </InputButtonContainer>
          </LoginFormContainer>
+         <RegisterFormWrapper>
+         <TitleBox>
+            <TitleRegister>Ich bin neu hier</TitleRegister>
+          </TitleBox>
         <Button name="Registrieren" bgColorIsRed onButtonClick={toRegister} />
+        </RegisterFormWrapper>
     </LoginFormWrapper>
   )
 }

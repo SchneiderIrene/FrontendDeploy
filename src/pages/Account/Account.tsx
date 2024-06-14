@@ -155,7 +155,7 @@ const Account = () => {
           </InputBlock>
           <Button
             name=" Passwort ändern"
-            bgColorIsRed={true}
+            bgColorIsRed
             onButtonClick={handleOpenPasswordModal}
           />
         </PasswortChangeContainer>
@@ -164,7 +164,7 @@ const Account = () => {
             <TextDeleteLogOut>Möchtest du dich abmelden?</TextDeleteLogOut>
             <Button
               name="Abmelden"
-              border={true}
+              border
               color="green"
               onButtonClick={handleOpenLogOutModal}
             />
@@ -174,7 +174,7 @@ const Account = () => {
             <ButtonBoxModal>
               <Button
                 name="Konto löschen"
-                border={true}
+                border
                 color="red"
                 onButtonClick={handleOpenDeleteModal}
               />
@@ -189,7 +189,7 @@ const Account = () => {
             </TextModal>
             <Button
               name="Abmelden"
-              bgColorIsRed={true}
+              bgColorIsRed
               onButtonClick={logoutUser}
             />
           </ModalContainerDeleteLogOut>

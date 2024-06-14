@@ -56,19 +56,21 @@ function Pot() {
         <DemoDay/>
         {/* <DayCard /> */}
         <ButtonContainer>
+          {pots.find(p=>p.id == id)?.active && (
+         <>
           <StyledP>
             Hast du Probleme beim Cannabisanbau? Möchtest du deinen <br /> Topf
             entfernen?
           </StyledP>
           <ButtonControl>
-            {pots.find(p=>p.id == id)?.active && (
             <Button
               name="Topf entfernen"
               bgColorIsRed
               onButtonClick={() => id && deActivatePot(id)}
             />
-            )}
           </ButtonControl>
+          </>
+            )}
         </ButtonContainer>
       </PotContainer>
     </PotWrapper>
