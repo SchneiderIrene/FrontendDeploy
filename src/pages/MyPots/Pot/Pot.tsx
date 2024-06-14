@@ -37,6 +37,7 @@ function Pot() {
 
   const deActivatePot = (id: string) => {
       dispatch(potsSliceActions.deActivatePot(id))
+      dispatch(potsSliceActions.potProfile())
       navigate(-1)
       
   }
