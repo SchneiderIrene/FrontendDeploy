@@ -25,6 +25,10 @@ function Pot() {
     dispatch(potsSliceActions.potProfile())
   }, [])
 
+  useEffect(() => {
+    dispatch(potsSliceActions.potProfile())
+  }, [pots.length])
+
 
   const activatePot = (id: string) => {
       dispatch(potsSliceActions.activatePot(id))
