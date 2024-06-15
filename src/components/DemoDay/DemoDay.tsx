@@ -1,24 +1,16 @@
-import { DemoDay1 } from "assets"
 import {
   CardContainer,
-  ImageContainer,
-  StyledH1,
   StyledH2,
   StyledP,
   Container1,
   Container2,
   Container3,
-  ButtonContainer,
-  ButtonControl,
   SubP,
 } from "./styles"
-import Button from "components/Button/Button"
 
 function DemoDay() {
   return (
     <CardContainer>
-      <ImageContainer src={DemoDay1} alt="Demo Day Image" />
-      <StyledH1>TAG 1</StyledH1>
       <Container1>
         <StyledH2> Benötigte Materialien</StyledH2>
         <StyledP>• 3%-iges Wasserstoffperoxid</StyledP>

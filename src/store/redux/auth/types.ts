@@ -7,6 +7,7 @@ export interface User {
   password?: string,
   newPassword?: string,
   akzeptCheckBox?: boolean,
+  roles?: string
  
 }
 

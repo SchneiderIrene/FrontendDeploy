@@ -1,4 +1,6 @@
 import {
+  AdminButtonControl,
+  AdminPotContainer,
   ArrowIcon,
   LinkTopf,
   ModalContainer,
@@ -28,6 +30,7 @@ import {  useNavigate } from "react-router-dom"
 
 function MyPots() {
   const dispatch = useAppDispatch()
+  const user = useAppSelector(authSliceSelectors.userData)
   const pots = useAppSelector(potsSliceSelectors.potData)
   const isLogin = useAppSelector(authSliceSelectors.isLogin)
   const navigate = useNavigate()
@@ -46,8 +49,36 @@ function MyPots() {
     dispatch(potsSliceActions.potProfile())
   }, [])
 
+  // const getInstruction = (id: string)=>{
+  //   dispatch(potsSliceActions.instruction(id))
+  //   console.log(pots.find(p=>p.id == id)?.instruction);
+ 
+  //    }
+
+  const createPot =()=>{
+    dispatch(potsSliceActions.createPot())
+  }
+
+  const scrollPot = (id: string)=>{
+    dispatch(potsSliceActions.scrollPot(id))
+  }
+
+
   return (
     <MyPotsWrapper>
+      {(user && user.email == "leafgrow.project@gmail.com") ? (
+        <AdminPotContainer>
+          <AdminButtonControl>
+        <Button name="Entwickeln Topf" color="green" border onButtonClick={createPot}/>
+        <Button name="Nächster Tag" color="green" border 
+        onButtonClick={()=>{scrollPot(pots[0].id)}}/>
+        </AdminButtonControl>
+        </AdminPotContainer>
+        
+      
+      ) : (
+
+     
       <PotsContainer >
         {pots.map((pot: Pot, index: number) => (
           <LinkTopf to={`/mypots/pot/${pot.id}`}>
@@ -58,6 +89,7 @@ function MyPots() {
           </LinkTopf>
         ))}
       </PotsContainer>
+       )}
       {!isLogin && (
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
           <ModalContainer>
