@@ -242,6 +242,10 @@ export const authSlice = createAppSlice({
         fulfilled: (state: AuthSliceState, action: any) => {
           state.status = "success"
           state.userData = action.payload
+          if(state.userData){
+             state.userData.roles = action.payload.roles
+          }
+         
         },
         rejected: (state: AuthSliceState, action: any) => {
           state.status = "error"

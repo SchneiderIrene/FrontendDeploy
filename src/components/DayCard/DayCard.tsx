@@ -25,13 +25,14 @@ import {
           <StyledP>{content as string}</StyledP>
         )} */}
         <Container2>
-          <StyledH2>Subtitle 2</StyledH2>
-          <StyledP>Paragraph 2</StyledP>
+          {content}
+          {/* <StyledH2>Subtitle 2</StyledH2>
+          <StyledP>Paragraph 2</StyledP> */}
         </Container2>
-        <Container3>
+        {/* <Container3>
           <StyledH2>Subtitle 3</StyledH2>
           <StyledP>Paragraph 3</StyledP>
-        </Container3>
+        </Container3> */}
       </CardContainer>
     )
   }

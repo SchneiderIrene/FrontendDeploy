@@ -109,3 +109,18 @@ export const ModalText = styled.p`
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
 `
+
+export const AdminButtonControl = styled.div`
+display: flex;
+width: 100%;
+gap: 30px;
+`
+
+export const AdminPotContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 1100px;
+gap: 40px;
+`

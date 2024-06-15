@@ -8,13 +8,17 @@ import {
 import {
   ButtonContainer,
   ButtonControl,
+  Content,
+  DayContainer,
+  ImageContainer,
   PotContainer,
   PotWrapper,
+  StyledH1,
   StyledP,
 } from "./styles"
 import DayCard from "components/DayCard/DayCard"
 import { useEffect } from "react"
-import DemoDay from "components/DemoDay/DemoDay";
+import DemoDay from "components/DemoDay/DemoDay"
 
 function Pot() {
   const dispatch = useAppDispatch()
@@ -30,55 +34,79 @@ function Pot() {
     dispatch(potsSliceActions.potProfile())
   }, [dispatch])
 
-
   const activatePot = (id: string) => {
-      dispatch(potsSliceActions.activatePot(id))
+    dispatch(potsSliceActions.activatePot(id))
   }
 
   const deActivatePot = (id: string) => {
-      dispatch(potsSliceActions.deActivatePot(id))
-      dispatch(potsSliceActions.potProfile())
-      navigate(-1)
-      
+    dispatch(potsSliceActions.deActivatePot(id))
+
+    dispatch(potsSliceActions.potProfile())
+    navigate(-1)
   }
+
+
+
+  const pot = pots.find(p => p.id == id)
 
   return (
     <PotWrapper key={id}>
-      <PotContainer>
-        <ButtonContainer>
-          <StyledP>
-            Bevor du mit dem Cannabisanbau fortfährst, lies die Informationen
-            <br /> zum ersten Tag und aktivierte deinen Topf, wenn du bereit
-            bist.
-          </StyledP>
-          <ButtonControl>
-            {!pots.find(p=>p.id == id)?.active && (
-              <Button 
+      <ButtonContainer>
+        {!pots.find(p => p.id == id)?.active && (
+          <>
+            <StyledP>
+              Bevor du mit dem Cannabisanbau fortfährst, lies die Informationen
+              <br /> zum ersten Tag und aktivierte deinen Topf, wenn du bereit
+              bist.
+            </StyledP>
+            <ButtonControl>
+              <Button
                 name="Topf activieren"
                 bgColorIsRed
                 onButtonClick={() => id && activatePot(id)}
               />
-            )}
-          </ButtonControl>
-        </ButtonContainer>
-        <DemoDay/>
-        {/* <DayCard /> */}
-        <ButtonContainer>
-          {pots.find(p=>p.id == id)?.active && (
-         <>
-          <StyledP>
-            Hast du Probleme beim Cannabisanbau? Möchtest du deinen <br /> Topf
-            entfernen?
-          </StyledP>
-          <ButtonControl>
-            <Button
-              name="Topf entfernen"
-              bgColorIsRed
-              onButtonClick={() => id && deActivatePot(id)}
-            />
-          </ButtonControl>
+            </ButtonControl>
           </>
-            )}
+        )}
+      </ButtonContainer>
+      <PotContainer>
+        {pots.find(p => p.id == id)?.active ? (
+          <DayContainer>
+            <ImageContainer
+              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
+              alt={`Day${pot?.instruction?.day}`}
+            />
+            <StyledH1>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH1>
+            <Content>
+              {pots.find(p => p.id == id)?.instruction?.content}
+            </Content>
+          </DayContainer>
+        ) : (
+          <DayContainer>
+            <ImageContainer
+              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag1.jpg`}
+              alt={`Day1`}
+            />
+            <StyledH1>{`Tag 1`}</StyledH1>
+            <DemoDay />
+          </DayContainer>
+        )}
+        <ButtonContainer>
+          {pots.find(p => p.id == id)?.active && (
+            <>
+              <StyledP>
+                Hast du Probleme beim Cannabisanbau? Möchtest du deinen <br />{" "}
+                Topf entfernen?
+              </StyledP>
+              <ButtonControl>
+                <Button
+                  name="Topf entfernen"
+                  bgColorIsRed
+                  onButtonClick={() => id && deActivatePot(id)}
+                />
+              </ButtonControl>
+            </>
+          )}
         </ButtonContainer>
       </PotContainer>
     </PotWrapper>

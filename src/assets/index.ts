@@ -18,6 +18,6 @@ export { default as Guide3} from "./erde.jpg";
 export { default as Guide4} from "./beleuchtung.jpg";
 export { default as Guide5} from "./bewässerung.jpg";
 export { default as PotImg} from "./pot_img.png";
-export { default as DemoDay1} from "./demo_day.jpg";
+
 
 
