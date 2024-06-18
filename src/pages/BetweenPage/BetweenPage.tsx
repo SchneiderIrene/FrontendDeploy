@@ -22,6 +22,7 @@ function BetweenPage() {
   const dispatch = useAppDispatch()
   const errorConfirm = useAppSelector(authSliceSelectors.error)
   const status = useAppSelector(authSliceSelectors.status)
+  const user = useAppSelector(authSliceSelectors.userData)
 
   useEffect(() => {
     if (code) {
@@ -30,8 +31,8 @@ function BetweenPage() {
     }
   }, [code])
 
-  const resetEmail = () => {
-    dispatch(authSliceActions.resetEmail())
+  const resetEmail = (email : string) => {
+    dispatch(authSliceActions.resetEmail(email))
     navigate("/")
   }
 
@@ -41,7 +42,7 @@ function BetweenPage() {
         {status === "error" && errorConfirm ? (
           <>
         <MessageErrorRegisterConfirm>{errorConfirm.message}</MessageErrorRegisterConfirm>
-        <Button  name="Erneut senden" bgColorIsRed onButtonClick={resetEmail}/>
+        <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=> user?.email && resetEmail(user.email)}/>
           </>) : (
           <> 
         <MessageSuccessRegister>
