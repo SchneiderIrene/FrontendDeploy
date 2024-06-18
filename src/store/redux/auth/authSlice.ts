@@ -105,9 +105,9 @@ export const authSlice = createAppSlice({
       },
     ),
     resetEmail: create.asyncThunk(
-      async (_, thunkApi) => {
+      async (email: string, thunkApi) => {
         try {
-          const response = await axios.get("/api/register/resent")
+          const response = await axios.get(`/api/register/resent?email=${email}`)
           return response.data
         } catch (error) {
           if (error instanceof AxiosError) {

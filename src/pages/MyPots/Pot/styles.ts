@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import ReactMarkdown from "react-markdown"
 
 export const PotWrapper = styled.div`
   display: flex;
@@ -38,9 +39,9 @@ export const StyledP = styled.p`
 export const ImageContainer = styled.img`
   width: 100%;
   height: 625px;
-  `
+`
 
-  export const DayContainer = styled.div`
+export const DayContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,16 +60,67 @@ export const StyledH1 = styled.h1`
 `
 
 export const Content = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-color: #38221d;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #38221d; */
+ 
+
+    /* Стили для заголовков */
+    h2 {
+    font-size: 20px;
+    margin-top: 1.3em;
+    margin-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-top: 1.1em;
+    margin-bottom: 0.2em;
+  }
+
+  /* Стили для списков */
+  ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+  }
+
+  /* Стили для блоков кода */
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  /* Стили для цитат */
+  blockquote {
+    border-left: 4px solid #bdc3c7;
+    padding-left: 10px;
+    margin: 20px 0;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+
+  /* Стили для горизонтальной линии */
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
 `
 
 // export const StyledH2 = styled.h2`
@@ -79,7 +131,6 @@ color: #38221d;
 //   text-align: center;
 //   margin-bottom: 60px;
 // `
-
 
 // export const SubP = styled.p`
 //   color: #38221d;
@@ -125,5 +176,3 @@ color: #38221d;
 //   margin-bottom: 40px;
 //   text-align: center;
 // `
-
-

@@ -16,9 +16,9 @@ import {
   StyledH1,
   StyledP,
 } from "./styles"
-import DayCard from "components/DayCard/DayCard"
 import { useEffect } from "react"
 import DemoDay from "components/DemoDay/DemoDay"
+import ReactMarkdown from "react-markdown";
 
 function Pot() {
   const dispatch = useAppDispatch()
@@ -45,7 +45,16 @@ function Pot() {
     navigate(-1)
   }
 
-
+  const getInstruction = (id: string) => {
+    dispatch(potsSliceActions.instruction(id))
+    console.log(pots.find(p => p.id == id)?.instruction)
+    ;<Button
+      name="INSTRUCTION"
+      color="green"
+      border
+      onButtonClick={() => id && getInstruction(id)}
+    />
+  }
 
   const pot = pots.find(p => p.id == id)
 
@@ -73,18 +82,22 @@ function Pot() {
         {pots.find(p => p.id == id)?.active ? (
           <DayContainer>
             <ImageContainer
-              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
+              src={`http://localhost:8080/images/tag${pot?.instruction?.day}.jpg`}
+              //src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
               alt={`Day${pot?.instruction?.day}`}
             />
             <StyledH1>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH1>
             <Content>
-              {pots.find(p => p.id == id)?.instruction?.content}
+              <ReactMarkdown>
+                {pots.find(p => p.id == id)?.instruction?.content}
+              </ReactMarkdown>
             </Content>
           </DayContainer>
         ) : (
           <DayContainer>
             <ImageContainer
-              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag1.jpg`}
+              src={`http://localhost:8080/images/tag1.jpg`}
+              //src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag1.jpg`}
               alt={`Day1`}
             />
             <StyledH1>{`Tag 1`}</StyledH1>

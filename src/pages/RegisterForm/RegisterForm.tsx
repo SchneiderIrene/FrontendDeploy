@@ -27,13 +27,14 @@ import {
   authSliceActions,
   authSliceSelectors,
 } from "store/redux/auth/authSlice"
-import {  useState } from "react"
+import {  useEffect, useState } from "react"
 import GoToBackButton from "components/GoToBackButton/GoToBackButton";
 import Button from "components/Button/Button";
 import Spinner from "components/Spinner/Spinner";
 
 function RegisterForm() {
   const dispatch = useAppDispatch()
+  const user = useAppSelector(authSliceSelectors.userData)
   const errorField = useAppSelector(authSliceSelectors.errorField)
   const errorMessage = useAppSelector(authSliceSelectors.error)
   const status = useAppSelector(authSliceSelectors.status)
@@ -103,9 +104,11 @@ function RegisterForm() {
     setIsRegister(false)
     formik.resetForm()
   }
-
-  const resetEmail = () => {
-    dispatch(authSliceActions.resetEmail())
+//  useEffect(()=>{
+//   dispatch(authSliceActions.userProfile())
+//  })
+  const resetEmail = (email : string) => {
+    dispatch(authSliceActions.resetEmail(email))
   }
 
   return (
@@ -118,7 +121,7 @@ function RegisterForm() {
             Wir haben dir eine E-Mail mit dem Verifizierungslink geschickt.
           </TextMessage>
           <TextQustion>Hast du die E-Mail noch nicht erhalten? </TextQustion>
-          <Button  name="Erneut senden" bgColorIsRed onButtonClick={resetEmail}/>
+          <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=>user?.email && resetEmail(user?.email)}/>
           <BackToRegister onClick={showRegisterForm}>
             Zurück zur Registrierung
           </BackToRegister>
