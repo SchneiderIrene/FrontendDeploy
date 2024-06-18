@@ -3,7 +3,7 @@
 export interface User {
   username?: string,
   id?: string,
-  email?: string,
+  email?: string | undefined,
   password?: string,
   newPassword?: string,
   akzeptCheckBox?: boolean,
