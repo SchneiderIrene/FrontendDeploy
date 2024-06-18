@@ -65,7 +65,7 @@ export const authSlice = createAppSlice({
     confirm: create.asyncThunk(
       async (code: string, thunkApi) => {
         try {
-          const response = await axios.get(`/#/api/register/confirm?code=${code}`)
+          const response = await axios.get(`/api/register/confirm?code=${code}`)
         } catch (error) {
           if (error instanceof AxiosError) {
             if (error.response?.status === 500) {
