@@ -113,14 +113,22 @@ export const ModalText = styled.p`
 export const AdminButtonControl = styled.div`
 display: flex;
 width: 100%;
-gap: 30px;
+gap: 10px;
 `
 
 export const AdminPotContainer = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: start;
 align-items: center;
 width: 1100px;
 gap: 40px;
+min-height: 1100px;
+`
+
+export const ButtonBox = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+gap: 10px;
 `

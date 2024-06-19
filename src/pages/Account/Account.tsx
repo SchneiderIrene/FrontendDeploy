@@ -13,11 +13,13 @@ import {
   DeleteLogOutBox,
   DeleteLogOutContainer,
   Form,
+  FormContainer,
   InputBlock,
   InputDesabled,
   InputsContainer,
   LabelByInputDesable,
   ModalContainerDeleteLogOut,
+  ModalContainerDeleteUserByEmail,
   ModalContainerPassword,
   PasswortChangeContainer,
   TextDeleteLogOut,
@@ -44,11 +46,14 @@ const Account = () => {
   const status = useSelector(authSliceSelectors.status)
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
+  const [isDeleteUserByEmailModalOpen, setIsDeleteUserByEmailModalOpen] = useState(false)
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false)
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false)
 
   const handleOpenDeleteModal = () => setIsDeleteModalOpen(true)
   const handleCloseDeleteModal = () => setIsDeleteModalOpen(false)
+  const handleOpenDeleteUserByEmailModal = () => setIsDeleteUserByEmailModalOpen(true)
+  const handleCloseDeleteUserByEmailModal = () => setIsDeleteUserByEmailModalOpen(false)
   const handleOpenPasswordModal = () => setIsPasswordModalOpen(true)
   const handleClosePasswordModal = () => setIsPasswordModalOpen(false)
   const handleOpenLogOutModal = () => setIsLogOutModalOpen(true)
@@ -76,7 +81,7 @@ const Account = () => {
       .matches(/[0-9]/, "Mindestens 1 Ziffer"),
   })
 
-  const formik = useFormik({
+ const formik = useFormik({
     initialValues: {
       newPassword: "",
     },
@@ -84,9 +89,29 @@ const Account = () => {
     onSubmit: values => {},
   })
 
+
+  const validationSchemaDeleteUserByEmail = Yup.object().shape({
+    email: Yup.string()
+    .required("E-Mail-Adresse ist erforderlich")
+    .email("Muss eine gültige E-Mail-Adresse sein")
+    .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Ungültige E-Mail")
+  })
+
+  const formikDeleteUserByEmail = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema,
+    onSubmit: values => {},
+  })
+
+ 
+
   useEffect(() => {
     if (status === "success") {
       handleClosePasswordModal()
+      handleCloseDeleteUserByEmailModal()
+      formikDeleteUserByEmail.resetForm()
     }
   }, [status])
 
@@ -103,6 +128,10 @@ const Account = () => {
 
   const deleteAccount = () => {
     dispatch(authSliceActions.deleteAccount())
+  }
+
+  const deleteUserByEmail = (email : string) =>{
+    dispatch(authSliceActions.deleteUserByEmail(email))
   }
 
   return (
@@ -169,7 +198,20 @@ const Account = () => {
               onButtonClick={handleOpenLogOutModal}
             />
           </DeleteLogOutBox>
-          <DeleteLogOutBox>
+          {userData?.email == "leafgrow.project@gmail.com" ? (
+            <DeleteLogOutBox>
+            <TextDeleteLogOut>Möchtest du Konto per E-Mail löschen?</TextDeleteLogOut>
+            <ButtonBoxModal>
+              <Button
+                name="Konto löschen per E-Mail"
+                border
+                color="red"
+                onButtonClick={handleOpenDeleteUserByEmailModal}
+              />
+            </ButtonBoxModal>
+          </DeleteLogOutBox>
+          ) : (
+            <DeleteLogOutBox>
             <TextDeleteLogOut>Möchtest du dein Konto löschen?</TextDeleteLogOut>
             <ButtonBoxModal>
               <Button
@@ -179,7 +221,8 @@ const Account = () => {
                 onButtonClick={handleOpenDeleteModal}
               />
             </ButtonBoxModal>
-          </DeleteLogOutBox>
+             </DeleteLogOutBox>
+          )}
         </DeleteLogOutContainer>
         <Modal isOpen={isLogOutModalOpen} onClose={handleCloseLogOutdModal}>
           <ModalContainerDeleteLogOut>
@@ -207,6 +250,35 @@ const Account = () => {
             />
           </ModalContainerDeleteLogOut>
         </Modal>
+
+        <Modal isOpen={isDeleteUserByEmailModalOpen} onClose={handleCloseDeleteUserByEmailModal}>
+          <ModalContainerDeleteLogOut>
+            <CloseButton onClick={handleCloseDeleteUserByEmailModal}>X</CloseButton>
+            <FormContainer onSubmit={formikDeleteUserByEmail.handleSubmit}>
+              <Input
+                name="email"
+                type="email"
+                placeholder="E-Mail"
+                label="E-Mail"
+                onInputChange={formikDeleteUserByEmail.handleChange}
+                value={formikDeleteUserByEmail.values.email}
+                error={formikDeleteUserByEmail.errors.email}
+                onBlur={formikDeleteUserByEmail.handleBlur}
+              />
+              <TextModal>
+              Bist du sicher? Löschen Konto per E-Mail?
+            </TextModal>
+               <Button
+              name="Konto per E-Mail löschen"
+              bgColorIsRed={true}
+              onButtonClick={() => deleteUserByEmail(formikDeleteUserByEmail.values.email)}
+            />
+              </FormContainer>
+            
+           
+          </ModalContainerDeleteLogOut>
+        </Modal>
+
         <Modal isOpen={isPasswordModalOpen} onClose={handleClosePasswordModal}>
           <ModalContainerPassword>
             <CloseButton onClick={handleClosePasswordModal}>X</CloseButton>
@@ -217,7 +289,7 @@ const Account = () => {
                 Kleinbuchstabe, 1 Großbuchstabe, 1 Ziffer
               </TextPasswordChangeModal>
             </TitleContainerPasswordChangeModal>
-            <Form onSubmit={formik.handleSubmit}>
+            <FormContainer onSubmit={formik.handleSubmit}>
               <Input
                 name="newPassword"
                 type="password"
@@ -237,7 +309,7 @@ const Account = () => {
                   disabled={!formik.isValid || !formik.dirty}
                 />
               </ButtonPasswordModalBox>
-            </Form>
+            </FormContainer>
           </ModalContainerPassword>
         </Modal>
       </AccountContainer>

@@ -327,6 +327,36 @@ export const authSlice = createAppSlice({
         },
       },
     ),
+    deleteUserByEmail: create.asyncThunk(
+      async (email : string, thunkApi) => {
+        try {
+          const response = await axios.delete(`/api/auth/admin/delete-user-by-email?email=${email}`)
+          return response.data
+        } catch (error) {
+          if (error instanceof AxiosError) {
+            if (error.response?.status === 500) {
+              return thunkApi.rejectWithValue("Server Error")
+            }
+            return thunkApi.rejectWithValue(error?.response?.data.message)
+          }
+        }
+      },
+      {
+        pending: (state: AuthSliceState) => {
+          state.status = "loading"
+          state.error = undefined
+        },
+        fulfilled: (state: AuthSliceState, action: any) => {
+          state.status = "success"
+          state.isLogin = true
+          localStorage.setItem("isLogin", JSON.stringify(true))
+        },
+        rejected: (state: AuthSliceState, action: any) => {
+          state.status = "error"
+          state.error = action.payload
+        },
+      },
+    ),
      resetErrorField: create.reducer((state: AuthSliceState)=>{
       state.errorField = null
      })
