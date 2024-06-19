@@ -97,7 +97,7 @@ function MyPots() {
               <div>
                 <img
                   //src={`http://localhost:8080/images/tag${pots[0]?.instruction?.day}.jpg`}
-                  src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
+                  src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pots[0]?.instruction?.day}.jpg`}
                   alt={`Day${pots[0]?.instruction?.day}`}
                 />
                 <h1>{`Tag ${pots[0]?.instruction?.day}`}</h1>
