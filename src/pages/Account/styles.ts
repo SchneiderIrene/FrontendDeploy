@@ -157,6 +157,7 @@ export const ModalContainerDeleteLogOut = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
 `
 
+
 export const TextModal = styled.p`
   font-family: "Inter";
   font-weight: 600;
@@ -166,4 +167,10 @@ export const TextModal = styled.p`
 
 export const ButtonBoxModal = styled.div`
   width: 480px;
+`
+
+export const FormContainer = styled.form`
+display: flex;
+flex-direction: column;
+gap: 10px;
 `

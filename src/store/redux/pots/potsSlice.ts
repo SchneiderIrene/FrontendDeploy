@@ -207,7 +207,7 @@ export const potsSlice = createAppSlice({
     createPot: create.asyncThunk(
       async (_, thunkApi) => {
         try {
-          const response = await axios.post(`/api/pots/create`)
+          const response = await axios.post(`/api/pots/create-pot-admin`)
           console.log(response.data)
 
           return response.data
@@ -234,7 +234,7 @@ export const potsSlice = createAppSlice({
         fulfilled: (state: PotsSliceState, action: any) => {
           state.status = "success"
           console.log("Payload received:", action.payload)
-          state.pots = action.payload
+          state.pots = [action.payload]
         },
         rejected: (state: PotsSliceState, action: any) => {
           console.log(action.payload)

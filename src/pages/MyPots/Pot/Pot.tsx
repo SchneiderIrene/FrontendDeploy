@@ -45,16 +45,16 @@ function Pot() {
     navigate(-1)
   }
 
-  const getInstruction = (id: string) => {
-    dispatch(potsSliceActions.instruction(id))
-    console.log(pots.find(p => p.id == id)?.instruction)
-    ;<Button
-      name="INSTRUCTION"
-      color="green"
-      border
-      onButtonClick={() => id && getInstruction(id)}
-    />
-  }
+  // const getInstruction = (id: string) => {
+  //   dispatch(potsSliceActions.instruction(id))
+  //   console.log(pots.find(p => p.id == id)?.instruction)
+  //   ;<Button
+  //     name="INSTRUCTION"
+  //     color="green"
+  //     border
+  //     onButtonClick={() => id && getInstruction(id)}
+  //   />
+  // }
 
   const pot = pots.find(p => p.id == id)
 
