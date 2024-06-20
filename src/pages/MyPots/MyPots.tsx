@@ -28,7 +28,7 @@ import { authSliceSelectors } from "store/redux/auth/authSlice"
 import Modal from "components/Modal/Modal"
 import { useNavigate, useParams } from "react-router-dom"
 import ReactMarkdown from "react-markdown"
-import { v4 } from "uuid"
+
 
 function MyPots() {
   const dispatch = useAppDispatch()
@@ -36,7 +36,7 @@ function MyPots() {
   const pots = useAppSelector(potsSliceSelectors.potData)
   const isLogin = useAppSelector(authSliceSelectors.isLogin)
   const navigate = useNavigate()
-  //  const { id } = useParams()
+
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const handleOpenModal = () => setIsModalOpen(true)
@@ -50,7 +50,7 @@ function MyPots() {
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
-  }, [])
+  }, [dispatch])
 
   // const getInstruction = (id: string)=>{
   //   dispatch(potsSliceActions.instruction(id))
@@ -64,38 +64,68 @@ function MyPots() {
 
   const activePot = (id: string) => {
     console.log(id)
-
     dispatch(potsSliceActions.activatePot(id))
   }
 
-  const scrollPot = (id: string) => {
-    dispatch(potsSliceActions.scrollPot(id))
+  const deActivePot = (id: string)=> {
+    dispatch(potsSliceActions.deActivatePot(id))
   }
 
-  const idAd = pots.map(p => p.id)
+  const scrollPot = (id: string) => {
+    dispatch(potsSliceActions.potProfile())
+    dispatch(potsSliceActions.scrollPot(id))
+    dispatch(potsSliceActions.potProfile())
+  }
+
+  const deletePot = (id: string)=>{
+    dispatch(potsSliceActions.deletePot(id))
+  }
+
+  // const idAd = pots.map(p => p.id)
 
   return (
     <MyPotsWrapper>
       {user && user.email == "leafgrow.project@gmail.com" ? (
-        <AdminPotContainer key={v4()}>
+        <AdminPotContainer>
           <ButtonBox>
-
             <AdminButtonControl>
-          <Button name="Entwickeln Topf" color="green" border onButtonClick={createPot}/>
-          <Button name="Entfernen Topf" color="green" border onButtonClick={() => {}}/>
+              {pots.length > 0 ? (
+               <Button name="Entfernen Topf" color="red"  border onButtonClick={() => pots[0] && deletePot(pots[0].id)}/> 
+              ) : (
+                <Button name="Entwickeln Topf" color="green" border onButtonClick={createPot}/>
+              )}
           </AdminButtonControl>
           <AdminButtonControl>
-            <Button name="Aktivieren Topf" color="green" border onButtonClick={() => pots[0] && activePot(pots[0].id)}/>
-          <Button name="Deaktivieren Topf" color="green" border onButtonClick={() => {}}/>
+            {pots.length > 0 && pots[0].active ? (
+              <Button name="Deaktivieren Topf" color="red" border onButtonClick={() => pots[0] && deActivePot(pots[0].id)}/>
+            ) : (
+              <Button name="Aktivieren Topf" 
+              color="green" 
+              border 
+              onButtonClick={() => pots[0] && activePot(pots[0].id)}
+              disabled={!(pots.length>0)}
+              />
+            )}
           </AdminButtonControl>
           <AdminButtonControl>
-            <Button name="Nächster Tag" color="green" border onButtonClick={() => {}}/>
+            <Button name="Nächster Tag" 
+            color="green" 
+            border 
+            onButtonClick={() => pots[0] && scrollPot(pots[0].id)}
+            disabled={!(pots.length>0) || !pots[0].active}
+            />
           </AdminButtonControl>
           </ButtonBox>
           <div>
             {pots[0]?.active && (
               <div>
+        
+            
+                
                 <img
+                //src={`http://localhost:8080/${pots[0]?.instruction?.image}`}
+
+                  //src={pots[0]?.instruction?.image} 
                   //src={`http://localhost:8080/images/tag${pots[0]?.instruction?.day}.jpg`}
                   src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pots[0]?.instruction?.day}.jpg`}
                   alt={`Day${pots[0]?.instruction?.day}`}
@@ -111,9 +141,9 @@ function MyPots() {
       ) : (
         <PotsContainer>
           {pots.map((pot: Pot, index: number) => (
-            <LinkTopf to={`/mypots/pot/${pot.id}`}>
-              <PotCard activ={pot.active} key={pot.id}>
-                <PotTitle key={pot.id}>{`Topf ${index + 1}`}</PotTitle>
+            <LinkTopf to={`/mypots/pot/${pot.id}`} key={pot.id}>
+              <PotCard activ={pot.active}>
+                <PotTitle>{`Topf ${index + 1}`}</PotTitle>
                 <PotImage src={PotImg} alt="pot" />
               </PotCard>
             </LinkTopf>

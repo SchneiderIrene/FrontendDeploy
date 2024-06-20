@@ -82,6 +82,7 @@ function Pot() {
         {pots.find(p => p.id == id)?.active ? (
           <DayContainer>
             <ImageContainer
+              
               //src={`http://localhost:8080/images/tag${pot?.instruction?.day}.jpg`}
               src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
               alt={`Day${pot?.instruction?.day}`}
