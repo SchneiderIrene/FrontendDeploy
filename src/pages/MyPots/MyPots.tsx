@@ -26,8 +26,9 @@ import {
 } from "store/redux/pots/potsSlice"
 import { authSliceSelectors } from "store/redux/auth/authSlice"
 import Modal from "components/Modal/Modal"
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import ReactMarkdown from "react-markdown"
+import Spinner from "components/Spinner/Spinner";
 
 
 function MyPots() {
@@ -35,6 +36,7 @@ function MyPots() {
   const user = useAppSelector(authSliceSelectors.userData)
   const pots = useAppSelector(potsSliceSelectors.potData)
   const isLogin = useAppSelector(authSliceSelectors.isLogin)
+  const status = useAppSelector(authSliceSelectors.status)
   const navigate = useNavigate()
 
 
@@ -85,6 +87,7 @@ function MyPots() {
 
   return (
     <MyPotsWrapper>
+      {status === "loading" && <Spinner/>}
       {user && user.email == "leafgrow.project@gmail.com" ? (
         <AdminPotContainer>
           <ButtonBox>
