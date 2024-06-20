@@ -90,6 +90,7 @@ function MyPots() {
       {status === "loading" && <Spinner/>}
       {user && user.email == "leafgrow.project@gmail.com" ? (
         <AdminPotContainer>
+          {status === "loading" && <Spinner/>}
           <ButtonBox>
             <AdminButtonControl>
               {pots.length > 0 ? (
