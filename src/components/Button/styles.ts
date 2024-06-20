@@ -28,13 +28,13 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   outline: none;
   border: none;
   padding: 10px;
-  background: ${({ bgColorIsRed }) => (bgColorIsRed ? "rgba(186, 45, 0, 1)" : "rgba(255, 254, 239, 1)")};  
+  background: ${({ bgColorIsRed, disabled }) => disabled ? "rgba(55, 62, 58, 0.3)" : (bgColorIsRed ? "rgba(186, 45, 0, 1)" : "rgba(255, 254, 239, 1)")};  
   color: ${({color})=>getColor(color)};
   border: ${({border})=>(border ? "4px solid rgba(55, 62, 58, 0.5)" : "none")};
   font-size: 20px;
   font-family: "DM Sans";
   font-weight: 900;
-  cursor: pointer;
+  cursor: ${({disabled}) => disabled ? "not-allowed" : "pointer" } ;
 
   &:focus {
     outline: none;
