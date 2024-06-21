@@ -25,6 +25,7 @@ function Pot() {
   const { id } = useParams()
   const pots = useAppSelector(potsSliceSelectors.potData)
   const navigate = useNavigate()
+  const content = useAppSelector(potsSliceSelectors.content)
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
@@ -33,6 +34,16 @@ function Pot() {
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
   }, [dispatch])
+
+
+  const pot = pots.find(p => p.id == id)
+
+  useEffect(() => {
+    if (pots.length>0 && pot?.instruction?.id !== undefined){
+      dispatch(potsSliceActions.potContent(pot.instruction?.id))
+      console.log(pot.instruction?.day);
+    }
+  }, [pots])
 
 
   const activatePot = (id: string) => {
@@ -57,7 +68,7 @@ function Pot() {
   //   />
   // }
 
-  const pot = pots.find(p => p.id == id)
+  
 
   return (
     <PotWrapper key={id}>
@@ -88,7 +99,7 @@ function Pot() {
             <StyledH3>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH3>
             <Content>
               <ReactMarkdown>
-                {pots.find(p => p.id == id)?.instruction?.content}
+                {content}
               </ReactMarkdown>
             </Content>
           </DayContainer>

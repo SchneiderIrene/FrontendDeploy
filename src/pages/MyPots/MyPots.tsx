@@ -41,6 +41,8 @@ function MyPots() {
   const pots = useAppSelector(potsSliceSelectors.potData)
   const isLogin = useAppSelector(authSliceSelectors.isLogin)
   const status = useAppSelector(authSliceSelectors.status)
+  const statusPot = useAppSelector(potsSliceSelectors.status)
+  const content = useAppSelector(potsSliceSelectors.content)
   const navigate = useNavigate()
 
 
@@ -57,6 +59,13 @@ function MyPots() {
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
   }, [dispatch])
+
+  useEffect(() => {
+    if (pots.length>0 && pots[0]?.instruction?.id !== undefined){
+      dispatch(potsSliceActions.potContent(pots[0].instruction?.id))
+      console.log(pots[0].instruction?.day);
+    }
+  }, [pots])
 
   // const getInstruction = (id: string)=>{
   //   dispatch(potsSliceActions.instruction(id))
@@ -87,11 +96,9 @@ function MyPots() {
     dispatch(potsSliceActions.deletePot(id))
   }
 
-  // const idAd = pots.map(p => p.id)
-
   return (
     <MyPotsWrapper>
-      {status === "loading" && <Spinner/>}
+      {status === "loading" || statusPot === 'loading' && <Spinner/>}
       {user && user.email == "leafgrow.project@gmail.com" ? (
         <AdminPotContainer>
           {status === "loading" && <Spinner/>}
@@ -124,7 +131,7 @@ function MyPots() {
             />
           </AdminButtonControl>
           </ButtonBox>
-            {pots[0]?.active && (
+            {pots[0]?.active &&  pots[0]?.instruction?.id !== undefined &&(
               <AdminContentContainer>
                 <ImgPotAdmin
                   src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag${pots[0]?.instruction?.day}.jpg`}
@@ -132,7 +139,7 @@ function MyPots() {
                 />
                 <TitleContent>{`Tag ${pots[0]?.instruction?.day}`}</TitleContent>
                 <Content>
-                  <ReactMarkdown>{pots[0]?.instruction?.content}</ReactMarkdown>
+                  {<ReactMarkdown>{content}</ReactMarkdown>}
                 </Content>
               </AdminContentContainer>
             )}
