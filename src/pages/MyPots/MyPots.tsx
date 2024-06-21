@@ -124,7 +124,6 @@ function MyPots() {
             />
           </AdminButtonControl>
           </ButtonBox>
-          <div>
             {pots[0]?.active && (
               <AdminContentContainer>
                 <ImgPotAdmin
@@ -137,7 +136,6 @@ function MyPots() {
                 </Content>
               </AdminContentContainer>
             )}
-          </div>
         </AdminPotContainer>
       ) : (
         <PotsContainer>
