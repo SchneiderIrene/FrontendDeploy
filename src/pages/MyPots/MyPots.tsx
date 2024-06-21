@@ -1,8 +1,11 @@
 import {
   AdminButtonControl,
+  AdminContentContainer,
   AdminPotContainer,
   ArrowIcon,
   ButtonBox,
+  Content,
+  ImgPotAdmin,
   LinkTopf,
   ModalContainer,
   ModalText,
@@ -12,6 +15,7 @@ import {
   PotImage,
   PotTitle,
   PotsContainer,
+  TitleContent,
 } from "./styles"
 import { PotImg } from "assets"
 import Button from "components/Button/Button"
@@ -122,23 +126,16 @@ function MyPots() {
           </ButtonBox>
           <div>
             {pots[0]?.active && (
-              <div>
-        
-            
-                
-                <img
-                //src={`http://localhost:8080/${pots[0]?.instruction?.image}`}
-
-                  //src={pots[0]?.instruction?.image} 
-                  //src={`http://localhost:8080/images/tag${pots[0]?.instruction?.day}.jpg`}
-                  src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pots[0]?.instruction?.day}.jpg`}
+              <AdminContentContainer>
+                <ImgPotAdmin
+                  src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag${pots[0]?.instruction?.day}.jpg`}
                   alt={`Day${pots[0]?.instruction?.day}`}
                 />
-                <h1>{`Tag ${pots[0]?.instruction?.day}`}</h1>
-                <div>
+                <TitleContent>{`Tag ${pots[0]?.instruction?.day}`}</TitleContent>
+                <Content>
                   <ReactMarkdown>{pots[0]?.instruction?.content}</ReactMarkdown>
-                </div>
-              </div>
+                </Content>
+              </AdminContentContainer>
             )}
           </div>
         </AdminPotContainer>
