@@ -1,4 +1,4 @@
-import { Pot, PotsSliceState } from "./types"
+import { PotsSliceState } from "./types"
 import axios, { AxiosError } from "axios"
 import { createAppSlice } from "store/createAppSlice"
 
@@ -6,6 +6,7 @@ const potsInitialState: PotsSliceState = {
   pots: [],
   status: "default",
   error: undefined,
+  content: []
 }
 
 export const potsSlice = createAppSlice({
@@ -324,11 +325,49 @@ export const potsSlice = createAppSlice({
         },
       },
     ),
+    potContent: create.asyncThunk(
+      async (_, thunkApi) => {
+        try {
+          const response = await axios.get(`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/texts/week01/day_01.txt`)
+          console.log(response.data)
+          return response.data
+        } catch (error) {
+          if (error instanceof AxiosError) {
+            if (error.response?.status === 500) {
+              return thunkApi.rejectWithValue({
+                message: "Server Error",
+                type: "server errors",
+              })
+            }
+            return thunkApi.rejectWithValue({
+              message: error?.response?.data.message,
+              type: "validation",
+            })
+          }
+        }
+      },
+      {
+        pending: (state: PotsSliceState) => {
+          state.status = "loading"
+          state.error = undefined
+        },
+        fulfilled: (state: PotsSliceState, action: any) => {
+          state.status = "success"
+          state.content = action.payload
+        },
+        rejected: (state: PotsSliceState, action: any) => {
+          console.log(action.payload)
+          state.status = "error"
+          state.error = action.payload.message
+        },
+      },
+    ),
   }),
   selectors: {
     potData: state => state.pots,
     status: state => state.status,
     error: state => state.error,
+    content: state => state.content
   },
 })
 

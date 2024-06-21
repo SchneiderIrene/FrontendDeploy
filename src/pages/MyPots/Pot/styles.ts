@@ -50,7 +50,7 @@ export const DayContainer = styled.div`
   gap: 50px;
 `
 
-export const StyledH1 = styled.h1`
+export const StyledH3 = styled.h1`
   color: #38221d;
   font-family: Inter;
   font-size: 28px;
@@ -60,67 +60,15 @@ export const StyledH1 = styled.h1`
 `
 
 export const Content = styled.div`
-  /* display: flex;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-family: Inter;
-  font-style: normal;
+  gap: 35px;
+  font-family: "Inter";
   font-weight: 600;
-  line-height: normal;
-  color: #38221d; */
- 
-
-    /* Стили для заголовков */
-    h2 {
-    font-size: 20px;
-    margin-top: 1.3em;
-    margin-bottom: 0.3em;
-  }
-
-  h3 {
-    font-size: 18px;
-    margin-top: 1.1em;
-    margin-bottom: 0.2em;
-  }
-
-  /* Стили для списков */
-  ul, ol {
-    margin-bottom: 1em;
-    padding-left: 20px;
-  }
-
-  /* Стили для блоков кода */
-  code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f4f4f4;
-    padding: 2px 4px;
-    border-radius: 3px;
-  }
-
-  pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-  }
-
-  /* Стили для цитат */
-  blockquote {
-    border-left: 4px solid #bdc3c7;
-    padding-left: 10px;
-    margin: 20px 0;
-    color: #7f8c8d;
-    font-style: italic;
-  }
-
-  /* Стили для горизонтальной линии */
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-
+  font-size: 24px;
+  color: rgba(55, 62, 58, 1);
 `
 
 // export const StyledH2 = styled.h2`

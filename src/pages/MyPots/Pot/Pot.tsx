@@ -13,7 +13,7 @@ import {
   ImageContainer,
   PotContainer,
   PotWrapper,
-  StyledH1,
+  StyledH3,
   StyledP,
 } from "./styles"
 import { useEffect } from "react"
@@ -24,6 +24,7 @@ function Pot() {
   const dispatch = useAppDispatch()
   const { id } = useParams()
   const pots = useAppSelector(potsSliceSelectors.potData)
+  const content = useAppSelector(potsSliceSelectors.content)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -34,13 +35,17 @@ function Pot() {
     dispatch(potsSliceActions.potProfile())
   }, [dispatch])
 
+  useEffect(()=>{
+    dispatch(potsSliceActions.potContent())
+  }, [dispatch] )
+
   const activatePot = (id: string) => {
     dispatch(potsSliceActions.activatePot(id))
+    
   }
 
   const deActivatePot = (id: string) => {
     dispatch(potsSliceActions.deActivatePot(id))
-
     dispatch(potsSliceActions.potProfile())
     navigate(-1)
   }
@@ -84,11 +89,15 @@ function Pot() {
             <ImageContainer
               src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag${pot?.instruction?.day}.jpg`}
             />
-            <StyledH1>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH1>
+            <StyledH3>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH3>
             <Content>
-              <ReactMarkdown>
+              <div>
+                <p>llllllllllllllllllllllllllll</p>
+                {content}
+              </div>
+              {/* <ReactMarkdown>
                 {pots.find(p => p.id == id)?.instruction?.content}
-              </ReactMarkdown>
+              </ReactMarkdown> */}
             </Content>
           </DayContainer>
         ) : (
@@ -97,7 +106,7 @@ function Pot() {
               src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag1.jpg`}
               alt={`Day1`}
             />
-            <StyledH1>{`Tag 1`}</StyledH1>
+            <StyledH3>{`Tag 1`}</StyledH3>
             <DemoDay />
           </DayContainer>
         )}
