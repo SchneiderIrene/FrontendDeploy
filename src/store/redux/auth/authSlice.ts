@@ -76,7 +76,7 @@ export const authSlice = createAppSlice({
             }
             if (error.response?.status === 408) {
               return thunkApi.rejectWithValue({
-                message: "Истек срок действия ссылки",
+                message: "Ooops... Der Link ist abgelaufen",
                 type: "server errors",
               })
             }
