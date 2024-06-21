@@ -82,10 +82,7 @@ function Pot() {
         {pots.find(p => p.id == id)?.active ? (
           <DayContainer>
             <ImageContainer
-              
-              //src={`http://localhost:8080/images/tag${pot?.instruction?.day}.jpg`}
-              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag${pot?.instruction?.day}.jpg`}
-              alt={`Day${pot?.instruction?.day}`}
+              src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag${pot?.instruction?.day}.jpg`}
             />
             <StyledH1>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH1>
             <Content>
@@ -97,8 +94,7 @@ function Pot() {
         ) : (
           <DayContainer>
             <ImageContainer
-              //src={`http://localhost:8080/images/tag1.jpg`}
-              src={`https://leafgrow-app-foign.ondigitalocean.app/#/images/tag1.jpg`}
+              src={`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/images/tag1.jpg`}
               alt={`Day1`}
             />
             <StyledH1>{`Tag 1`}</StyledH1>
