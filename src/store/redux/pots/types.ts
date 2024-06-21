@@ -17,5 +17,4 @@ export interface PotsSliceState {
   pots: Pot[];
   status: "default" | "loading" | "success" | "error";
   error: string | null | undefined;
-  content: []
 }
