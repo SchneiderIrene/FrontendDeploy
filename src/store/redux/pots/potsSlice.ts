@@ -326,9 +326,9 @@ export const potsSlice = createAppSlice({
       },
     ),
     potContent: create.asyncThunk(
-      async (day : string, thunkApi) => {
+      async (id : string, thunkApi) => {
         try {
-          const response = await axios.get(`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/texts/week01/day_${day}.txt`)
+          const response = await axios.get(`https://leaf-grow.fra1.cdn.digitaloceanspaces.com/texts/week01/day_${id}.md`)
           console.log(response.data)
           return response.data
         } catch (error) {
