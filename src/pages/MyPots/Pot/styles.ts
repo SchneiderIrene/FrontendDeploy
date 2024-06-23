@@ -60,15 +60,30 @@ export const StyledH3 = styled.h1`
 `
 
 export const Content = styled.div`
-  display: flex;
+   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 35px;
   font-family: "Inter";
-  font-weight: 600;
-  font-size: 24px;
+  
+  
   color: rgba(55, 62, 58, 1);
+
+  p{
+    text-indent: 30px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  ul, ol, dl {
+    align-items: start;
+  } 
 `
 
 // export const StyledH2 = styled.h2`

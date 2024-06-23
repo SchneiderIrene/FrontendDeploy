@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import { Link, NavLink } from "react-router-dom"
+import ReactMarkdown from "react-markdown"
 
 interface PotCardProps {
   activ: boolean
@@ -154,7 +155,38 @@ export const Content = styled.div`
   align-items: center;
   gap: 35px;
   font-family: "Inter";
-  font-weight: 600;
-  font-size: 24px;
   color: rgba(55, 62, 58, 1);
+   line-height: 3;
+   text-align: center;
+  `
+
+  export const StyledReactMarkdown = styled(ReactMarkdown)`
+
+   h1, h2, h3, h4, h5, h6{
+    font-size: 28px ;
+    font-weight: 900;
+    
+      
+  }
+  p{
+    /* text-indent: 30px; */
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0px;
+  
+  }
+  ul, ol, dl {
+    /* padding: 50px; */
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0px;
+    
+  } 
+li {
+  margin: 0px;
+  padding: 0px;
+}
+strong {
+  font-style: normal;
+}
 `
