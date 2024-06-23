@@ -34,6 +34,8 @@ import {
 import { useAppDispatch } from "store/hooks"
 import { CloseButton } from "components/Modal/styles"
 import Button from "components/Button/Button"
+import { log } from "console";
+import { v4 } from "uuid";
 
 
 const Account = () => {
@@ -47,6 +49,9 @@ const Account = () => {
   const [isDeleteUserByEmailModalOpen, setIsDeleteUserByEmailModalOpen] = useState(false)
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false)
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false)
+
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
 
   const handleOpenDeleteModal = () => setIsDeleteModalOpen(true)
   const handleCloseDeleteModal = () => setIsDeleteModalOpen(false)
@@ -69,6 +74,17 @@ const Account = () => {
     }
   }, [status, isLogin, navigate])
 
+  useEffect(()=>{
+    if(userData){
+      setUsername(userData.username || "")
+      setEmail(userData.email || "")
+     console.log(userData.username);
+     console.log(userData.email);
+     console.log(userData);
+     
+    }
+  }, [userData])
+
   const validationSchema = Yup.object().shape({
     newPassword: Yup.string()
       .required("Neues Passwort ist erforderlich")
@@ -83,7 +99,7 @@ const Account = () => {
     initialValues: {
       newPassword: "",
     },
-    validationSchema,
+    validationSchema : validationSchema,
     onSubmit: values => {},
   })
 
@@ -99,11 +115,9 @@ const Account = () => {
     initialValues: {
       email: "",
     },
-    validationSchema,
+    validationSchema : validationSchemaDeleteUserByEmail,
     onSubmit: values => {},
   })
-
- 
 
   useEffect(() => {
     if (status === "success") {
@@ -113,12 +127,17 @@ const Account = () => {
     }
   }, [status])
 
+  useEffect(()=>{
+   dispatch(authSliceActions.userProfile())
+  }, [])
+
   const changePasswort = () => {
     dispatch(
       authSliceActions.changePassword({
         newPassword: formik.values.newPassword,
       }),
     )
+    formik.resetForm()
   }
   const logoutUser = () => {
     dispatch(authSliceActions.logOut())
@@ -133,7 +152,7 @@ const Account = () => {
   }
 
   return (
-    <AccountWrapper>
+    <AccountWrapper id={v4()}>
       <Title>Kontoeinstellungen</Title>
       <AccountContainer>
         <PasswortChangeContainer>
@@ -152,7 +171,7 @@ const Account = () => {
               <InputDesabled
                 name="username"
                 id="username"
-                value={userData?.username}
+                value={username}
                 disabled={true}
               />
             </InputsContainer>
@@ -164,7 +183,7 @@ const Account = () => {
               <InputDesabled
                 name="email"
                 id="email"
-                value={userData?.email}
+                value={email}
                 disabled={true}
               />
             </InputsContainer>
@@ -272,8 +291,6 @@ const Account = () => {
               onButtonClick={() => deleteUserByEmail(formikDeleteUserByEmail.values.email)}
             />
               </FormContainer>
-            
-           
           </ModalContainerDeleteLogOut>
         </Modal>
 

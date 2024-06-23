@@ -54,10 +54,7 @@ export const PasswortChangeContainer = styled.div`
   justify-content: space-around;
   gap: 24px;
 `
-export const Form = styled.form`
-width: 480px;
-height: 202px;
-`
+
 export const TitleInformation = styled.p`
   color: rgba(55, 62, 58, 1);
   font-size: 18px;
@@ -105,6 +102,7 @@ export const LabelByInputDesable = styled.label`
 `
 
 export const ButtonPasswordModalBox = styled.div`
+width: 100%;
 padding-top: 36px;
 `
 export const ModalContainerPassword = styled.div`
@@ -173,4 +171,10 @@ export const FormContainer = styled.form`
 display: flex;
 flex-direction: column;
 gap: 10px;
+width: 480px;
+height: 202px;
 `
+// export const FormContainer = styled.form`
+// width: 480px;
+// height: 202px;
+// `

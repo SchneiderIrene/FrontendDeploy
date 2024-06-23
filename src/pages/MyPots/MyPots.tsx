@@ -15,6 +15,7 @@ import {
   PotImage,
   PotTitle,
   PotsContainer,
+  StyledReactMarkdown,
   TitleContent,
 } from "./styles"
 import { PotImg } from "assets"
@@ -31,8 +32,8 @@ import {
 import { authSliceSelectors } from "store/redux/auth/authSlice"
 import Modal from "components/Modal/Modal"
 import { useNavigate } from "react-router-dom"
-import ReactMarkdown from "react-markdown"
 import Spinner from "components/Spinner/Spinner";
+import rehypeRaw from 'rehype-raw';
 
 
 function MyPots() {
@@ -96,6 +97,9 @@ function MyPots() {
     dispatch(potsSliceActions.deletePot(id))
   }
 
+  console.log(content);
+  
+
   return (
     <MyPotsWrapper>
       {status === "loading" || statusPot === 'loading' && <Spinner/>}
@@ -139,7 +143,8 @@ function MyPots() {
                 />
                 <TitleContent>{`Tag ${pots[0]?.instruction?.day}`}</TitleContent>
                 <Content>
-                  {<ReactMarkdown>{content}</ReactMarkdown>}
+                  {/* <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown> */}
+                  <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown>
                 </Content>
               </AdminContentContainer>
             )}

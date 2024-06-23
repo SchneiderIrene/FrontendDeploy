@@ -19,6 +19,7 @@ import {
 import { useEffect } from "react"
 import DemoDay from "components/DemoDay/DemoDay"
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 function Pot() {
   const dispatch = useAppDispatch()
@@ -98,7 +99,7 @@ function Pot() {
             />
             <StyledH3>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH3>
             <Content>
-              <ReactMarkdown>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                 {content}
               </ReactMarkdown>
             </Content>
