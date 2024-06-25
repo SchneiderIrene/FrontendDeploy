@@ -31,6 +31,7 @@ import {  useEffect, useState } from "react"
 import GoToBackButton from "components/GoToBackButton/GoToBackButton";
 import Button from "components/Button/Button";
 import Spinner from "components/Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 function RegisterForm() {
   const dispatch = useAppDispatch()
@@ -207,9 +208,9 @@ function RegisterForm() {
               <span>*Ich habe die </span>
               <a href="/nutzungsbedingungen">Nutzungsbedinungen</a>
               <span> und </span>
-              <a href="/legalinfo" target="_blank">gesetzliche Informationen</a>
+              <Link to="/legalinfo" target="_blank">gesetzliche Informationen</Link>
               <span>
-                gelesen und akzeptiere diese. Zusätzlich habe ich die
+                {" "}gelesen und akzeptiere diese. Zusätzlich habe ich die
                 Informationen über die Verwendung meiner personenbezogenen Daten
                 verstanden, die in der{" "}
               </span>
