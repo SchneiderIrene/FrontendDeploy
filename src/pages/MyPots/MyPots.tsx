@@ -143,7 +143,6 @@ function MyPots() {
                 />
                 <TitleContent>{`Tag ${pots[0]?.instruction?.day}`}</TitleContent>
                 <Content>
-                  {/* <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown> */}
                   <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown>
                 </Content>
               </AdminContentContainer>

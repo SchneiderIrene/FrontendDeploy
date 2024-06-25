@@ -173,13 +173,15 @@ export const Content = styled.div`
     font-size: 24px;
     font-weight: 600;
     padding: 0px;
+    text-align: 0px;
   
   }
   ul, ol, dl {
     /* padding: 50px; */
     font-size: 24px;
     font-weight: 600;
-    padding: 0px;
+    margin-left: 20px;
+    text-align: left;
     
   } 
 li {
