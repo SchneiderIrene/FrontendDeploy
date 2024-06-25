@@ -34,7 +34,6 @@ import {
 import { useAppDispatch } from "store/hooks"
 import { CloseButton } from "components/Modal/styles"
 import Button from "components/Button/Button"
-import { log } from "console";
 import { v4 } from "uuid";
 
 

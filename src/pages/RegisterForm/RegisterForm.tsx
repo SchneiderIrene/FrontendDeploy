@@ -104,9 +104,9 @@ function RegisterForm() {
     setIsRegister(false)
     formik.resetForm()
   }
-//  useEffect(()=>{
-//   dispatch(authSliceActions.userProfile())
-//  })
+ useEffect(()=>{
+  dispatch(authSliceActions.resetErrorField())
+ },[])
   const resetEmail = (email : string) => {
     dispatch(authSliceActions.resetEmail(email))
   }

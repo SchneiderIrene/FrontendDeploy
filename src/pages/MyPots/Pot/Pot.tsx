@@ -11,15 +11,20 @@ import {
   Content,
   DayContainer,
   ImageContainer,
+  ModalContainerDeletePot,
   PotContainer,
   PotWrapper,
   StyledH3,
   StyledP,
+  StyledReactMarkdown,
+  TextModal,
 } from "./styles"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import DemoDay from "components/DemoDay/DemoDay"
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Modal from "components/Modal/Modal";
+import { CloseButton } from "components/Modal/styles";
 
 function Pot() {
   const dispatch = useAppDispatch()
@@ -27,6 +32,11 @@ function Pot() {
   const pots = useAppSelector(potsSliceSelectors.potData)
   const navigate = useNavigate()
   const content = useAppSelector(potsSliceSelectors.content)
+
+  const [isDeletePotModalOpen, setIsDeletePotModalOpen] = useState(false)
+
+  const handleOpenDeletePotModal = () => setIsDeletePotModalOpen(true)
+  const handleCloseDeletePotModal = () => setIsDeletePotModalOpen(false)
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
@@ -94,9 +104,7 @@ function Pot() {
             />
             <StyledH3>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH3>
             <Content>
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
-                {content}
-              </ReactMarkdown>
+            <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown>
             </Content>
           </DayContainer>
         ) : (
@@ -120,13 +128,26 @@ function Pot() {
                 <Button
                   name="Topf entfernen"
                   bgColorIsRed
-                  onButtonClick={() => id && deActivatePot(id)}
+                  onButtonClick={handleOpenDeletePotModal}
                 />
               </ButtonControl>
             </>
           )}
         </ButtonContainer>
       </PotContainer>
+      <Modal isOpen={isDeletePotModalOpen} onClose={handleCloseDeletePotModal}>
+          <ModalContainerDeletePot>
+            <CloseButton onClick={handleCloseDeletePotModal}>X</CloseButton>
+            <TextModal>
+              Bist du sicher, dass du deinen Topf entfernen möchtest?
+            </TextModal>
+            <Button
+              name="Bestätigen"
+              bgColorIsRed={true}
+              onButtonClick={() => id && deActivatePot(id)}
+            />
+          </ModalContainerDeletePot>
+        </Modal>
     </PotWrapper>
   )
 }

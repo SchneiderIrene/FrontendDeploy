@@ -26,7 +26,7 @@ export const PotContainer = styled.div`
   align-items: center;
   gap: 40px;
   width: 1100px;
-  height: 2094px;
+  /* height: 2094px; */
 `
 
 export const StyledP = styled.p`
@@ -56,86 +56,73 @@ export const StyledH3 = styled.h1`
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 50px;
 `
 
 export const Content = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 35px;
   font-family: "Inter";
-  
-  
   color: rgba(55, 62, 58, 1);
+   line-height: 3;
+   text-align: center;
+  `
 
-  p{
-    text-indent: 30px;
-    font-size: 24px;
-    font-weight: 600;
-  }
+export const StyledReactMarkdown = styled(ReactMarkdown)`
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 20px;
-    font-weight: 900;
-  }
+h1, h2, h3, h4, h5, h6{
+ font-size: 28px ;
+ font-weight: 900;
+ 
+   
+}
+p{
+ /* text-indent: 30px; */
+ font-size: 24px;
+ font-weight: 600;
+ padding: 0px;
+ text-align: 0px;
 
-  ul, ol, dl {
-    align-items: start;
-  } 
+}
+ul, ol, dl {
+ /* padding: 50px; */
+ font-size: 24px;
+ font-weight: 600;
+ margin-left: 20px;
+ text-align: left;
+ 
+} 
+li {
+margin: 0px;
+padding: 0px;
+}
+strong {
+font-style: normal;
+}
 `
 
-// export const StyledH2 = styled.h2`
-//   color: #38221d;
-//   font-size: 24px;
-//   font-weight: 600;
-//   font-family: Inter;
-//   text-align: center;
-//   margin-bottom: 60px;
-// `
+export const ModalContainerDeletePot = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  background-color: rgba(255, 254, 239, 1);
+  padding: 69px 96px;
+  width: 863px;
+  height: 362px;
+  border: 2px solid rgba(2, 88, 41, 1);
+`
 
-// export const SubP = styled.p`
-//   color: #38221d;
-//   font-size: 20px;
-//   font-weight: 600;
-//   text-align: left;
-//   font-family: Inter;
-//   margin-left: 40px;
-//   margin-bottom: 10px;
-// `
+export const TextModal = styled.p`
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 24px;
+  color: rgba(55, 62, 58, 1);
+`
 
-// export const Container1 = styled.div`
-//   width: 100%;
-//   max-width: 1110px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 10px;
-//   margin-bottom: 40px;
-// `
-
-// export const Container2 = styled.div`
-//   width: 100%;
-//   max-width: 1110px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 20px;
-//   margin-bottom: 40px;
-//   text-align: center;
-// `
-
-// export const Container3 = styled.div`
-//   width: 100%;
-//   max-width: 1110px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 20px;
-//   margin-bottom: 40px;
-//   text-align: center;
-// `
