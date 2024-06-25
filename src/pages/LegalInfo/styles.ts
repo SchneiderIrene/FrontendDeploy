@@ -1,12 +1,21 @@
 import styled from "@emotion/styled"
 import { Link } from "react-router-dom"
 
-export const LegalInfoWrapper = styled.form`
+export const LegalInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 50px 140px 50px 140px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 `
+export const LegalInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+`
+
 export const StyledP = styled.h3`
   text-align: left;
   font-size: 18px;

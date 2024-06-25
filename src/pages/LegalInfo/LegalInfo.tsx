@@ -4,12 +4,14 @@ import {
     StyledH5,
     StyledP,
     StyledLink,
+    LegalInfoContainer,
   } from "./styles"
   
   function LegalInfo() {
     return (
       <LegalInfoWrapper>
-        <StyledP>
+        <LegalInfoContainer>
+          <StyledP>
           Seit dem 1. April 2024 dürfen Personen über 18 Jahren in Deutschland 25
           Gramm Cannabis für den Konsum besitzen und mit sich führen. Außerdem
           können Haschischliebhaber nun drei Cannabispflanzen in ihren eigenen
@@ -56,6 +58,8 @@ import {
           Seite 6 von 50 Bundesgesetzblatt Jahrgang 2024 Teil I Nr. 109,
           ausgegeben zu Bonn am 27. März 2024
         </StyledP>
+        </LegalInfoContainer>
+        
       </LegalInfoWrapper>
     )
   }
