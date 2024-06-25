@@ -30,10 +30,6 @@ function Pot() {
 
   useEffect(() => {
     dispatch(potsSliceActions.potProfile())
-  }, [])
-
-  useEffect(() => {
-    dispatch(potsSliceActions.potProfile())
   }, [dispatch])
 
 
@@ -42,7 +38,6 @@ function Pot() {
   useEffect(() => {
     if (pots.length>0 && pot?.instruction?.id !== undefined){
       dispatch(potsSliceActions.potContent(pot.instruction?.id))
-      console.log(pot.instruction?.day);
     }
   }, [pots])
 

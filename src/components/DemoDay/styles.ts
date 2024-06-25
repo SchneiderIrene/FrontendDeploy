@@ -18,7 +18,7 @@ export const StyledH2 = styled.h2`
   margin-bottom: 60px;
 `
 
-export const StyledP = styled.p`
+export const StyledP = styled.div`
   color: #38221d;
   font-size: 20px;
   font-weight: 600;
