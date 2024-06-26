@@ -2,16 +2,15 @@ import styled from "@emotion/styled"
 import { NavLink, Link } from "react-router-dom"
 import { LogoH } from "assets"
 
-
 export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1; 
+  flex: 1;
   gap: 20px;
   width: 100%;
   background-color: #fffeef;
-  min-height: 100vh; 
-  overflow: hidden; 
+  min-height: 100vh;
+  overflow: hidden;
 `
 
 export const Header = styled.header`
@@ -29,11 +28,10 @@ export const HeaderContentWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 1280px; 
+  max-width: 90%;
   width: 100%;
-  margin: 0 auto; 
-  padding: 0 40px; 
-  
+  margin: 0 auto;
+  padding: 0 2%;
 `
 
 export const NavContainerLink = styled.div`
@@ -49,26 +47,24 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-family: Inter;
   font-size: 20px;
-  color: #FFFEEF;
+  color: #fffeef;
   font-weight: 600;
   &:hover {
-  text-decoration: none;
+    text-decoration: none;
   }
 `
 
 export const NavContainer = styled.nav`
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 8px;
-   gap: 40px; 
+  gap: 20px;
   flex: 1;
   flex-grow: 1;
-  
 `
 
 export const HeaderLogoContainer = styled.div`
-  margin-left: -80px;
-  width: 80px;
+  margin-left: auto;
   cursor: pointer;
 `
 
@@ -80,12 +76,11 @@ export const HeaderLogo = styled.img`
 
 HeaderLogo.defaultProps = { src: LogoH }
 
-
 export const Main = styled.main`
   display: flex;
   flex: 1;
   padding: 20px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 `
 
 export const Footer = styled.footer`
@@ -95,7 +90,7 @@ export const Footer = styled.footer`
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  color: #373E3A;
+  color: #373e3a;
 `
 
 export const FooterContentWrapper = styled.div`
@@ -103,7 +98,7 @@ export const FooterContentWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1280px; 
+  max-width: 1280px;
   margin: 0 auto;
 `
 
@@ -114,12 +109,11 @@ export const FooterNavContainer = styled.nav`
   gap: 24px;
 `
 
-
 export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 14px;
-  color: #373e3a;  
-  font-family: 'DM Sans';
+  color: #373e3a;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -140,19 +134,19 @@ export const AccountContainer = styled.div`
 
 export const StyledButton = styled.div`
   width: 216px;
-   right: 0;
+  right: 0;
 `
 
 export const FooterContent = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
-  `
+`
 
-  export const FooterLeftLink = styled(StyledLink)`
+export const FooterLeftLink = styled(StyledLink)`
   color: #373e3a;
   font-size: 14px;
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -164,7 +158,7 @@ export const FooterText = styled.p`
   display: inline-block;
 `
 export const Copyright = styled.div`
-  color: #373E3A;
+  color: #373e3a;
   font-family: "DM Sans";
   font-size: 14px;
   font-weight: 500;
