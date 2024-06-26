@@ -17,17 +17,18 @@ export const Container1 = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%; 
   margin: 0 auto;
   margin-top: -20px;
   padding-left: 10px;
   padding-bottom: 100px;
   box-sizing: border-box;
+  overflow: auto; 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const Container2 = styled.div`
   display: flex;
@@ -336,7 +337,7 @@ export const StyledP = styled.p`
   padding: 30px;
   border-bottom: 2px solid green;
   color: #373e3a;
-  z-index: 2;
+  z-index: 2;  
 `
 
 export const Icon6Styled = styled.img`

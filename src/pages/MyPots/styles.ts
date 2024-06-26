@@ -143,8 +143,8 @@ export const ImgPotAdmin = styled.img`
 
 export const TitleContent = styled.h2`
   font-family: "Inter";
-  font-weight: 600;
-  font-size: 28px;
+  font-weight: 900;
+  font-size: 32px;
   color: rgba(55, 62, 58, 1);
 `
 
@@ -156,39 +156,41 @@ export const Content = styled.div`
   gap: 35px;
   font-family: "Inter";
   color: rgba(55, 62, 58, 1);
-   line-height: 3;
-   text-align: left;
-  `
+  line-height: 3;
+`
 
-  export const StyledReactMarkdown = styled(ReactMarkdown)`
-
-   h1, h2, h3, h4, h5, h6{
-    font-size: 28px ;
+export const StyledReactMarkdown = styled(ReactMarkdown)`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 28px;
     font-weight: 900;
-    
-      
+    text-align: center;
   }
-  p{
-    /* text-indent: 30px; */
+  p {
     font-size: 24px;
     font-weight: 600;
     padding: 0px;
-    /* text-align: 0px; */
-  
+    text-align: 0px;
+    line-height: 1.8;
+    margin-bottom: 24px;
   }
-  ul, ol, dl {
-    /* padding: 50px; */
+  ul,
+  ol,
+  dl {
     font-size: 24px;
     font-weight: 600;
-    margin-left: 20px;
+    padding-left: 0px;
     text-align: left;
-    
-  } 
-li {
-  margin: 0px;
-  padding: 0px;
-}
-strong {
-  font-style: normal;
-}
+  }
+  li {
+    margin: 0px;
+    padding: 0px;
+  }
+  strong {
+    font-style: normal;
+  }
 `
