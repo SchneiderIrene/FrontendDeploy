@@ -193,4 +193,5 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
   strong {
     font-style: normal;
   }
+
 `

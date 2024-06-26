@@ -127,4 +127,3 @@ export const TextModal = styled.p`
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
 `
-
