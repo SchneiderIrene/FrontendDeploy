@@ -157,7 +157,7 @@ export const Content = styled.div`
   font-family: "Inter";
   color: rgba(55, 62, 58, 1);
    line-height: 3;
-   text-align: center;
+   text-align: left;
   `
 
   export const StyledReactMarkdown = styled(ReactMarkdown)`
@@ -173,7 +173,7 @@ export const Content = styled.div`
     font-size: 24px;
     font-weight: 600;
     padding: 0px;
-    text-align: 0px;
+    /* text-align: 0px; */
   
   }
   ul, ol, dl {

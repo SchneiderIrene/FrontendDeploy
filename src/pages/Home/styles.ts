@@ -337,7 +337,6 @@ export const StyledP = styled.p`
   border-bottom: 2px solid green;
   color: #373e3a;
   z-index: 2;
-  }
 `
 
 export const Icon6Styled = styled.img`
