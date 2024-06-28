@@ -22,6 +22,9 @@ export const Header = styled.header`
   margin: 0 auto;
   height: 100px;
   background-color: #007132;
+  @media (max-width: 768px) {
+    padding: 10px 0px;
+  }
 `
 
 export const HeaderContentWrapper = styled.div`
@@ -53,6 +56,9 @@ export const StyledNavLink = styled(NavLink)`
   &:hover {
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 export const NavContainer = styled.nav`
@@ -62,6 +68,7 @@ export const NavContainer = styled.nav`
   gap: 20px;
   flex: 1;
   flex-grow: 1;
+  flex-wrap: wrap;
   @media (max-width: 768px) {
     justify-content: center;
   }
@@ -76,6 +83,9 @@ export const HeaderLogo = styled.img`
   width: 100px;
   height: 100%;
   object-fit: contain;
+  @media (max-width: 768px) {
+    width: 80px;
+  }
 `
 
 HeaderLogo.defaultProps = { src: LogoH }
@@ -124,6 +134,9 @@ export const FooterNavContainer = styled.nav`
   flex-direction: row;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 14px;
   @media (max-width: 768px) {
     gap: 12px;
   }
@@ -144,6 +157,9 @@ export const StyledLink = styled(Link)`
 
 export const UserName = styled.div`
   font-size: 24px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 export const AccountContainer = styled.div`
