@@ -28,7 +28,7 @@ export const HeaderContentWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 90%;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 2%;
@@ -36,11 +36,12 @@ export const HeaderContentWrapper = styled.div`
 
 export const NavContainerLink = styled.div`
   display: flex;
-  align-items: flex-start;
   align-items: center;
   gap: 40px;
-  transform: translateX(-50%);
   text-decoration: none;
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -61,6 +62,9 @@ export const NavContainer = styled.nav`
   gap: 20px;
   flex: 1;
   flex-grow: 1;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `
 
 export const HeaderLogoContainer = styled.div`
@@ -81,6 +85,13 @@ export const Main = styled.main`
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 `
 
 export const Footer = styled.footer`
@@ -88,9 +99,11 @@ export const Footer = styled.footer`
   flex-direction: column;
   padding: 30px 70px;
   width: 100%;
-  height: fit-content;
   justify-content: space-between;
   color: #373e3a;
+  @media (max-width: 768px) {
+    padding: 20px 20px;
+  }
 `
 
 export const FooterContentWrapper = styled.div`
@@ -100,6 +113,10 @@ export const FooterContentWrapper = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const FooterNavContainer = styled.nav`
@@ -107,6 +124,9 @@ export const FooterNavContainer = styled.nav`
   flex-direction: row;
   align-items: center;
   gap: 24px;
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -185,6 +205,10 @@ export const ModalContainer = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
   text-align: center;
+  @media (max-width: 768px) {
+    padding: 20px;
+    width: 90%;
+  }
 `
 
 export const ModalTextWrapper = styled.div`
@@ -194,6 +218,11 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
+  @media (max-width: 768px) {
+    width: 90%;
+    align-items: center;
+    gap: 20px;
+  }
 `
 
 export const ArrowIcon = styled.span`
@@ -205,4 +234,7 @@ export const ModalText = styled.p`
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `
