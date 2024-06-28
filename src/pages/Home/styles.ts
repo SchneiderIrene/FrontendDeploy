@@ -34,7 +34,17 @@ export const Container1 = styled.div`
     padding-bottom: 60px;
   }
 `
-
+export const Image1 = styled.img`
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 0px;
+  position: relative;
+  left: 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
 export const Container2 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -82,6 +92,7 @@ export const OverlayContainer = styled.div`
     position: static;
     & > *:first-of-type {
       margin-left: 0;
+      gap: 10px;
     }
     & > * + * {
       margin-left: 0;
@@ -159,6 +170,9 @@ export const TextColumn = styled.div`
   flex-direction: column;
   margin-top: 20px;
   position: relative;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -171,8 +185,10 @@ export const TextWrapper = styled.div`
   font-style: normal;
   color: #373e3a;
   margin: 10px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
-
 export const Container3 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -188,22 +204,10 @@ export const Container3 = styled.div`
   }
 `
 
-export const Image1 = styled.img`
-  max-width: 40%;
-  height: auto;
-  object-fit: contain;
-  margin-top: -30px;
-  position: relative;
-  left: 30px;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`
-
 export const Image3 = styled.img`
   width: 360px;
   height: auto;
-  margin: 6px; 
+  margin: 6px;
   @media (max-width: 1200px) {
     width: 300px;
   }
@@ -219,6 +223,9 @@ export const ImageLogo = styled.img`
   width: 100px;
   height: auto;
   object-fit: contain;
+  @media (max-width: 768px) {
+    width: 70px;
+  }
 `
 
 export const LogoContainer = styled.div`
@@ -226,8 +233,10 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
 `
-
 export const StyledH1Container1 = styled.h1`
   display: flex;
   font-family: Inter;
@@ -239,6 +248,10 @@ export const StyledH1Container1 = styled.h1`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-top: 0;
+  }
 `
 
 export const StyledH2Container2 = styled.h2`
@@ -254,7 +267,9 @@ export const StyledH2Container2 = styled.h2`
   overflow: hidden;
   z-index: 1;
   @media (max-width: 768px) {
-    margin-top: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 0;
   }
 `
 
@@ -270,6 +285,9 @@ export const StyledPContainer1 = styled.p`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 export const StyledH3 = styled.h2`
@@ -280,7 +298,8 @@ export const StyledH3 = styled.h2`
   color: #373e3a;
   margin-top: 80px;
   @media (max-width: 768px) {
-    margin-top: 100px;
+    font-size: 20px;
+    margin-top: 0px;
   }
 `
 
@@ -297,6 +316,9 @@ export const StyledPContainer4 = styled.div`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 export const StyledFAQHeading = styled.h1`
@@ -307,6 +329,10 @@ export const StyledFAQHeading = styled.h1`
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 `
 
 export const StyledFAQSubHeading = styled.h3`
@@ -317,6 +343,10 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 18px;
   font-weight: 450;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: -5px;
+  }
 `
 
 export const StyledPContainer5 = styled.div`
@@ -330,6 +360,10 @@ export const StyledPContainer5 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 `
 
 export const BackgroundImage = styled.img`
@@ -352,14 +386,20 @@ export const StyledH5 = styled.h2`
   font-weight: 600;
   text-align: center;
   margin-top: 80px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-top: 60px;
+  }
 `
-
 export const StyledP5 = styled.h3`
   color: #373e3a;
   font-family: "DM Sans";
   font-size: 18px;
   font-weight: 400;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -370,6 +410,9 @@ export const StyledLink = styled(Link)`
   margin-left: 5px;
   &:hover {
     text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `
 
@@ -386,14 +429,22 @@ export const StyledP = styled.p`
   border-bottom: 2px solid green;
   color: #373e3a;
   z-index: 2;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 15px;
+  }
 `
 
 export const Icon6Styled = styled.img`
-  width: 32px;
+  width: 28px;
   height: auto;
   position: relative;
   top: -36px;
   margin-left: 2px;
+  @media (max-width: 768px) {
+    width: 18px;
+    top: -24px;
+  }
 `
 
 export const StyledSpan = styled.span`
@@ -405,8 +456,10 @@ export const StyledSpan = styled.span`
   font-weight: 600;
   font-feature-settings: "lnum";
   border-bottom: 2px solid green;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
-
 export const ButtonControl = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -419,10 +472,17 @@ export const ButtonControl = styled.div`
 export const Icon = styled.img`
   width: 36px;
   height: auto;
+  @media (max-width: 768px) {
+    width: 22px;
+  }
 `
+
 export const StyledEmail = styled.p`
   color: #ba2d00;
   font-family: "DM Sans";
   font-size: 16px;
   font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
