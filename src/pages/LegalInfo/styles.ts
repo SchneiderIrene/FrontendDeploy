@@ -14,6 +14,12 @@ export const LegalInfoContainer = styled.div`
   align-items: center;
   gap: 20px;
   max-width: 1400px;
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    gap: 15px;
+  }
 `
 
 export const StyledP = styled.h3`
@@ -21,6 +27,15 @@ export const StyledP = styled.h3`
   font-size: 18px;
   color: #373e3a;
   font-family: "DM Sans";
+  margin-top: 10px;
+  @media (max-width: 480px) {
+    font-size: 9px;
+    margin-top: 5px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 13.5px;
+    margin-top: 7.5px;
+  }
 `
 
 export const StyledH4 = styled.h3`
@@ -30,6 +45,14 @@ export const StyledH4 = styled.h3`
   font-weight: bold;
   color: #373e3a;
   font-family: "DM Sans";
+  @media (max-width: 480px) {
+    font-size: 11px;
+    margin-top: 15px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 16.5px;
+    margin-top: 22.5px;
+  }
 `
 
 export const StyledH5 = styled.h3`
@@ -37,6 +60,12 @@ export const StyledH5 = styled.h3`
   font-size: 18px;
   color: #373e3a;
   font-family: "DM Sans";
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 13.5px;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -46,5 +75,14 @@ export const StyledLink = styled(Link)`
   margin: 0 5px;
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+    margin: 0 2.5px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 13.5px;
+    margin: 0 3.75px;
   }
 `

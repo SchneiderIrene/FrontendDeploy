@@ -17,17 +17,16 @@ export const LoginFormContainer = styled.form`
 `
 
 export const TitleContainer = styled.div`
-width: 100%;
-
+  width: 100%;
 `
 
 export const InputButtonContainer = styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: space-around;
-gap: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  gap: 24px;
 `
 export const InputsContainer = styled.div`
   display: flex;
@@ -36,23 +35,22 @@ export const InputsContainer = styled.div`
   width: 100%;
 `
 export const ButtonBox = styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: space-around;
-gap: 16px;
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  gap: 16px;
 `
 
 export const ChecboxContainer = styled.div`
-display: flex;
+  display: flex;
 `
 
 export const Checkbox = styled.input`
-border: 1.97px solid rgba(55, 62, 58, 1);
-width: 18px;
-height: 18px;
+  border: 1.97px solid rgba(55, 62, 58, 1);
+  width: 18px;
+  height: 18px;
 `
 
 export const LabelCheckBox = styled.label`
@@ -61,7 +59,6 @@ export const LabelCheckBox = styled.label`
   font-family: "DM Sans";
   font-weight: 600;
   margin-bottom: 4px;
-
 `
 
 export const PasswordForget = styled.a`
@@ -86,7 +83,7 @@ export const TitleLogin = styled.h3`
   font-family: "Inter";
   font-weight: 600;
   font-size: 28px;
-  color: #373E3A;
+  color: #373e3a;
 `
 
 export const TextError = styled.p`
@@ -107,15 +104,15 @@ export const RegisterFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0; 
+  padding: 20px 0;
   width: 480px;
   margin-top: -300px;
-  `
+`
 
 export const TitleRegister = styled.div`
   font-family: "Inter";
   font-weight: 600;
   font-size: 28px;
-  color: #373E3A;
-  margin-bottom: 10px; 
-  `
+  color: #373e3a;
+  margin-bottom: 10px;
+`

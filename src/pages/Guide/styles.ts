@@ -9,6 +9,14 @@ export const GuidePageWrapper = styled.div`
   gap: 110px;
   padding: 0 60px;
   counter-reset: item;
+  @media (max-width: 480px) {
+    margin: 30px;
+    padding: 0 40px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin: 45px;
+    padding: 0 44px;
+  }
 `
 
 export const Container = styled.div`
@@ -46,9 +54,34 @@ export const Container = styled.div`
     position: limk;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
+    padding: 25px;     
+    &:first-of-type {
+      margin-top: -30px;
+    }
+    &::before {
+      transform: translateY(-15px);
+    }
+    &::after {
+      transform: translateY(15px);
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    &:first-of-type {
+      margin-top: -45px;
+    }
+    &::before {
+      transform: translateY(-20px);
+    }
+    &::after {
+      transform: translateY(20px);
+    }
   }
 `
 
@@ -61,6 +94,12 @@ export const StyledPCont2 = styled.p<{ isLogin: boolean }>`
   word-wrap: break-word;
   overflow: hidden;
   visibility: ${props => (props.isLogin ? "visible" : "hidden")};
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 export const Image = styled.img`
@@ -69,6 +108,12 @@ export const Image = styled.img`
   object-fit: contain;
   z-index: 0;
   padding: 14px;
+  @media (max-width: 480px) {
+    padding: 7px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 10px;
+  }
 `
 
 export const StyledH1 = styled.h1`
@@ -81,6 +126,14 @@ export const StyledH1 = styled.h1`
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 30px;
+    margin-top: 15px;
+  }
 `
 
 export const StyledH3 = styled.h3<{ isLogin: boolean }>`
@@ -93,6 +146,14 @@ export const StyledH3 = styled.h3<{ isLogin: boolean }>`
   word-wrap: break-word;
   overflow: hidden;
   display: ${props => (props.isLogin ? "block" : "none")};
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 24px;
+    margin-top: 15px;
+  }
 `
 
 export const StyledP = styled.p<{ isLogin: boolean }>`
@@ -106,6 +167,16 @@ export const StyledP = styled.p<{ isLogin: boolean }>`
   overflow: hidden;
   display: ${props => (props.isLogin ? "block" : "none")};
   padding: 16px 16px 0 16px;
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px 8px 0 8px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 12px 12px 0 12px;
+  }
 `
 
 export const ModalContainer = styled.div`
@@ -124,6 +195,16 @@ export const ModalContainer = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
   text-align: center;
+  @media (max-width: 480px) {
+    padding: 20px 40px 20px 40px;
+    width: 330px;
+    height: 140px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 30px 60px 30px 60px;
+    width: 495px;
+    height: 210px;
+  }
 `
 
 export const ModalTextWrapper = styled.div`
@@ -133,10 +214,24 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
+  @media (max-width: 480px) {
+    width: 222px;
+    gap: 18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 333px;
+    gap: 27px;
+  }
 `
 
 export const ArrowIcon = styled.span`
   margin-left: 10px;
+  @media (max-width: 480px) {
+    margin-left: 5px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-left: 7.5px;
+  }
 `
 
 export const ModalText = styled.p`
@@ -144,7 +239,10 @@ export const ModalText = styled.p`
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 20px;
+  }
 `
-
-
-
