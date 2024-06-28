@@ -123,7 +123,11 @@ export const FooterContentWrapper = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
   }
@@ -187,6 +191,12 @@ export const FooterLeftLink = styled(StyledLink)`
   font-weight: 500;
   line-height: normal;
   margin-right: 10px;
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 export const FooterText = styled.p`
   font-size: 14px;
@@ -198,6 +208,12 @@ export const Copyright = styled.div`
   font-family: "DM Sans";
   font-size: 14px;
   font-weight: 500;
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 export const CopyrightText = styled.p`

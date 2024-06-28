@@ -185,10 +185,14 @@ export const TextWrapper = styled.div`
   font-style: normal;
   color: #373e3a;
   margin: 10px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   }
 `
+
 export const Container3 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -223,7 +227,10 @@ export const ImageLogo = styled.img`
   width: 100px;
   height: auto;
   object-fit: contain;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    width: 50px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 70px;
   }
 `
@@ -233,7 +240,10 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    margin-top: 20px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     margin-top: 30px;
   }
 `
@@ -248,8 +258,12 @@ export const StyledH1Container1 = styled.h1`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
-  @media (max-width: 768px) {
-    font-size: 24px;
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 22px;
     margin-top: 0;
   }
 `
@@ -266,7 +280,12 @@ export const StyledH2Container2 = styled.h2`
   word-wrap: break-word;
   overflow: hidden;
   z-index: 1;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin-top: 14px;
+    margin-right: 0;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
     margin-top: 10px;
     margin-right: 0;
@@ -285,7 +304,10 @@ export const StyledPContainer1 = styled.p`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   }
 `
@@ -297,7 +319,11 @@ export const StyledH3 = styled.h2`
   font-weight: 600;
   color: #373e3a;
   margin-top: 80px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 20px;
     margin-top: 0px;
   }
@@ -316,8 +342,14 @@ export const StyledPContainer4 = styled.div`
   width: 100%;
   word-wrap: break-word;
   overflow: hidden;
-  @media (max-width: 768px) {
+  padding: 0 60px;
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 0 30px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
+    padding: 0 45px;
   }
 `
 
@@ -329,7 +361,11 @@ export const StyledFAQHeading = styled.h1`
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 20px;
     margin-top: 30px;
   }
@@ -343,7 +379,11 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 18px;
   font-weight: 450;
   line-height: normal;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+    margin-bottom: -5px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     margin-bottom: -5px;
   }
@@ -360,12 +400,15 @@ export const StyledPContainer5 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     margin-top: 10px;
   }
 `
-
 export const BackgroundImage = styled.img`
   position: absolute;
   top: 0;
@@ -386,18 +429,26 @@ export const StyledH5 = styled.h2`
   font-weight: 600;
   text-align: center;
   margin-top: 80px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-top: 60px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
     margin-top: 60px;
   }
 `
+
 export const StyledP5 = styled.h3`
   color: #373e3a;
   font-family: "DM Sans";
   font-size: 18px;
   font-weight: 400;
   text-align: center;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   }
 `
@@ -411,7 +462,10 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   }
 `
@@ -429,7 +483,11 @@ export const StyledP = styled.p`
   border-bottom: 2px solid green;
   color: #373e3a;
   z-index: 2;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 15px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     padding: 15px;
   }
@@ -441,7 +499,11 @@ export const Icon6Styled = styled.img`
   position: relative;
   top: -36px;
   margin-left: 2px;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    width: 14px;
+    top: -18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 18px;
     top: -24px;
   }
@@ -456,8 +518,11 @@ export const StyledSpan = styled.span`
   font-weight: 600;
   font-feature-settings: "lnum";
   border-bottom: 2px solid green;
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 14px;
   }
 `
 export const ButtonControl = styled.div`
@@ -472,7 +537,12 @@ export const ButtonControl = styled.div`
 export const Icon = styled.img`
   width: 36px;
   height: auto;
-  @media (max-width: 768px) {
+
+  @media (max-width: 480px) {
+    width: 16px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 22px;
   }
 `
@@ -482,7 +552,10 @@ export const StyledEmail = styled.p`
   font-family: "DM Sans";
   font-size: 16px;
   font-weight: 700;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
   }
 `
