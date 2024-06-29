@@ -147,11 +147,11 @@ export const StyledH3 = styled.h3<{ isLogin: boolean }>`
   overflow: hidden;
   display: ${props => (props.isLogin ? "block" : "none")};
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 15px;
   }
 `

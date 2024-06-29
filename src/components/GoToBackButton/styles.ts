@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 export const GoBackButtonComponent = styled.button`
-position: absolute;
+  position: absolute;
   width: 93px;
   height: 26px;
   outline: none;
@@ -17,5 +17,20 @@ position: absolute;
   font-family: "DM Sans";
   font-weight: 500;
   cursor: pointer;
- 
+
+  @media (max-width: 768px) {
+    width: 70px;
+    height: 20px;
+    top: 160px;
+    left: 60px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    width: 46px;
+    height: 13px;
+    top: 140px;
+    left: 40px;
+    font-size: 14px;
+  }
 `
