@@ -215,7 +215,7 @@ export const ModalTextWrapper = styled.div`
   align-items: left;
   gap: 36px;
   @media (max-width: 480px) {
-    width: 222px;
+    width: 200px;
     gap: 18px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
