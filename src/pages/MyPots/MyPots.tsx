@@ -57,16 +57,23 @@ function MyPots() {
     }
   }, [])
 
+  // useEffect(() => {
+  //   dispatch(potsSliceActions.potProfile())
+  // }, [dispatch])
+
   useEffect(() => {
-    dispatch(potsSliceActions.potProfile())
-  }, [dispatch])
+    if (isLogin) {
+      dispatch(potsSliceActions.potProfile());
+    }
+  }, [dispatch, isLogin]);
+
+
 
   useEffect(() => {
     if (pots.length>0 && pots[0]?.instruction?.id !== undefined){
       dispatch(potsSliceActions.potContent(pots[0].instruction?.id))
-      console.log(pots[0].instruction?.day);
     }
-  }, [pots])
+  }, [dispatch, pots])
 
   // const getInstruction = (id: string)=>{
   //   dispatch(potsSliceActions.instruction(id))
@@ -88,17 +95,19 @@ function MyPots() {
   }
 
   const scrollPot = (id: string) => {
-    dispatch(potsSliceActions.potProfile())
+    //dispatch(potsSliceActions.potProfile())
+    console.log("Scrolling to Pot with ID:", id);
     dispatch(potsSliceActions.scrollPot(id))
-    dispatch(potsSliceActions.potProfile())
+    //dispatch(potsSliceActions.potProfile())
   }
 
   const deletePot = (id: string)=>{
     dispatch(potsSliceActions.deletePot(id))
   }
 
-  console.log(content);
-  
+  useEffect(() => {
+    console.log('Updated content:', content);
+  }, [content]);
 
   return (
     <MyPotsWrapper>

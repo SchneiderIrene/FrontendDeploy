@@ -83,6 +83,16 @@ export const ModalContainer = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
   text-align: center;
+
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    width: 90%;
+  } 
+  @media (max-width: 480px) {
+    padding: 20px;
+    height: 230px;
+  }
 `
 
 export const ModalTextWrapper = styled.div`
@@ -92,6 +102,15 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+  }
+  @media (max-width: 480px) {
+   padding: 0px;
+  }
 `
 
 export const ArrowIcon = styled.span`
@@ -103,6 +122,13 @@ export const ModalText = styled.p`
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `
 
 export const AdminButtonControl = styled.div`
