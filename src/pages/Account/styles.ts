@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-
 export const AccountWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -192,14 +191,14 @@ export const LabelByInputDesable = styled.label`
 `
 
 export const ButtonPasswordModalBox = styled.div`
-width: 100%;
-padding-top: 36px;
-@media (max-width: 480px) {
-  padding-top: 18px;
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  padding-top: 27px;
-}
+  width: 100%;
+  padding-top: 36px;
+  @media (max-width: 480px) {
+    padding-top: 18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-top: 27px;
+  }
 `
 
 export const ModalContainerPassword = styled.div`
@@ -305,6 +304,12 @@ export const TextModal = styled.p`
 
 export const ButtonBoxModal = styled.div`
   width: 480px;
+  @media (max-width: 480px) {
+    width: 240px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 360px;
+  }
 `
 
 export const FormContainer = styled.form`

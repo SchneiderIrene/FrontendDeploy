@@ -15,9 +15,16 @@ export const InputLabel = styled.label`
   font-weight: 500;
   color: rgba(55, 62, 58, 0.8);
   appearance: none;
-  
+
   :-ms-reveal {
-    display: none;
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 13.5px;
   }
 `
 
@@ -41,12 +48,29 @@ export const InputComponent = styled.input`
     background-color: rgba(255, 254, 239, 0);
   }
 
+  @media (max-width: 480px) {
+    height: 30px;
+    font-size: 10px;
+    padding: 8.5px 16px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 45px;
+    font-size: 15px;
+    padding: 12.75px 24px;
+  }
 `
 
 export const ErrorMessage = styled.p`
   color: red;
   font-size: 18px;
   height: 18px;
+
+  @media (max-width: 480px) {
+    font-size: 9px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 13.5px;
+  }
 `
 
 export const EyeIcon = styled.div`
@@ -60,4 +84,13 @@ export const EyeIcon = styled.div`
   justify-content: center;
   width: 24px;
   height: 24px;
+
+  @media (max-width: 480px) {
+    width: 12px;
+    height: 12px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+  }
 `
