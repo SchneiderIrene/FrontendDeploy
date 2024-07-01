@@ -144,6 +144,11 @@ export const FooterNavContainer = styled.nav`
   @media (max-width: 768px) {
     gap: 12px;
   }
+  @media (max-width: 480px) {
+    gap: 6px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+  }
 `
 
 export const StyledLink = styled(Link)`

@@ -1,9 +1,9 @@
-import styled from "@emotion/styled"
-import { Link, NavLink } from "react-router-dom"
-import ReactMarkdown from "react-markdown"
+import styled from "@emotion/styled";
+import { Link, NavLink } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
 interface PotCardProps {
-  activ: boolean
+  activ: boolean;
 }
 
 export const MyPotsWrapper = styled.div`
@@ -12,60 +12,86 @@ export const MyPotsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
-`
+  padding: 0 20px; 
+`;
+
 export const PotsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1284px;
+  width: 100%; 
   height: 420px;
   gap: 36px;
-`
+  @media (max-width: 480px) {
+    height: 210px;
+    gap: 18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 315px;
+    gap: 27px;
+  }
+`;
+
 export const PotCard = styled.div<PotCardProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: rgba(242, 242, 242, 1);
-  width: 340px;
+  width: 100%; 
   height: 356px;
   box-shadow: 4px 10px 4px rgba(55, 62, 58, 0.2);
   padding: 40px;
   background-color: rgba(255, 240, 212, 1);
   cursor: pointer;
   filter: ${({ activ }) => (activ ? "none" : "grayscale(100%)")};
-`
+  @media (max-width: 480px) {
+    height: 178px;
+    padding: 20px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 267px;
+    padding: 30px;
+  }
+`;
+
 export const LinkTopf = styled(Link)`
   text-decoration: none;
   color: rgba(56, 34, 29, 1);
-`
+`;
+
 export const PotTitle = styled.h3`
   position: relative;
   font-family: "Inter";
   font-weight: 600;
   font-size: 36px;
   color: rgba(56, 34, 29, 1);
-`
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 27px;
+  }
+`;
+
 export const PotImage = styled.img`
   position: relative;
-  width: 124px;
-  height: 175px;
-`
+  width: 100%; 
+  height: auto; 
+`;
 
-export const StyledLink = styled(NavLink)``
+export const StyledLink = styled(NavLink)``;
 
 export const ButtonControl = styled.div`
   position: relative;
   filter: grayscale(100%);
-  width: 100%;
+  width: 80%; 
   position: relative;
   height: 48px;
-  width: 200px;
-
   :hover {
     transform: scale(1.1);
   }
-`
+`;
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -83,7 +109,17 @@ export const ModalContainer = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
   text-align: center;
-`
+  @media (max-width: 480px) {
+    padding: 20px 40px 20px 40px;
+    width: 330px;
+    height: 140px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 30px 60px 30px 60px;
+    width: 495px;
+    height: 210px;
+  }
+`;
 
 export const ModalTextWrapper = styled.div`
   width: 444px;
@@ -92,41 +128,64 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
-`
+  @media (max-width: 480px) {
+    width: 222px;
+    gap: 18px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 333px;
+    gap: 27px;
+  }
+`;
 
 export const ArrowIcon = styled.span`
   margin-left: 10px;
-`
+`;
 
 export const ModalText = styled.p`
   font-family: "Inter";
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
-`
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
 
 export const AdminButtonControl = styled.div`
   display: flex;
   width: 100%;
   gap: 10px;
-`
+`;
 
 export const AdminPotContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 1110px;
+  width: 100%; 
   gap: 40px;
   min-height: 1100px;
-`
+  @media (max-width: 480px) {
+    min-height: 550px;
+    gap: 20px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    min-height: 825px;
+    gap: 30px;
+  }
+`;
 
 export const ButtonBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1100px; 
   gap: 10px;
-`
+`;
 
 export const AdminContentContainer = styled.div`
   display: flex;
@@ -134,19 +193,25 @@ export const AdminContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 50px;
-`
+`;
 
 export const ImgPotAdmin = styled.img`
   width: 100%;
-  height: 625px;
-`
+  height: auto; 
+`;
 
 export const TitleContent = styled.h2`
   font-family: "Inter";
   font-weight: 900;
   font-size: 32px;
   color: rgba(55, 62, 58, 1);
-`
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 24px;
+  }
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -157,7 +222,8 @@ export const Content = styled.div`
   font-family: "Inter";
   color: rgba(55, 62, 58, 1);
   line-height: 3;
-`
+`;
+
 
 export const StyledReactMarkdown = styled(ReactMarkdown)`
   h1,
@@ -193,4 +259,42 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
   strong {
     font-style: normal;
   }
-`
+  @media (max-width: 480px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    ul,
+    ol,
+    dl {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    ul,
+    ol,
+    dl {
+      font-size: 16px;
+    }
+  }
+`;

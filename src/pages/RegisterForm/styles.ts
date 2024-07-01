@@ -242,9 +242,9 @@ cursor: pointer;
   color: #373e3a;
 }
 @media (max-width: 480px) {
-  font-size: 6px;
+  font-size: 8px;
 }
 @media (min-width: 481px) and (max-width: 768px) {
-  font-size: 9px;
+  font-size: 12px;
 }
 `;

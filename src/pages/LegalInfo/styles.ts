@@ -6,7 +6,7 @@ export const LegalInfoWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  flex: 1;  
 `
 export const LegalInfoContainer = styled.div`
   display: flex;
@@ -16,9 +16,11 @@ export const LegalInfoContainer = styled.div`
   max-width: 1400px;
   @media (max-width: 480px) {
     gap: 10px;
+    padding: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     gap: 15px;
+    padding: 30px;
   }
 `
 

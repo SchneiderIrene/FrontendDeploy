@@ -84,7 +84,7 @@ function Pot() {
             <StyledP>
               Bevor du mit dem Cannabisanbau fortfährst, lies die Informationen
               <br /> zum ersten Tag und aktivierte deinen Topf, wenn du bereit
-              bist.
+              bist
             </StyledP>
             <ButtonControl>
               <Button
