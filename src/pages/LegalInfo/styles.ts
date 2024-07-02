@@ -16,9 +16,11 @@ export const LegalInfoContainer = styled.div`
   max-width: 1400px;
   @media (max-width: 480px) {
     gap: 10px;
+    padding: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     gap: 15px;
+    padding: 30px;
   }
 `
 

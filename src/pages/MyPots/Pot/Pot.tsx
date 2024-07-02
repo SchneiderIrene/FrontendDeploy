@@ -21,10 +21,10 @@ import {
 } from "./styles"
 import { useEffect, useState } from "react"
 import DemoDay from "components/DemoDay/DemoDay"
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import Modal from "components/Modal/Modal";
-import { CloseButton } from "components/Modal/styles";
+import ReactMarkdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
+import Modal from "components/Modal/Modal"
+import { CloseButton } from "components/Modal/styles"
 
 function Pot() {
   const dispatch = useAppDispatch()
@@ -42,19 +42,16 @@ function Pot() {
     dispatch(potsSliceActions.potProfile())
   }, [dispatch])
 
-
   const pot = pots.find(p => p.id == id)
 
   useEffect(() => {
-    if (pots.length>0 && pot?.instruction?.id !== undefined){
+    if (pots.length > 0 && pot?.instruction?.id !== undefined) {
       dispatch(potsSliceActions.potContent(pot.instruction?.id))
     }
   }, [pots])
 
-
   const activatePot = (id: string) => {
     dispatch(potsSliceActions.activatePot(id))
-    
   }
 
   const deActivatePot = (id: string) => {
@@ -74,8 +71,6 @@ function Pot() {
   //   />
   // }
 
-  
-
   return (
     <PotWrapper key={id}>
       <ButtonContainer>
@@ -84,7 +79,7 @@ function Pot() {
             <StyledP>
               Bevor du mit dem Cannabisanbau fortfährst, lies die Informationen
               <br /> zum ersten Tag und aktivierte deinen Topf, wenn du bereit
-              bist.
+              bist
             </StyledP>
             <ButtonControl>
               <Button
@@ -104,7 +99,9 @@ function Pot() {
             />
             <StyledH3>{`Tag ${pots.find(p => p.id == id)?.instruction?.day}`}</StyledH3>
             <Content>
-            <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</StyledReactMarkdown>
+              <StyledReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {content}
+              </StyledReactMarkdown>
             </Content>
           </DayContainer>
         ) : (
@@ -136,18 +133,18 @@ function Pot() {
         </ButtonContainer>
       </PotContainer>
       <Modal isOpen={isDeletePotModalOpen} onClose={handleCloseDeletePotModal}>
-          <ModalContainerDeletePot>
-            <CloseButton onClick={handleCloseDeletePotModal}>X</CloseButton>
-            <TextModal>
-              Bist du sicher, dass du deinen Topf entfernen möchtest?
-            </TextModal>
-            <Button
-              name="Bestätigen"
-              bgColorIsRed={true}
-              onButtonClick={() => id && deActivatePot(id)}
-            />
-          </ModalContainerDeletePot>
-        </Modal>
+        <ModalContainerDeletePot>
+          <CloseButton onClick={handleCloseDeletePotModal}>X</CloseButton>
+          <TextModal>
+            Bist du sicher, dass du deinen Topf entfernen möchtest?
+          </TextModal>
+          <Button
+            name="Bestätigen"
+            bgColorIsRed={true}
+            onButtonClick={() => id && deActivatePot(id)}
+          />
+        </ModalContainerDeletePot>
+      </Modal>
     </PotWrapper>
   )
 }

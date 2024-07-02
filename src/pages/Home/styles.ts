@@ -284,11 +284,13 @@ export const StyledH2Container2 = styled.h2`
     font-size: 12px;
     margin-top: 14px;
     margin-right: 0;
+    padding: 10px 0;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
     margin-top: 10px;
     margin-right: 0;
+    padding: 10px 0;
   }
 `
 
@@ -346,9 +348,12 @@ export const StyledPContainer4 = styled.div`
   @media (max-width: 480px) {
     font-size: 12px;
     padding: 0 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 45px;
   }
 `
