@@ -354,7 +354,7 @@ export const StyledPContainer4 = styled.div`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;
-    padding: 0 45px;   
+    padding: 0 45px;
   }
 `
 

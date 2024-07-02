@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import ReactMarkdown from "react-markdown";
+import styled from "@emotion/styled"
+import ReactMarkdown from "react-markdown"
 
 export const PotWrapper = styled.div`
   display: flex;
@@ -8,41 +8,41 @@ export const PotWrapper = styled.div`
   justify-content: center;
   gap: 50px;
   flex: 1;
-  padding: 0 20px; 
+  padding: 0 20px;
   @media (max-width: 480px) {
-    gap: 25px; 
+    gap: 25px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    gap: 35px; 
+    gap: 35px;
   }
-`;
+`
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
   height: 60px;
   @media (max-width: 480px) {
-    height: 30px; 
+    height: 30px;
     margin-bottom: 20px;
-    gap: 20px; 
+    gap: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    height: 45px; 
-    margin-bottom: 30px; 
+    height: 45px;
+    margin-bottom: 30px;
     gap: 30px;
   }
-`;
+`
 
 export const ButtonControl = styled.div`
   width: 220px;
   @media (max-width: 480px) {
-    width: 110px; 
+    width: 110px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    width: 165px; 
+    width: 165px;
   }
-`;
+`
 
 export const PotContainer = styled.div`
   display: flex;
@@ -50,14 +50,14 @@ export const PotContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  width: 100%; 
+  width: 100%;
   @media (max-width: 480px) {
-    gap: 20px; 
+    gap: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    gap: 30px; 
+    gap: 30px;
   }
-`;
+`
 
 export const StyledP = styled.p`
   color: #38221d;
@@ -67,20 +67,18 @@ export const StyledP = styled.p`
   text-align: left;
   @media (max-width: 480px) {
     font-size: 10px;
-    padding: 0px;    
+    padding: 0px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;
-    padding: 0px; 
-    
-
+    padding: 0px;
   }
-`;
+`
 
 export const ImageContainer = styled.img`
   width: 100%;
-  height: auto; 
-`;
+  height: auto;
+`
 
 export const DayContainer = styled.div`
   width: 100%;
@@ -90,12 +88,12 @@ export const DayContainer = styled.div`
   align-items: center;
   gap: 50px;
   @media (max-width: 480px) {
-    gap: 25px; 
+    gap: 25px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    gap: 35px; 
+    gap: 35px;
   }
-`;
+`
 
 export const StyledH3 = styled.h1`
   color: #38221d;
@@ -109,7 +107,7 @@ export const StyledH3 = styled.h1`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 24px;
   }
-`;
+`
 
 export const Content = styled.div`
   display: flex;
@@ -121,12 +119,12 @@ export const Content = styled.div`
   color: rgba(55, 62, 58, 1);
   line-height: 3;
   @media (max-width: 480px) {
-    gap: 17.5px; 
+    gap: 17.5px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    gap: 26.25px; 
+    gap: 26.25px;
   }
-`;
+`
 
 export const StyledReactMarkdown = styled(ReactMarkdown)`
   h1,
@@ -200,7 +198,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const ModalContainerDeletePot = styled.div`
   position: fixed;
@@ -226,7 +224,7 @@ export const ModalContainerDeletePot = styled.div`
     width: 647.25px;
     height: 271.5px;
   }
-`;
+`
 
 export const TextModal = styled.p`
   font-family: "Inter";
@@ -239,4 +237,4 @@ export const TextModal = styled.p`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
   }
-`;
+`

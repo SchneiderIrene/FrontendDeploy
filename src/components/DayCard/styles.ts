@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 
-
 export const CardContainer = styled.div`
   width: 100%;
   height: auto;
@@ -9,13 +8,13 @@ export const CardContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   border: 4px solid green;
-`;
+`
 
 export const ImageContainer = styled.img`
   width: 100%;
-  height: auto; 
+  height: auto;
   border: 3px solid black;
-`;
+`
 
 export const StyledH1 = styled.h1`
   color: #38221d;
@@ -30,7 +29,7 @@ export const StyledH1 = styled.h1`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 21px;
   }
-`;
+`
 
 export const StyledH2 = styled.h2`
   color: #38221d;
@@ -45,7 +44,7 @@ export const StyledH2 = styled.h2`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
   }
-`;
+`
 
 export const StyledP = styled.p`
   color: #38221d;
@@ -59,7 +58,7 @@ export const StyledP = styled.p`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
   }
-`;
+`
 
 export const Container2 = styled.div`
   width: 100%;
@@ -70,7 +69,7 @@ export const Container2 = styled.div`
   align-items: center;
   gap: 10px;
   border: 3px solid red;
-`;
+`
 
 export const Container3 = styled.div`
   width: 100%;
@@ -81,4 +80,4 @@ export const Container3 = styled.div`
   align-items: center;
   gap: 10px;
   border: 3px solid red;
-`;
+`

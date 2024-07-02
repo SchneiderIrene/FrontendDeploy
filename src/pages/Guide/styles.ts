@@ -32,7 +32,6 @@ export const Container = styled.div`
 
   &:first-of-type {
     margin-top: -60px;
-    
   }
 
   &::before,
@@ -58,7 +57,7 @@ export const Container = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
-    padding: 25px;     
+    padding: 25px;
     &:first-of-type {
       margin-top: -30px;
       padding: 0 40px;
