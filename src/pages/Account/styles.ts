@@ -279,7 +279,7 @@ export const ModalContainerDeleteLogOut = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   @media (max-width: 480px) {
     padding: 34.5px 48px;
-    width: 431.5px;
+    width: 330px;
     height: 181px;
   }
   @media (min-width: 481px) and (max-width: 768px) {

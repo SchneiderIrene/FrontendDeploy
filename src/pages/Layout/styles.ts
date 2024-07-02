@@ -137,6 +137,7 @@ export const FooterNavContainer = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -182,11 +183,12 @@ export const StyledButton = styled.div`
   right: 0;
 `
 
-export const FooterContent = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-`
+
+// export const FooterContent = styled.div`
+//   display: flex;
+//   flex: 1;
+//   align-items: center;
+// `
 
 export const FooterLeftLink = styled(StyledLink)`
   color: #373e3a;
@@ -245,9 +247,14 @@ export const ModalContainer = styled.div`
   @media (max-width: 768px) {
     padding: 20px;
     width: 90%;
+  } 
+  @media (max-width: 480px) {
+    padding: 20px;
+    height: 230px;
   }
-`
 
+
+`
 export const ModalTextWrapper = styled.div`
   width: 444px;
   display: flex;
@@ -255,11 +262,16 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
+  padding: 20px;
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
     align-items: center;
     gap: 20px;
   }
+  @media (max-width: 480px) {
+   padding: 0px;
+  }
+
 `
 
 export const ArrowIcon = styled.span`
@@ -273,5 +285,8 @@ export const ModalText = styled.p`
   color: rgba(55, 62, 58, 1);
   @media (max-width: 768px) {
     font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
   }
 `

@@ -109,6 +109,7 @@ export const ModalContainer = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
   text-align: center;
+
   @media (max-width: 480px) {
     padding: 20px 40px 20px 40px;
     width: 330px;
@@ -118,6 +119,7 @@ export const ModalContainer = styled.div`
     padding: 30px 60px 30px 60px;
     width: 495px;
     height: 210px;
+
   }
 `
 
@@ -128,6 +130,7 @@ export const ModalTextWrapper = styled.div`
   justify-content: space-around;
   align-items: left;
   gap: 36px;
+
   @media (max-width: 480px) {
     width: 222px;
     gap: 18px;
@@ -135,6 +138,7 @@ export const ModalTextWrapper = styled.div`
   @media (min-width: 481px) and (max-width: 768px) {
     width: 333px;
     gap: 27px;
+
   }
 `
 
@@ -147,11 +151,13 @@ export const ModalText = styled.p`
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
+
   @media (max-width: 480px) {
     font-size: 12px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
+
   }
 `
 
@@ -258,6 +264,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
   strong {
     font-style: normal;
   }
+
   @media (max-width: 480px) {
     h1,
     h2,
@@ -296,4 +303,5 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
       font-size: 16px;
     }
   }
+
 `

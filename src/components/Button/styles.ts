@@ -26,7 +26,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   height: 60px;
   outline: none;
   border: none;
-  padding: 10px;
+  /* padding: 10px; */
   background: ${({ bgColorIsRed, disabled }) =>
     disabled
       ? "rgba(55, 62, 58, 0.3)"
