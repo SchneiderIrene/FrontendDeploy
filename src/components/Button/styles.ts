@@ -40,9 +40,12 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   font-family: "DM Sans";
   font-weight: 900;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 11px;
     height: 30px;
   }
   @media (min-width: 481px) and (max-width: 768px) {

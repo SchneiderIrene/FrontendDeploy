@@ -67,7 +67,7 @@ function Home() {
           <StyledH1Container1>
             Vom Samen bis zur Ernte: gemeinsam Cannabis <br /> sicher
             kultivieren. <br />
-            Topf für Topf.
+            Topf für Topf
           </StyledH1Container1>
           <StyledPContainer1>
             Ab 01.04.2024 darf man in Deutschland bis zu drei <br />{" "}

@@ -57,9 +57,10 @@ export const Container = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
-    padding: 25px;     
+    padding: 25px;
     &:first-of-type {
       margin-top: -30px;
+      padding: 0 40px;
     }
     &::before {
       transform: translateY(-15px);
@@ -75,6 +76,7 @@ export const Container = styled.div`
     padding: 35px;
     &:first-of-type {
       margin-top: -45px;
+      padding: 0 50px;
     }
     &::before {
       transform: translateY(-20px);
