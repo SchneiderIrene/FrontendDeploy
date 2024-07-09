@@ -201,7 +201,6 @@ export const ButtonBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1100px;
   gap: 10px;
 `
 
