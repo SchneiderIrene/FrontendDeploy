@@ -38,8 +38,8 @@ export const PotCard = styled.div<PotCardProps>`
   justify-content: space-around;
   align-items: center;
   background-color: rgba(242, 242, 242, 1);
-  width: 100%;
-  height: 356px;
+  width: 300px;
+  height: 312px;
   box-shadow: 4px 10px 4px rgba(55, 62, 58, 0.2);
   padding: 40px;
   background-color: rgba(255, 240, 212, 1);
@@ -75,9 +75,9 @@ export const PotTitle = styled.h3`
 `
 
 export const PotImage = styled.img`
-  position: relative;
-  width: 100%;
-  height: auto;
+  /* position: relative; */
+  width: 148px;
+  height: 208px;
 `
 
 export const StyledLink = styled(NavLink)``
