@@ -20,27 +20,30 @@ export const PotWrapper = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 60px;
   @media (max-width: 480px) {
     height: 30px;
     margin-bottom: 20px;
     gap: 20px;
+    flex-direction: column;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     height: 45px;
     margin-bottom: 30px;
     gap: 30px;
+    flex-direction: column;
   }
 `
 
 export const ButtonControl = styled.div`
   width: 220px;
   @media (max-width: 480px) {
-    width: 110px;
+    width: 100%;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    width: 165px;
+    width: 100%;
   }
 `
 
@@ -68,6 +71,7 @@ export const StyledP = styled.p`
   @media (max-width: 480px) {
     font-size: 10px;
     padding: 0px;
+    /* text-align: center; */
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;

@@ -199,13 +199,11 @@ export const ModalContainer = styled.div`
   text-align: center;
   @media (max-width: 480px) {
     padding: 20px 40px 20px 40px;
-    width: 330px;
-    height: 140px;
+    max-width: 100%;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    padding: 30px 60px 30px 60px;
-    width: 495px;
-    height: 210px;
+    padding: 20px 40px 20px 40px;
+    max-width: 100%;
   }
 `
 
