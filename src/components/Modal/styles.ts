@@ -28,19 +28,3 @@ export const ModalContent = styled.div`
     max-width: 80%;
   }
 `
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 1.25rem;
-  }
-`

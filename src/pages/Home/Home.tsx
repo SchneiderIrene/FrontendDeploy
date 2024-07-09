@@ -77,7 +77,6 @@ function Home() {
         </div>
         <Image1 src={Img1} alt="Img1" />
       </Container1>
-
       <Container2>
         <Image2 src={Img2} alt="Img2" />
         <StyledH2Container2>
@@ -129,17 +128,14 @@ function Home() {
           </TextColumn>
         </OverlayContainer>
       </Container2>
-
       <StyledH3>
         Schaue dir die Funktionalität an, die beim Registrieren verfügbar ist
       </StyledH3>
-
       <Container3>
         <Image3 src={Img3} alt="Img3" />
         <Image3 src={Img4} alt="Img4" />
         <Image3 src={Img5} alt="Img5" />
       </Container3>
-
       <StyledPContainer4>
         <p>
           Erhalte personalisierte Unterstützung für den <br /> Anbau von

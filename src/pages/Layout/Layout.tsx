@@ -114,27 +114,6 @@ function Layout({ children }: LayoutProps) {
           </Copyright>
         </FooterContentWrapper>
       </Footer>
-      {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <ModalContainer>
-            <ModalTextWrapper>
-              <ModalText>
-                Diese Seite ist nur für registrierte und eingeloggte
-                Benutzer/innen verfügbar
-              </ModalText>
-              <Button
-                name={
-                  <span>
-                    Zurück zum Homepage <ArrowIcon>→</ArrowIcon>
-                  </span>
-                }
-                bgColorIsRed
-                onButtonClick={goToHomePage}
-              />
-            </ModalTextWrapper>
-          </ModalContainer>
-        </Modal>
-      )}
     </LayoutWrapper>
   )
 }

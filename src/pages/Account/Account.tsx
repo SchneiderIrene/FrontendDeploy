@@ -25,14 +25,14 @@ import {
   TextPasswordChangeModal,
   Title,
   TitleContainerPasswordChangeModal,
-  TitleInformation
+  TitleInformation,
+  CloseButton
 } from "./styles"
 import {
   authSliceActions,
   authSliceSelectors,
 } from "store/redux/auth/authSlice"
 import { useAppDispatch } from "store/hooks"
-import { CloseButton } from "components/Modal/styles"
 import Button from "components/Button/Button"
 import { v4 } from "uuid";
 
