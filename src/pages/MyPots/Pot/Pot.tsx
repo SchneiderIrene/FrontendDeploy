@@ -18,13 +18,12 @@ import {
   StyledP,
   StyledReactMarkdown,
   TextModal,
+  CloseButton
 } from "./styles"
 import { useEffect, useState } from "react"
 import DemoDay from "components/DemoDay/DemoDay"
-import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
 import Modal from "components/Modal/Modal"
-import { CloseButton } from "components/Modal/styles"
 
 function Pot() {
   const dispatch = useAppDispatch()
