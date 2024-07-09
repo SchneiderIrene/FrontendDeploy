@@ -25,10 +25,12 @@ export const PotsContainer = styled.div`
   @media (max-width: 480px) {
     height: 210px;
     gap: 18px;
+    flex-direction: column;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     height: 315px;
     gap: 27px;
+    flex-direction: column;
   }
 `
 
@@ -46,12 +48,29 @@ export const PotCard = styled.div<PotCardProps>`
   cursor: pointer;
   filter: ${({ activ }) => (activ ? "none" : "grayscale(100%)")};
   @media (max-width: 480px) {
-    height: 178px;
+    height: 150px;
+    width: 200px;
     padding: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    height: 267px;
+    height: 250px;
+    width: 300px;
     padding: 30px;
+
+  }
+`
+export const PotImage = styled.img`
+  position: relative;
+  width: 148px;
+  height: 208px;
+
+  @media (max-width: 480px) {
+    width: 60px; 
+    height: 100px; 
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+   width: 120px; 
+   height: 180px;
   }
 `
 
@@ -74,11 +93,7 @@ export const PotTitle = styled.h3`
   }
 `
 
-export const PotImage = styled.img`
-  /* position: relative; */
-  width: 148px;
-  height: 208px;
-`
+
 
 export const StyledLink = styled(NavLink)``
 
@@ -112,14 +127,11 @@ export const ModalContainer = styled.div`
 
   @media (max-width: 480px) {
     padding: 20px 40px 20px 40px;
-    width: 330px;
-    height: 140px;
+    max-width: 100%;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    padding: 30px 60px 30px 60px;
-    width: 495px;
-    height: 210px;
-
+    padding: 20px 40px 20px 40px;
+    max-width: 100%;
   }
 `
 

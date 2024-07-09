@@ -117,7 +117,9 @@ function Pot() {
           {pots.find(p => p.id == id)?.active && (
             <>
               <StyledP>
-                Hast du Probleme beim Cannabisanbau? Möchtest du deinen <br />{" "}
+                Hast du Probleme beim Cannabisanbau? Möchtest du deinen 
+                {/* <br /> */}
+                {" "}
                 Topf entfernen?
               </StyledP>
               <ButtonControl>
