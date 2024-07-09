@@ -19,11 +19,7 @@ import {
   FooterLeftLink,
   Copyright,
   StyledButton,
-  NavContainerLink,
-  ModalContainer,
-  ModalTextWrapper,
-  ArrowIcon,
-  ModalText,
+  NavContainerLink
 } from "./styles"
 import { LogoH } from "assets"
 import {
@@ -72,40 +68,20 @@ function Layout({ children }: LayoutProps) {
               >
                 Home
               </StyledNavLink>
-              {isLogin ? (
-                <StyledNavLink
-                  to="/guide"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={() => navigate("/guide")}
-                >
-                  Anleitung
-                </StyledNavLink>
-              ) : (
-                <StyledNavLink
-                  to="/guide"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={handleOpenModal}
-                >
-                  Anleitung
-                </StyledNavLink>
-              )}
-              {isLogin ? (
-                <StyledNavLink
-                  to="/mypots"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={() => navigate("/mypots")}
-                >
-                  Töpfe
-                </StyledNavLink>
-              ) : (
-                <StyledNavLink
-                  to="/mypots"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                  onClick={handleOpenModal}
-                >
-                  Töpfe
-                </StyledNavLink>
-              )}
+              <StyledNavLink
+                to="/guide"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={() => navigate("/guide")}
+              >
+                Anleitung
+              </StyledNavLink>
+              <StyledNavLink
+                to="/mypots"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={() => navigate("/mypots")}
+              >
+                Töpfe
+              </StyledNavLink>
             </NavContainerLink>
             {isLogin ? (
               <StyledNavLink to="/account" onClick={() => navigate("/account")}>
@@ -119,42 +95,23 @@ function Layout({ children }: LayoutProps) {
                 <Button name="Anmelden" bgColorIsRed onButtonClick={toLogin} />
               </StyledButton>
             )}
-            {!isLogin && (
-              <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-                <ModalContainer>
-                  <ModalTextWrapper>
-                    <ModalText>
-                      Diese Seite ist nur für registrierte und eingeloggte
-                      Benutzer/innen verfügbar
-                    </ModalText>
-                    <Button
-                      name={
-                        <span>
-                          Zurück zum Homepage <ArrowIcon>→</ArrowIcon>
-                        </span>
-                      }
-                      bgColorIsRed
-                      onButtonClick={goToHomePage}
-                    />
-                  </ModalTextWrapper>
-                </ModalContainer>
-              </Modal>
-            )}
           </NavContainer>
         </HeaderContentWrapper>
       </Header>
       <Main>{children}</Main>
       <Footer>
-      <FooterContentWrapper>
-         <FooterNavContainer>
-          <FooterLeftLink to="/legalInfo">Gesetzliche Informationen</FooterLeftLink>
-          <FooterLeftLink to="">Datenschutz</FooterLeftLink>
-          <FooterLeftLink to="">Nutzungsbedingungen</FooterLeftLink>
-          <FooterLeftLink to="">Impressum</FooterLeftLink>
-        </FooterNavContainer>
-        <Copyright>
-          <p>Copyright © 2024 LeafGrow</p>
-        </Copyright>
+        <FooterContentWrapper>
+          <FooterNavContainer>
+            <FooterLeftLink to="/legalInfo">
+              Gesetzliche Informationen
+            </FooterLeftLink>
+            <FooterLeftLink to="">Datenschutz</FooterLeftLink>
+            <FooterLeftLink to="">Nutzungsbedingungen</FooterLeftLink>
+            <FooterLeftLink to="">Impressum</FooterLeftLink>
+          </FooterNavContainer>
+          <Copyright>
+            <p>Copyright © 2024 LeafGrow</p>
+          </Copyright>
         </FooterContentWrapper>
       </Footer>
       {isModalOpen && (

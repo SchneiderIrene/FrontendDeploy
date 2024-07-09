@@ -183,13 +183,6 @@ export const StyledButton = styled.div`
   right: 0;
 `
 
-
-// export const FooterContent = styled.div`
-//   display: flex;
-//   flex: 1;
-//   align-items: center;
-// `
-
 export const FooterLeftLink = styled(StyledLink)`
   color: #373e3a;
   font-size: 14px;
@@ -226,67 +219,4 @@ export const Copyright = styled.div`
 export const CopyrightText = styled.p`
   font-size: 14px;
   color: #373e3a;
-`
-
-export const ModalContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 80px 40px 80px;
-  width: 660px;
-  height: 280px;
-  max-width: 80%;
-  border: 2px solid rgba(2, 88, 41, 1);
-  background-color: rgba(255, 254, 239, 1);
-  text-align: center;
-  @media (max-width: 768px) {
-    padding: 20px;
-    width: 90%;
-  } 
-  @media (max-width: 480px) {
-    padding: 20px;
-    height: 230px;
-  }
-
-
-`
-export const ModalTextWrapper = styled.div`
-  width: 444px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: left;
-  gap: 36px;
-  padding: 20px;
-  @media (max-width: 768px) {
-    width: 100%;
-    align-items: center;
-    gap: 20px;
-  }
-  @media (max-width: 480px) {
-   padding: 0px;
-  }
-
-`
-
-export const ArrowIcon = styled.span`
-  margin-left: 10px;
-`
-
-export const ModalText = styled.p`
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 24px;
-  color: rgba(55, 62, 58, 1);
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-  @media (max-width: 480px) {
-    font-size: 14px;
-  }
 `
