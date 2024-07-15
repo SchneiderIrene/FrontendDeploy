@@ -31,9 +31,9 @@ function BetweenPage() {
     }
   }, [code])
 
-  useEffect (()=>{
-    dispatch(authSliceActions.userProfile())
-  })
+  // useEffect (()=>{
+  //   dispatch(authSliceActions.userProfile())
+  // })
 
   const resetEmail = (email : string) => {
     dispatch(authSliceActions.resetEmail(email))

@@ -97,6 +97,7 @@ export const authSlice = createAppSlice({
           state.userData = action.payload
           state.isLogin = true
           localStorage.setItem("isLogin", JSON.stringify(true))
+          
         },
         rejected: (state: AuthSliceState, action: any) => {
           state.status = "error"
