@@ -54,18 +54,17 @@ function RegisterForm() {
       .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Ungültige E-Mail"),
       [FIELD_NAMES.PASSWORD]: Yup.string()
       .required(
-        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer",
+        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe, 1 Ziffer und 1 Sonderzeichen",
       )
-      .min(8, "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer")
+      .min(
+        8,
+        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe, 1 Ziffer und 1 Sonderzeichen",
+      )
       .max(60, "Das Passwort darf maximal 60 Zeichen lang sein")
       .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
-        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe und 1 Ziffer",
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!№%:;?*_+\\§&$=!@#><~.,"-])[a-zA-Z\d!№%:;?*_+\\§&$=!@#><~.,"-]{8,}$/,
+        "Für dein Passwort wähle mindestens 8 Zeichen mit 1 Kleinbuchstabe, 1 Großbuchstabe, 1 Ziffer und 1 Sonderzeichen",
       ),
-      [FIELD_NAMES.CHECKBOX]: Yup.boolean().oneOf(
-      [true],
-      "Checkbox muss akzeptiert werden",
-    ),
     [FIELD_NAMES.AGE_CHECKBOX]: Yup.boolean().oneOf(
       [true],
       "Du musst mindestens 18 Jahre alt sein",
