@@ -111,7 +111,7 @@ export const Square = styled.div`
   margin-left: 0.83vw;
   box-sizing: border-box;
   background: #fafafa;
-  box-shadow: 0.208vw 0.208vw 052vw 0vw rgba(55, 62, 58, 0.2);
+  box-shadow: 0.2vw 0.2vw 0.52vw 0vw rgba(55, 62, 58, 0.2);
   backdrop-filter: blur(0.26vw);
   /* @media (max-width: 768px) {
     margin-top: 20px;
