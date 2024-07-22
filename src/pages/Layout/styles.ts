@@ -23,9 +23,12 @@ export const Header = styled.header`
   height: 5.2vw;
   background-color: #007132;
 
-  /* @media (max-width: 768px) {
-    padding: 10px 0px;
-  } */
+  @media (max-width: 768px) {
+    /* padding: 10px 0px; */
+    height: 45px;
+    gap: 20px;
+    justify-content: center;
+  }
 `
 
 export const HeaderContentWrapper = styled.div`
@@ -40,9 +43,9 @@ export const NavContainerLink = styled.div`
   align-items: center;
   gap: 2.08vw;
   text-decoration: none;
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 20px;
-  } */
+  }
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -54,9 +57,9 @@ export const StyledNavLink = styled(NavLink)`
   &:hover {
     text-decoration: none;
   }
-  /* @media (max-width: 768px) {
-    font-size: 16px;
-  } */
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `
 
 export const NavContainer = styled.nav`
@@ -78,9 +81,9 @@ export const HeaderLogo = styled.img`
   width: 5.2vw;
   height: 100%;
   object-fit: contain;
-  /* @media (max-width: 768px) {
-    width: 4.16vw;
-  } */
+  @media (max-width: 480px) {
+    width: 50px;
+  }
 `
 
 HeaderLogo.defaultProps = { src: LogoH }
@@ -160,9 +163,9 @@ export const StyledLink = styled(Link)`
 
 export const UserName = styled.div`
   font-size: 1.25vw;
-  /* @media (max-width: 768px) {
-    font-size: 20px;
-  } */
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `
 
 export const AccountContainer = styled.div`
@@ -174,6 +177,9 @@ export const AccountContainer = styled.div`
 export const StyledButton = styled.div`
   width: 11.25vw;
   right: 0;
+  @media (max-width: 480px) {
+    width: 170px;
+  }
 `
 
 export const FooterLeftLink = styled(StyledLink)`
