@@ -23,7 +23,7 @@ const getColor = (color: "red" | "grey" | "green" | undefined) => {
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`
   width: 100%;
-  height: 60px;
+  height: 3.125vw;
   outline: none;
   border: none;
   /* padding: 10px; */
@@ -36,7 +36,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   color: ${({ color }) => getColor(color)};
   border: ${({ border }) =>
     border ? "4px solid rgba(55, 62, 58, 0.5)" : "none"};
-  font-size: 20px;
+  font-size: 1.04vw;
   font-family: "DM Sans";
   font-weight: 900;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -44,14 +44,14 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     font-size: 11px;
     height: 30px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
     height: 45px;
-  }
+  } */
 
   &:focus {
     outline: none;
