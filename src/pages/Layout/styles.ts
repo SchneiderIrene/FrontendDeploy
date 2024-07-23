@@ -23,9 +23,9 @@ export const Header = styled.header`
   height: 5.2vw;
   background-color: #007132;
 
-  @media (max-width: 768px) {
-    /* padding: 10px 0px; */
-    height: 45px;
+  @media (max-width: 480px) {
+    padding: 10px;
+    height: 100px;
     gap: 20px;
     justify-content: center;
   }
@@ -36,6 +36,11 @@ export const HeaderContentWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 480px) {
+    padding: 40px;
+    justify-content: space-between;
+  }
 `
 
 export const NavContainerLink = styled.div`
@@ -43,8 +48,8 @@ export const NavContainerLink = styled.div`
   align-items: center;
   gap: 2.08vw;
   text-decoration: none;
-  @media (max-width: 768px) {
-    gap: 20px;
+  @media (max-width: 480px) {
+    gap: 60px;
   }
 `
 
@@ -67,8 +72,10 @@ export const NavContainer = styled.nav`
   justify-content: flex-end;
   gap: 1.04vw;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
 `
 
@@ -95,7 +102,7 @@ export const Main = styled.main`
   width: 100%;
   max-width: 72.91vw;
   margin: 0 auto;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
   }
 `
@@ -164,7 +171,7 @@ export const StyledLink = styled(Link)`
 export const UserName = styled.div`
   font-size: 1.25vw;
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
 
@@ -178,7 +185,7 @@ export const StyledButton = styled.div`
   width: 11.25vw;
   right: 0;
   @media (max-width: 480px) {
-    width: 170px;
+    width: 250px;
   }
 `
 
