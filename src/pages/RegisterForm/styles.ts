@@ -6,6 +6,7 @@ export const RegisterWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 80px;
   width: 100%;
   @media (max-width: 480px) {
@@ -179,28 +180,31 @@ export const CheckboxError = styled.div`
 
 export const TextError = styled.p`
   color: rgba(186, 45, 0, 1);
-  font-size: 20px;
+  font-size: 1.04vw;
   font-family: "DM Sans";
   font-weight: 500;
+  position: absolute;
+  top: 50px;
+  left: 0;
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 8px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
-  }
+  } */
 `
 
 export const ErrorBox = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
+  width: 100%;
   justify-content: center;
-  top: 300px;
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     top: 150px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     top: 225px;
-  }
+  } */
 `
 
 export const StyledP = styled.span`

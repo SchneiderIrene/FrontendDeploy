@@ -219,15 +219,15 @@ export const ModalContainerPassword = styled.div`
   @media (max-width: 480px) {
     gap: 17.5px;
     padding: 34.5px 48px;
-    width: 336px;
+    width: 300px;
     height: 296px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     gap: 26.25px;
     padding: 51.75px 72px;
     width: 504px;
     height: 444px;
-  }
+  } */
 `
 
 export const TitleContainerPasswordChangeModal = styled.div`
@@ -279,14 +279,14 @@ export const ModalContainerDeleteLogOut = styled.div`
   border: 2px solid rgba(2, 88, 41, 1);
   @media (max-width: 480px) {
     padding: 34.5px 48px;
-    width: 330px;
-    height: 181px;
+    width: 300px;
+    height: 150px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 51.75px 72px;
     width: 647.25px;
     height: 271.5px;
-  }
+  } */
 `
 
 export const TextModal = styled.p`
@@ -297,9 +297,9 @@ export const TextModal = styled.p`
   @media (max-width: 480px) {
     font-size: 12px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
-  }
+  } */
 `
 
 export const ButtonBoxModal = styled.div`

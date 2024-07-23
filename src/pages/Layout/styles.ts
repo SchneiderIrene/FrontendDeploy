@@ -179,6 +179,10 @@ export const AccountContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.52vw;
+  
+  @media (max-width: 480px) {
+    margin-left: 80px;
+  }
 `
 
 export const StyledButton = styled.div`
