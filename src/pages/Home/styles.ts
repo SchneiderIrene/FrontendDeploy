@@ -239,9 +239,10 @@ export const Rectangle = styled.div`
   box-shadow: 0.2vw 0.2vw 0.52vw 0vw rgba(55, 62, 58, 0.2);
   backdrop-filter: blur(0.26vw);
   @media (max-width: 480px) {
+    padding: 0;
     margin: 0;
     height: 20px;
-    max-width: 220px;
+    max-width: 290px;
   }
 `
 
@@ -309,10 +310,10 @@ export const ImageLogo = styled.img`
   width: 5.2vw;
   height: auto;
   object-fit: contain;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     width: 50px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 70px;
   } */
 `
@@ -383,11 +384,11 @@ export const StyledFAQHeading = styled.h1`
   font-size: 1.25vw;
   font-weight: 600;
   line-height: normal;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 20px;
     margin-top: 30px;
   } */
@@ -401,11 +402,15 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 0.937vw;
   font-weight: 450;
   line-height: normal;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
-    margin-bottom: -5px;
+  @media (max-width: 480px) {
+    font-size: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+ 
+    /* margin-bottom: -5px; */
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     margin-bottom: -5px;
   } */
@@ -423,7 +428,6 @@ export const StyledPContainer5 = styled.div`
   overflow: hidden;
   position: relative;
   @media (max-width: 480px) {
-    font-size: 10px;
     margin-top: 10px;
     max-width: 220px;
   }
@@ -452,11 +456,11 @@ export const StyledH5 = styled.h2`
   font-weight: 600;
   text-align: center;
   margin-top: 4.166vw;
-  /* @media (max-width: 480px) {
-    font-size: 14px;
-    margin-top: 60px;
+  @media (max-width: 480px) {
+    font-size: 12px;
+    margin-top: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
     margin-top: 60px;
   } */
@@ -468,10 +472,10 @@ export const StyledP5 = styled.h3`
   font-size: 0.937vw;
   font-weight: 400;
   text-align: center;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   } */
 `
@@ -485,10 +489,11 @@ export const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-  /* @media (max-width: 480px) {
-    font-size: 10px;
+  @media (max-width: 480px) {
+    font-size: 7px;
+    margin-left: 0px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   } */
 `
@@ -507,12 +512,15 @@ export const StyledP = styled.p`
   color: #373e3a;
   z-index: 2;
   @media (max-width: 480px) {
+   align-items: center;
    width: 100%;
    max-width: 800px;
    line-height: 1.5;
-   
-   
-   
+   font-size: 8px;
+   text-align: center;
+   padding-left: 12px;
+   /* margin-left: 20px; */
+  
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
@@ -526,11 +534,12 @@ export const Icon6Styled = styled.img`
   position: relative;
   top: -1.875vw;
   margin-left: 0.1vw;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     width: 14px;
-    top: -18px;
+    top: 0px;
+    margin-left: 7px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 18px;
     top: -24px;
   } */
@@ -539,16 +548,17 @@ export const Icon6Styled = styled.img`
 export const StyledSpan = styled.span`
   color: #ba2d00;
   position: absolute;
-  left: 0;
+  left: 0px;
   font-family: "Merriweather", serif;
   font-size: 0.83vw;
   font-weight: 600;
   font-feature-settings: "lnum";
   border-bottom: 0.1vw solid green;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
+  @media (max-width: 480px) {
+    font-size: 8px;
+    top: 5px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   } */
 `
@@ -564,17 +574,19 @@ export const ButtonControl = styled.div`
   } 
 `
 
-export const InfoContainer = styled.div``
+export const InfoContainer = styled.div`
+
+`
 
 export const Icon = styled.img`
   width: 1.875vw;
   height: auto;
 
-  /* @media (max-width: 480px) {
-    width: 16px;
+  @media (max-width: 480px) {
+    width: 10px;
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 22px;
   } */
 `
@@ -584,10 +596,10 @@ export const StyledEmail = styled.p`
   font-family: "DM Sans";
   font-size: 0.83vw;
   font-weight: 700;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
   } */
 `
