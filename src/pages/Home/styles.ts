@@ -219,10 +219,10 @@ export const RectangleContainer = styled.div`
  
   @media (max-width: 480px) {
     position: static;
-    gap: 5px;
+    gap: 10px;
     margin: 0px;
     padding: 0px;
-    width: 215px;
+    width: 230px;
     & > *:first-of-type {
       margin-top: 0;
     }
