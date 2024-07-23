@@ -49,7 +49,8 @@ import {
   StyledFAQSubHeading,
   StyledEmail,
   StyledP5,
-  InfoContainer
+  InfoContainer,
+  SquareContainer
 } from "./styles"
 import Button from "components/Button/Button"
 
@@ -85,7 +86,7 @@ function Home() {
         persönlichen Assistent für den <br /> Cannabisheimanbau
         </StyledH2Container2>
         <OverlayContainer>
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <SquareContainer >
             <Square>
               <Icon src={Icon1} alt="Icon1" />
               <TextWrapper>
@@ -104,7 +105,7 @@ function Home() {
                 </p>
               </TextWrapper>
             </Square>
-          </div>
+          </SquareContainer>
           <TextColumn>
             <RectangleContainer>
               <Rectangle>
