@@ -28,6 +28,7 @@ export const Container1 = styled.div`
     flex-direction: column;
     align-items: center;
     padding-bottom: 3.12vw;
+    margin-top: 6.6vw
   }
 `
 export const StyledH1Container1 = styled.h1`
@@ -42,15 +43,37 @@ export const StyledH1Container1 = styled.h1`
   word-wrap: break-word;
   overflow: hidden;
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 0;
     max-width: 600px;
-    justify-content: center;
+    text-align: center;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     /* font-size: 22px; */
     margin-top: 0;
   }
+`
+export const StyledPContainer1 = styled.p`
+  display: flex;
+  justify-content: space-between;
+  color: #373e3a;
+  font-family: "DM Sans";
+  font-size: 0.937vw;
+  font-weight: 400;
+  margin-top: 1.04vw;
+  max-width: 26.04vw;
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    text-align: center;
+    max-width: 500px;
+    line-height: 1.2;
+  }
+  /* @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 14px;
+  } */
 `
 
 export const Image1 = styled.img`
@@ -60,8 +83,9 @@ export const Image1 = styled.img`
   margin-top: 0;
   position: relative;
   left: 1.56vw;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
+    max-width: 240px;
   }
 `
 export const Container2 = styled.div`
@@ -74,8 +98,9 @@ export const Container2 = styled.div`
   padding-bottom: 6.25vw;
   position: relative;
   box-sizing: border-box;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
+    align-items: center;
     margin-top: 0;
   }
 `
@@ -88,9 +113,37 @@ export const Image2 = styled.img`
   z-index: 0;
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 240px;
   }
 `
 
+export const StyledH2Container2 = styled.h2`
+  font-size: 1.25vw;
+  font-family: Inter;
+  color: #373e3a;
+  font-weight: 600;
+  margin-top: -11.458vw;
+  margin-right: 4.16vw;
+  max-width: 26.04vw;
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  z-index: 1;
+  @media (max-width: 480px) {
+    max-width: 500px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 14px;
+    margin-right: 0;
+    padding: 10px 0;
+  }
+  /* @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 0;
+    padding: 10px 0;
+  } */
+`
 export const OverlayContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -105,9 +158,10 @@ export const OverlayContainer = styled.div`
   & > * + * {
     margin-left: -2.08vw;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: static;
     & > *:first-of-type {
       margin-left: 0;
@@ -136,11 +190,12 @@ export const Square = styled.div`
   background: #fafafa;
   box-shadow: 0.2vw 0.2vw 0.52vw 0vw rgba(55, 62, 58, 0.2);
   backdrop-filter: blur(0.26vw);
-  /* @media (max-width: 768px) {
-    margin-top: 20px;
+  @media (max-width: 480px) {
+    margin-top: 0;
     margin-left: 0;
-    padding: 20px;
-  } */
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `
 
 export const RectangleContainer = styled.div`
@@ -151,8 +206,13 @@ export const RectangleContainer = styled.div`
   margin-top: 8.958vw;
   padding-left: 1.56vw;
   width: 100%;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     position: static;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+    padding: 0px;
+    min-width: 55vw;
     & > *:first-of-type {
       margin-top: 0;
     }
@@ -178,8 +238,8 @@ export const Rectangle = styled.div`
   background: #fafafa;
   box-shadow: 0.2vw 0.2vw 0.52vw 0vw rgba(55, 62, 58, 0.2);
   backdrop-filter: blur(0.26vw);
-  @media (max-width: 768px) {
-    margin-left: 0;
+  @media (max-width: 480px) {
+    margin: 0;
   }
 `
 
@@ -188,9 +248,9 @@ export const TextColumn = styled.div`
   flex-direction: column;
   margin-top: 1.04vw;
   position: relative;
-  /* @media (max-width: 768px) {
-    margin-top: 0.52vw;
-  } */
+  @media (max-width: 480px) {
+   
+  }
 `
 
 export const TextWrapper = styled.div`
@@ -267,51 +327,9 @@ export const LogoContainer = styled.div`
 `
 
 
-export const StyledH2Container2 = styled.h2`
-  font-size: 1.25vw;
-  font-family: Inter;
-  color: #373e3a;
-  font-weight: 600;
-  margin-top: -11.458vw;
-  margin-right: 4.16vw;
-  max-width: 26.04vw;
-  width: 100%;
-  word-wrap: break-word;
-  overflow: hidden;
-  z-index: 1;
-  /* @media (max-width: 480px) {
-    font-size: 12px;
-    margin-top: 14px;
-    margin-right: 0;
-    padding: 10px 0;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-right: 0;
-    padding: 10px 0;
-  } */
-`
 
-export const StyledPContainer1 = styled.p`
-  display: flex;
-  justify-content: space-between;
-  color: #373e3a;
-  font-family: "DM Sans";
-  font-size: 0.937vw;
-  font-weight: 400;
-  margin-top: 1.04vw;
-  max-width: 26.04vw;
-  width: 100%;
-  word-wrap: break-word;
-  overflow: hidden;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-  } */
-`
+
+
 
 export const StyledH3 = styled.h2`
   text-align: center;
@@ -320,11 +338,11 @@ export const StyledH3 = styled.h2`
   font-weight: 600;
   color: #373e3a;
   margin-top: 4.166vw;
-  /* @media (max-width: 480px) {
-    font-size: 14px;
+  @media (max-width: 480px) {
+    font-size: 12px;
     margin-top: 0px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 20px;
     margin-top: 0px;
   } */
@@ -345,11 +363,12 @@ export const StyledPContainer4 = styled.div`
   overflow: hidden;
   padding: 0 3.125vw;
   @media (max-width: 480px) {
-    /* font-size: 12px;
-    padding: 0 30px; */
+    font-size: 10px;
     flex-direction: column;
     align-items: center;
     gap: 1.04vw;
+    max-width: 300px;
+    text-align: center;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;
@@ -404,11 +423,12 @@ export const StyledPContainer5 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 10px;
     margin-top: 10px;
+    max-width: 220px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     margin-top: 10px;
   } */
@@ -487,11 +507,15 @@ export const StyledP = styled.p`
   border-bottom: 0.1vw solid green;
   color: #373e3a;
   z-index: 2;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
-    padding: 15px;
+  @media (max-width: 480px) {
+   width: 100%;
+   max-width: 800px;
+   line-height: 1.5;
+   
+   
+   
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
     padding: 15px;
   } */
@@ -536,7 +560,12 @@ export const ButtonControl = styled.div`
   margin-top: 0.52vw;
   margin-bottom: 2.6vw;
   width: 11.458vw;
+  @media (max-width: 481px) {
+    width: 100%;
+  } 
 `
+
+export const InfoContainer = styled.div``
 
 export const Icon = styled.img`
   width: 1.875vw;

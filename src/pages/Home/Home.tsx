@@ -48,7 +48,8 @@ import {
   StyledFAQHeading, 
   StyledFAQSubHeading,
   StyledEmail,
-  StyledP5
+  StyledP5,
+  InfoContainer
 } from "./styles"
 import Button from "components/Button/Button"
 
@@ -151,7 +152,7 @@ function Home() {
       </StyledFAQSubHeading>
       <StyledPContainer5>
         <BackgroundImage src={Img1} alt="Img1"/>
-        <div>
+        <InfoContainer>
           <StyledP>
             <StyledSpan>01</StyledSpan> Was ist LeafGrow? LeafGrow ist ein
             persönlicher Assistent, der Ihnen hilft, zu Hause Unkraut anzubauen.
@@ -191,7 +192,7 @@ function Home() {
             eine Freiheitsstrafe von bis zu drei Jahren oder eine Geldstrafe.
             <Icon6Styled src={Icon6} alt="Icon6" />
           </StyledP>
-        </div>
+        </InfoContainer>
       </StyledPContainer5>
       <StyledH5>Hast du noch einige Fragen?</StyledH5>
       <StyledP5>
