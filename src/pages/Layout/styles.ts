@@ -116,9 +116,9 @@ export const Footer = styled.footer`
   justify-content: space-between;
   align-items: center;
   color: #373e3a;
-  /* @media (max-width: 768px) {
-    padding: 20px 20px;
-  } */
+  @media (max-width: 480px) {
+    
+  }
 `
 
 export const FooterContentWrapper = styled.div`
@@ -129,11 +129,12 @@ export const FooterContentWrapper = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 `
 
 export const FooterNavContainer = styled.nav`
@@ -147,12 +148,12 @@ export const FooterNavContainer = styled.nav`
   margin-bottom: 0.729vw;
   /* @media (max-width: 768px) {
     gap: 12px;
-  }
+  } */
   @media (max-width: 480px) {
     gap: 6px;
     margin-top: 5px;
     margin-bottom: 12px;
-  } */
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -201,10 +202,10 @@ export const FooterLeftLink = styled(StyledLink)`
   font-weight: 500;
   line-height: normal;
   margin-right: 0.52vw;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
+  @media (max-width: 480px) {
+    font-size: 9px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
   } */
 `
@@ -218,10 +219,10 @@ export const Copyright = styled.div`
   font-family: "DM Sans";
   font-size: 0.729vw;
   font-weight: 500;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
+  @media (max-width: 480px) {
+    font-size: 8px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
   } */
 `
