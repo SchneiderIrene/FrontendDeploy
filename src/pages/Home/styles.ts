@@ -180,6 +180,7 @@ flex-direction: row;
 
 @media (max-width: 480px) {
     gap: 10px;
+    width: 210px
   }
 `
 
