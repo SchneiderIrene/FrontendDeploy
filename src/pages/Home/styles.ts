@@ -18,18 +18,41 @@ export const Container1 = styled.div`
   align-items: center;
   width: 100%;
   max-width: 72.92vw;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-top: -1.04vw;
   padding-left: 0.52vw;
   padding-bottom: 5.2vw;
   box-sizing: border-box;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 3.12vw;
   }
 `
+export const StyledH1Container1 = styled.h1`
+  display: flex;
+  font-family: Inter;
+  font-size: 1.875vw;
+  font-weight: 700;
+  color: #373e3a;
+  margin-top: -2.6vw;
+  max-width: 26vw;
+  width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-top: 0;
+    max-width: 600px;
+    justify-content: center;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* font-size: 22px; */
+    margin-top: 0;
+  }
+`
+
 export const Image1 = styled.img`
   max-width: 40%;
   height: auto;
@@ -242,26 +265,7 @@ export const LogoContainer = styled.div`
     margin-top: 30px;
   } */
 `
-export const StyledH1Container1 = styled.h1`
-  display: flex;
-  font-family: Inter;
-  font-size: 1.875vw;
-  font-weight: 700;
-  color: #373e3a;
-  margin-top: -2.6vw;
-  max-width: 26vw;
-  width: 100%;
-  word-wrap: break-word;
-  overflow: hidden;
-  @media (max-width: 480px) {
-    /* font-size: 16px; */
-    margin-top: 0;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    /* font-size: 22px; */
-    margin-top: 0;
-  }
-`
+
 
 export const StyledH2Container2 = styled.h2`
   font-size: 1.25vw;

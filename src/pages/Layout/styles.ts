@@ -24,9 +24,9 @@ export const Header = styled.header`
   background-color: #007132;
 
   @media (max-width: 480px) {
-    padding: 10px;
-    height: 100px;
-    gap: 20px;
+    padding: 2.08vw;
+    height: 20.83vw;
+    gap: 4vw;
     justify-content: center;
   }
 `
@@ -38,7 +38,7 @@ export const HeaderContentWrapper = styled.div`
   width: 100%;
 
   @media (max-width: 480px) {
-    padding: 40px;
+    padding: 1.04vw;
     justify-content: space-between;
   }
 `
@@ -49,7 +49,7 @@ export const NavContainerLink = styled.div`
   gap: 2.08vw;
   text-decoration: none;
   @media (max-width: 480px) {
-    gap: 60px;
+    gap: 14vw;
   }
 `
 
@@ -75,7 +75,7 @@ export const NavContainer = styled.nav`
   @media (max-width: 480px) {
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 3vw;
   }
 `
 
@@ -89,7 +89,7 @@ export const HeaderLogo = styled.img`
   height: 100%;
   object-fit: contain;
   @media (max-width: 480px) {
-    width: 50px;
+    width: 15vw;
   }
 `
 
@@ -185,7 +185,7 @@ export const StyledButton = styled.div`
   width: 11.25vw;
   right: 0;
   @media (max-width: 480px) {
-    width: 250px;
+    width: 64vw;
   }
 `
 
