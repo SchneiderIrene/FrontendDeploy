@@ -165,12 +165,21 @@ export const OverlayContainer = styled.div`
     position: static;
     & > *:first-of-type {
       margin-left: 0;
-      gap: 0.52vw;
+      /* gap: 0.52vw; */
     }
     & > * + * {
       margin-left: 0;
       margin-top: 1.04vw;
     }
+  }
+`
+
+export const SquareContainer = styled.div`
+display: flex;
+flex-direction: row;
+
+@media (max-width: 480px) {
+    gap: 10px;
   }
 `
 
@@ -206,13 +215,14 @@ export const RectangleContainer = styled.div`
   margin-top: 8.958vw;
   padding-left: 1.56vw;
   width: 100%;
+  
  
   @media (max-width: 480px) {
     position: static;
     gap: 5px;
-    margin: 0;
+    margin: 0px;
     padding: 0px;
-    width: 200px;
+    width: 210px;
     & > *:first-of-type {
       margin-top: 0;
     }
