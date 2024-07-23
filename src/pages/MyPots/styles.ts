@@ -16,23 +16,25 @@ export const MyPotsWrapper = styled.div`
 `
 
 export const PotsContainer = styled.div<{ isLogin: boolean }>`
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 420px;
   gap: 36px;
-  display: ${props => (props.isLogin ? "block" : "none")};
+  display: ${props => (props.isLogin ? "flex" : "none")};
   @media (max-width: 480px) {
     height: 210px;
     gap: 18px;
     flex-direction: column;
+    justify-content: end;
+    margin-top: 100px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     height: 315px;
     gap: 27px;
     flex-direction: column;
-  }
+  } */
 `
 
 export const PotCard = styled.div<PotCardProps>`
@@ -129,7 +131,7 @@ export const ModalContainer = styled.div`
   @media (max-width: 480px) {
     width: 300px;
     height: 250px;
-    transform: translate(-50%, -120%);
+    transform: translate(-50%, -75%);
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 20px 40px 20px 40px;

@@ -187,7 +187,7 @@ export const TextError = styled.p`
   top: 50px;
   left: 0;
   @media (max-width: 480px) {
-    font-size: 8px;
+    font-size: 6px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;

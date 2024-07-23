@@ -8,13 +8,14 @@ export const AccountWrapper = styled.div`
   gap: 65px;
   flex: 1;
   @media (max-width: 480px) {
-    padding-top: 62.5px;
+    padding-top: 30px;
+    justify-content: start;
     gap: 32.5px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     padding-top: 93.75px;
     gap: 48.75px;
-  }
+  } */
 `
 
 export const AccountContainer = styled.div`
@@ -55,10 +56,10 @@ export const DeleteLogOutContainer = styled.div`
     width: 240px;
     gap: 40px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 360px;
     gap: 60px;
-  }
+  } */
 `
 
 export const TextDeleteLogOut = styled.p`
@@ -280,7 +281,7 @@ export const ModalContainerDeleteLogOut = styled.div`
   @media (max-width: 480px) {
     padding: 34.5px 48px;
     width: 300px;
-    height: 150px;
+    height: 200px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 51.75px 72px;
@@ -304,12 +305,14 @@ export const TextModal = styled.p`
 
 export const ButtonBoxModal = styled.div`
   width: 480px;
+  
   @media (max-width: 480px) {
     width: 240px;
+
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 360px;
-  }
+  } */
 `
 
 export const FormContainer = styled.form`
@@ -321,13 +324,12 @@ export const FormContainer = styled.form`
   @media (max-width: 480px) {
     gap: 5px;
     width: 240px;
-    height: 101px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     gap: 7.5px;
     width: 360px;
     height: 151.5px;
-  }
+  } */
 `
 export const CloseButton = styled.button`
   position: absolute;

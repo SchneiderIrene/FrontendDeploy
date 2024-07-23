@@ -198,7 +198,7 @@ export const ModalContainer = styled.div`
   @media (max-width: 480px) {
     width: 300px;
     height: 250px;
-    transform: translate(-50%, -120%);
+    transform: translate(-50%, -75%);
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 20px 40px 20px 40px;
