@@ -44,11 +44,11 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   align-items: center;
   justify-content: center;
 
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     font-size: 11px;
     height: 30px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
     height: 45px;
   } */
