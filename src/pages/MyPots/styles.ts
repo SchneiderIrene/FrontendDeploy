@@ -27,8 +27,8 @@ export const PotsContainer = styled.div<{ isLogin: boolean }>`
     height: 210px;
     gap: 18px;
     flex-direction: column;
-    justify-content: end;
-    margin-top: 100px;
+    /* justify-content: end; */
+    /* margin-top: 100px; */
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     height: 315px;
