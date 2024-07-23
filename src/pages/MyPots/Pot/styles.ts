@@ -6,14 +6,11 @@ export const PotWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 2.6vw;
   flex: 1;
   padding: 0 20px;
   @media (max-width: 480px) {
-    gap: 25px;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    gap: 35px;
+   
   }
 `
 
@@ -22,18 +19,13 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
-  @media (max-width: 480px) {
-    height: 30px;
-    margin-bottom: 20px;
-    gap: 20px;
+  height: 3.125vw;
+  @media (max-width: 480px)  {
+    padding-top: 10px;
+    gap: 10px;
+    height: 60px;
     flex-direction: column;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    height: 45px;
-    margin-bottom: 30px;
-    gap: 30px;
-    flex-direction: column;
+    justify-content: center;
   }
 `
 
@@ -42,9 +34,9 @@ export const ButtonControl = styled.div`
   @media (max-width: 480px) {
     width: 100%;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 100%;
-  }
+  } */
 `
 
 export const PotContainer = styled.div`
@@ -65,18 +57,19 @@ export const PotContainer = styled.div`
 export const StyledP = styled.p`
   color: #38221d;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 1.25vw;
   font-weight: 600;
   text-align: left;
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 6px;
+    line-height: 1.2;
     padding: 0px;
-    /* text-align: center; */
+    text-align: center;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;
     padding: 0px;
-  }
+  } */
 `
 
 export const ImageContainer = styled.img`
@@ -214,33 +207,34 @@ export const ModalContainerDeletePot = styled.div`
   align-items: center;
   display: flex;
   background-color: rgba(255, 254, 239, 1);
-  padding: 69px 96px;
-  width: 863px;
-  height: 362px;
-  border: 2px solid rgba(2, 88, 41, 1);
+  padding: 3.59vw 5vw;
+  width:44.94vw;
+  height: 18.85vw;
+  border: 0.1vw solid rgba(2, 88, 41, 1);
   @media (max-width: 480px) {
     padding: 34.5px 48px;
-    width: 431.5px;
-    height: 181px;
+    width: 300px;
+    height: 150px;
+    
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 51.75px 72px;
     width: 647.25px;
     height: 271.5px;
-  }
+  } */
 `
 
 export const TextModal = styled.p`
   font-family: "Inter";
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: rgba(55, 62, 58, 1);
   @media (max-width: 480px) {
     font-size: 12px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
-  }
+  } */
 `
 
 export const CloseButton = styled.button`

@@ -11,20 +11,20 @@ export const ModalOverlay = styled.div`
 `
 
 export const ModalContent = styled.div`
-  position: fixed;
+  /* position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 600px;
+  max-width: 31.25vw;
   padding: 20px;
   box-sizing: border-box;
   z-index: 1001;
-  @media (max-width: 480px) {
-    max-width: 70%;
+  /* @media (max-width: 480px) {
+    max-width: 50px;
     padding: 30px 40px;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
+  } */
+  /* @media (min-width: 481px) and (max-width: 768px) {
     max-width: 80%;
-  }
+  } */ */
 `

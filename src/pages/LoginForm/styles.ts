@@ -5,6 +5,7 @@ export const LoginFormWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 80px;
   width: 100%;
   @media (max-width: 480px) {
@@ -157,29 +158,30 @@ export const TitleLogin = styled.h3`
 
 export const TextError = styled.p`
   color: rgba(186, 45, 0, 1);
-  font-size: 18px;
+  font-size: 0.93vw;
   font-family: "DM Sans";
   font-weight: 500;
+  text-align: left;
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 8px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 13.5px;
-  }
+  } */
 `;
 
 export const TextErrorServer = styled.p`
   color: rgba(186, 45, 0, 1);
-  font-size: 20px;
+  font-size: 0.93vw;
   font-family: "DM Sans";
   font-weight: 500;
   position: absolute;
   @media (max-width: 480px) {
-    font-size: 10px;
+    font-size: 12px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 15px;
-  }
+  } */
 `;
 
 export const RegisterFormWrapper = styled.div`

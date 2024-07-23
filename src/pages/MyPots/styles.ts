@@ -15,13 +15,14 @@ export const MyPotsWrapper = styled.div`
   padding: 0 20px;
 `
 
-export const PotsContainer = styled.div`
+export const PotsContainer = styled.div<{ isLogin: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 420px;
   gap: 36px;
+  display: ${props => (props.isLogin ? "block" : "none")};
   @media (max-width: 480px) {
     height: 210px;
     gap: 18px;
@@ -126,13 +127,14 @@ export const ModalContainer = styled.div`
   text-align: center;
 
   @media (max-width: 480px) {
+    width: 300px;
+    height: 250px;
+    transform: translate(-50%, -120%);
+  }
+  /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 20px 40px 20px 40px;
     max-width: 100%;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    padding: 20px 40px 20px 40px;
-    max-width: 100%;
-  }
+  } */
 `
 
 export const ModalTextWrapper = styled.div`
@@ -147,11 +149,11 @@ export const ModalTextWrapper = styled.div`
     width: 222px;
     gap: 18px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 333px;
     gap: 27px;
 
-  }
+  } */
 `
 
 export const ArrowIcon = styled.span`
@@ -161,16 +163,16 @@ export const ArrowIcon = styled.span`
 export const ModalText = styled.p`
   font-family: "Inter";
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: rgba(55, 62, 58, 1);
 
   @media (max-width: 480px) {
     font-size: 12px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
 
-  }
+  } */
 `
 
 export const AdminButtonControl = styled.div`

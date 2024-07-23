@@ -158,7 +158,7 @@ function MyPots() {
             )}
         </AdminPotContainer>
       ) : (
-        <PotsContainer>
+        <PotsContainer isLogin={isLogin}>
           {pots.map((pot: Pot, index: number) => (
             <LinkTopf to={`/mypots/pot/${pot.id}`} key={pot.id}>
               <PotCard activ={pot.active}>

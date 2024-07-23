@@ -11,7 +11,7 @@ function GoToBackButton() {
 
   return (
     <GoBackButtonComponent onClick={goBack}>
-      <IoArrowBack size={24} style={{ color: "rgba(186, 45, 0, 1)" }} />
+      <IoArrowBack style={{ color: "rgba(186, 45, 0, 1)" }} />
       Zurück
     </GoBackButtonComponent>
   )

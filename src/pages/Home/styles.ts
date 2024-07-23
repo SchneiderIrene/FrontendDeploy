@@ -206,13 +206,13 @@ export const RectangleContainer = styled.div`
   margin-top: 8.958vw;
   padding-left: 1.56vw;
   width: 100%;
+ 
   @media (max-width: 480px) {
     position: static;
-    flex-direction: row;
-    gap: 10px;
+    gap: 5px;
     margin: 0;
     padding: 0px;
-    min-width: 55vw;
+    width: 200px;
     & > *:first-of-type {
       margin-top: 0;
     }
@@ -240,6 +240,8 @@ export const Rectangle = styled.div`
   backdrop-filter: blur(0.26vw);
   @media (max-width: 480px) {
     margin: 0;
+    height: 20px;
+    max-width: 200px;
   }
 `
 
@@ -248,8 +250,9 @@ export const TextColumn = styled.div`
   flex-direction: column;
   margin-top: 1.04vw;
   position: relative;
+  
   @media (max-width: 480px) {
-   
+   margin-top: 0;
   }
 `
 
@@ -263,10 +266,11 @@ export const TextWrapper = styled.div`
   font-style: normal;
   color: #373e3a;
   margin: 0.52vw;
-  /* @media (max-width: 480px) {
-    font-size: 10px;
+
+  @media (max-width: 480px) {
+    font-size: 5px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   } */
 `
