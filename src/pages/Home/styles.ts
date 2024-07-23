@@ -222,7 +222,7 @@ export const RectangleContainer = styled.div`
     gap: 10px;
     margin: 0px;
     padding: 0px;
-    width: 230px;
+    width: 210px;
     & > *:first-of-type {
       margin-top: 0;
     }

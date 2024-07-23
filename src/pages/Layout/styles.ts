@@ -150,7 +150,8 @@ export const FooterNavContainer = styled.nav`
     gap: 12px;
   } */
   @media (max-width: 480px) {
-    gap: 6px;
+    flex-direction: column;
+    gap: 10px;
     margin-top: 5px;
     margin-bottom: 12px;
   }
