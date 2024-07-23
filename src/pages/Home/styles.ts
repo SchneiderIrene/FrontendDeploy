@@ -241,7 +241,7 @@ export const Rectangle = styled.div`
   @media (max-width: 480px) {
     margin: 0;
     height: 20px;
-    max-width: 200px;
+    max-width: 220px;
   }
 `
 
@@ -329,11 +329,6 @@ export const LogoContainer = styled.div`
     margin-top: 30px;
   } */
 `
-
-
-
-
-
 
 export const StyledH3 = styled.h2`
   text-align: center;
