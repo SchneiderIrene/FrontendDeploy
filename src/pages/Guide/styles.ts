@@ -11,7 +11,7 @@ export const GuidePageWrapper = styled.div`
   counter-reset: item;
   @media (max-width: 480px) {
     margin: 0;
-    padding: 0;
+    padding: 0 14.28vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     margin: 45px;
@@ -53,19 +53,19 @@ export const Container = styled.div`
     position: limk;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     padding: 25px;
     &:first-of-type {
-      margin-top: -30px;
+      margin-top: -5.55vw;
       /* padding: 0 40px; */
     }
     &::before {
-      transform: translateY(-15px);
+      transform: translateY(-3.125vw);
     }
     &::after {
-      transform: translateY(15px);
+      transform: translateY(3.125vw);
     }
   }
 
@@ -95,11 +95,11 @@ export const StyledPCont2 = styled.p<{ isLogin: boolean }>`
   word-wrap: break-word;
   overflow: hidden;
   visibility: ${props => (props.isLogin ? "visible" : "hidden")};
-  @media (max-width: 480px) {
-    font-size: 12px;
+  @media (max-width: 768px) {
+    font-size: 3vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
+    font-size: 14px;
   } */
 `
 
@@ -126,13 +126,13 @@ export const StyledH1 = styled.h1`
   overflow: hidden;
   position: relative;
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 4.57vw;
     margin-bottom: 20px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 30px;
-    margin-top: 15px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 3.33vw;
+    margin-top: 0px;
+  }
 `
 
 export const StyledH3 = styled.h3<{ isLogin: boolean }>`
@@ -144,13 +144,13 @@ export const StyledH3 = styled.h3<{ isLogin: boolean }>`
   overflow: hidden;
   display: ${props => (props.isLogin ? "block" : "none")};
 
-  @media (max-width: 480px) {
-    font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 3.33vw;
     text-align: left;
     margin-top: 10px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 22px;
+    font-size: 3.33vw;
     margin-top: 15px;
   } */
 `
@@ -166,9 +166,9 @@ export const StyledP = styled.p<{ isLogin: boolean }>`
   overflow: hidden;
   display: ${props => (props.isLogin ? "block" : "none")};
   padding: 0.83vw;
-  @media (max-width: 480px) {
-    font-size: 12px;
-    margin-bottom: 10px ;
+  @media (max-width: 768px) {
+    font-size: 2.5vw;
+    margin-bottom: 2.08vw ;
     /* margin-top: 10px; */
     /* padding: 8px 8px 0 8px; */
   }

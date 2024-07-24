@@ -20,13 +20,14 @@ export const PotsContainer = styled.div<{ isLogin: boolean }>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 420px;
+  min-height: 420px;
   gap: 36px;
   display: ${props => (props.isLogin ? "flex" : "none")};
-  @media (max-width: 480px) {
-    height: 210px;
+  @media (max-width: 768px) {
+    min-height: 210px;
     gap: 18px;
     flex-direction: column;
+    padding: 50px;
     /* justify-content: end; */
     /* margin-top: 100px; */
   }
@@ -56,9 +57,9 @@ export const PotCard = styled.div<PotCardProps>`
     padding: 20px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    height: 250px;
-    width: 300px;
-    padding: 30px;
+    height: 220px;
+    width: 250px;
+    padding: 20px;
 
   }
 `
@@ -72,8 +73,8 @@ export const PotImage = styled.img`
     height: 100px; 
   }
   @media (min-width: 481px) and (max-width: 768px) {
-   width: 120px; 
-   height: 180px;
+   width: 100px; 
+   height: 150px;
   }
 `
 
