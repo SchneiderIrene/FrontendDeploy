@@ -104,6 +104,8 @@ export const Main = styled.main`
   margin: 0 auto;
   @media (max-width: 480px) {
     flex-direction: column;
+    align-items: center; 
+    max-width: 480px;
   }
 `
 
