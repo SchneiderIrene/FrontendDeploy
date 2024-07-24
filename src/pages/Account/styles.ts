@@ -102,11 +102,11 @@ export const PasswortChangeContainer = styled.div`
     height: 239.5px;
     gap: 12px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 360px;
     height: 359.25px;
     gap: 18px;
-  }
+  } */
 `
 
 export const TitleInformation = styled.p`
@@ -217,11 +217,11 @@ export const ModalContainerPassword = styled.div`
   height: 592px;
   border: 2px solid rgba(2, 88, 41, 1);
   background-color: rgba(255, 254, 239, 1);
-  @media (max-width: 480px) {
-    gap: 17.5px;
-    padding: 34.5px 48px;
-    width: 300px;
-    height: 296px;
+  @media (max-width: 768px) {
+    gap: 3.54vw;
+    padding: 7vw 5vw;
+    width: 80vw;
+    height: 65vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     gap: 26.25px;
@@ -239,16 +239,16 @@ export const TitleContainerPasswordChangeModal = styled.div`
   align-items: center;
   justify-content: space-around;
   gap: 12px;
-  @media (max-width: 480px) {
-    width: 201.5px;
-    height: 48.5px;
-    gap: 6px;
+  @media (max-width: 768px) {
+    width: 41.66vw;
+    height: 10vw;
+    gap: 1.25vw;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     width: 302.25px;
     height: 72.75px;
     gap: 9px;
-  }
+  } */
 `
 
 export const TextPasswordChangeModal = styled.p`
@@ -256,12 +256,14 @@ export const TextPasswordChangeModal = styled.p`
   font-size: 18px;
   font-family: "DM Sans";
   font-weight: 500;
-  @media (max-width: 480px) {
-    font-size: 9px;
+  @media (max-width: 768px) {
+    font-size: 2.28vw;
+   width: 100%;
+    min-width: 57.14vw
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 13.5px;
-  }
+  } */
 `
 
 export const ModalContainerDeleteLogOut = styled.div`
@@ -278,10 +280,10 @@ export const ModalContainerDeleteLogOut = styled.div`
   width: 863px;
   height: 362px;
   border: 2px solid rgba(2, 88, 41, 1);
-  @media (max-width: 480px) {
-    padding: 34.5px 48px;
-    width: 300px;
-    height: 200px;
+  @media (max-width: 768px) {
+    padding: 7px 10vw;
+    width: 62.5vw;
+    height: 41.66vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 51.75px 72px;
@@ -295,8 +297,8 @@ export const TextModal = styled.p`
   font-weight: 600;
   font-size: 24px;
   color: rgba(55, 62, 58, 1);
-  @media (max-width: 480px) {
-    font-size: 12px;
+  @media (max-width: 768px) {
+    font-size: 2.5vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
@@ -306,8 +308,8 @@ export const TextModal = styled.p`
 export const ButtonBoxModal = styled.div`
   width: 480px;
   
-  @media (max-width: 480px) {
-    width: 240px;
+  @media (max-width: 768px) {
+    width: 100%;
 
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
@@ -321,9 +323,10 @@ export const FormContainer = styled.form`
   gap: 10px;
   width: 480px;
   height: 202px;
-  @media (max-width: 480px) {
-    gap: 5px;
-    width: 240px;
+  @media (max-width: 768px) {
+    gap: 1.04vw;
+    min-width: 50vw;
+    width: 100%;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     gap: 7.5px;

@@ -10,20 +10,23 @@ export const PotWrapper = styled.div`
   flex: 1;
   padding: 0 20px;
   @media (max-width: 480px) {
-   
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5vw;
   }
 `
-
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 3.125vw;
-  @media (max-width: 480px)  {
+  @media (max-width: 768px) {
     padding-top: 10px;
     gap: 10px;
-    height: 60px;
+    height: 12.5vw;
     flex-direction: column;
     justify-content: center;
   }
@@ -31,7 +34,7 @@ export const ButtonContainer = styled.div`
 
 export const ButtonControl = styled.div`
   width: 220px;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
@@ -66,10 +69,13 @@ export const StyledP = styled.p`
     padding: 0px;
     text-align: center;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 16px;
-    padding: 0px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.2;
+
+    /* padding: 0px; */
+  }
 `
 
 export const ImageContainer = styled.img`
@@ -208,14 +214,13 @@ export const ModalContainerDeletePot = styled.div`
   display: flex;
   background-color: rgba(255, 254, 239, 1);
   padding: 3.59vw 5vw;
-  width:44.94vw;
+  width: 44.94vw;
   height: 18.85vw;
   border: 0.1vw solid rgba(2, 88, 41, 1);
-  @media (max-width: 480px) {
-    padding: 34.5px 48px;
-    width: 300px;
-    height: 150px;
-    
+  @media (max-width: 768px) {
+    padding: 7.08vw 10vw;
+    width: 62.5vw;
+    height: 35vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     padding: 51.75px 72px;
@@ -229,8 +234,8 @@ export const TextModal = styled.p`
   font-weight: 600;
   font-size: 1.25vw;
   color: rgba(55, 62, 58, 1);
-  @media (max-width: 480px) {
-    font-size: 12px;
+  @media (max-width: 768px) {
+    font-size: 2.5vw;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
