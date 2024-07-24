@@ -54,8 +54,8 @@ export const StyledH1Container1 = styled.h1`
   }
 `
 export const StyledPContainer1 = styled.p`
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   color: #373e3a;
   font-family: "DM Sans";
   font-size: 0.937vw;
@@ -111,9 +111,10 @@ export const Image2 = styled.img`
   object-fit: contain;
   margin-left: 0.416vw;
   z-index: 0;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     width: 100%;
     max-width: 240px;
+    display: none;
   }
 `
 
@@ -436,11 +437,10 @@ export const StyledPContainer5 = styled.div`
   max-width: 36.458vw;
   width: 100%;
   word-wrap: break-word;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   @media (max-width: 480px) {
     margin-top: 10px;
-    max-width: 220px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
@@ -470,6 +470,7 @@ export const StyledH5 = styled.h2`
   @media (max-width: 480px) {
     font-size: 12px;
     margin-top: 20px;
+   
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 18px;
@@ -502,11 +503,21 @@ export const StyledLink = styled(Link)`
   }
   @media (max-width: 480px) {
     font-size: 7px;
-    margin-left: 0px;
+    margin-left: 1px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
   } */
+`
+
+export const InfoContainer = styled.div`
+
+@media (max-width: 480px) {
+    display: flex;
+flex-direction: column;
+width: 100%;
+min-width: 360px;
+  }
 `
 
 export const StyledP = styled.p`
@@ -525,10 +536,10 @@ export const StyledP = styled.p`
   @media (max-width: 480px) {
    align-items: center;
    width: 100%;
-   max-width: 800px;
+   max-width: 480px;
    line-height: 1.5;
    font-size: 8px;
-   text-align: center;
+   text-align: left;
    padding-left: 12px;
    /* margin-left: 20px; */
   
@@ -568,6 +579,7 @@ export const StyledSpan = styled.span`
   @media (max-width: 480px) {
     font-size: 8px;
     top: 5px;
+    left: -1px;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 14px;
@@ -585,9 +597,7 @@ export const ButtonControl = styled.div`
   } 
 `
 
-export const InfoContainer = styled.div`
 
-`
 
 export const Icon = styled.img`
   width: 1.875vw;
