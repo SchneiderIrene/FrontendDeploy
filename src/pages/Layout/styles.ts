@@ -23,12 +23,16 @@ export const Header = styled.header`
   height: 5.2vw;
   background-color: #007132;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     padding: 2.08vw;
     height: 20.83vw;
     gap: 4vw;
     justify-content: center;
   }
+  /* @media (min-width: 481px) and (max-width: 768px) {
+    height: 12vw;
+    
+  } */
 `
 
 export const HeaderContentWrapper = styled.div`
@@ -39,8 +43,9 @@ export const HeaderContentWrapper = styled.div`
 
   @media (max-width: 480px) {
     padding: 1.04vw;
-    justify-content: space-between;
   }
+
+
 `
 
 export const NavContainerLink = styled.div`
@@ -51,6 +56,7 @@ export const NavContainerLink = styled.div`
   @media (max-width: 480px) {
     gap: 14vw;
   }
+
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -59,11 +65,14 @@ export const StyledNavLink = styled(NavLink)`
   font-size: 1.04vw;
   color: #fffeef;
   font-weight: 600;
-  &:hover {
+  /* &:hover {
     text-decoration: none;
-  }
+  } */
   @media (max-width: 480px) {
     font-size: 12px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 3.33vw;
   }
 `
 
@@ -77,6 +86,9 @@ export const NavContainer = styled.nav`
     flex-direction: column;
     gap: 3vw;
   }
+  @media (min-width: 481px) and (max-width: 768px) {
+    gap: 4vw;
+  }
 `
 
 export const HeaderLogoContainer = styled.div`
@@ -88,7 +100,7 @@ export const HeaderLogo = styled.img`
   width: 5.2vw;
   height: 100%;
   object-fit: contain;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     width: 15vw;
   }
 `
@@ -128,7 +140,7 @@ export const FooterContentWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -151,7 +163,7 @@ export const FooterNavContainer = styled.nav`
   /* @media (max-width: 768px) {
     gap: 12px;
   } */
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 10px;
     margin-top: 5px;
@@ -177,6 +189,11 @@ export const UserName = styled.div`
   @media (max-width: 480px) {
     font-size: 16px;
   }
+    @media (min-width: 481px) and (max-width: 768px) {
+   font-size: 18px;
+   margin-right: 20px;
+  }
+  
 `
 
 export const AccountContainer = styled.div`
@@ -187,6 +204,9 @@ export const AccountContainer = styled.div`
   @media (max-width: 480px) {
     margin-left: 80px;
   }
+  @media (min-width: 481px) and (max-width: 768px) {
+   
+  }
 `
 
 export const StyledButton = styled.div`
@@ -194,6 +214,9 @@ export const StyledButton = styled.div`
   right: 0;
   @media (max-width: 480px) {
     width: 64vw;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 30vw;
   }
 `
 
@@ -208,9 +231,9 @@ export const FooterLeftLink = styled(StyledLink)`
   @media (max-width: 480px) {
     font-size: 9px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
-  } */
+  }
 `
 export const FooterText = styled.p`
   font-size: 0.729vw;
@@ -225,9 +248,9 @@ export const Copyright = styled.div`
   @media (max-width: 480px) {
     font-size: 8px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
-  } */
+  }
 `
 
 export const CopyrightText = styled.p`
