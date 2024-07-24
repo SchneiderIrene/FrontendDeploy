@@ -2,7 +2,6 @@ import { FAQs } from "assets"
 import styled from "@emotion/styled"
 import { Link } from "react-router-dom"
 
-
 export const HomePageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,7 +9,7 @@ export const HomePageWrapper = styled.div`
   padding: 2.08vw;
   width: 100%;
   gap: 1.04vw;
-  @media (max-width: 1020px){
+  @media (max-width: 1020px) {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -33,12 +32,10 @@ export const Container1 = styled.div`
     align-items: center;
     padding-bottom: 3.12vw;
     margin-top: 6.6vw;
-    
   }
   @media (min-width: 481px) and (max-width: 768px) {
     position: relative;
   }
-  
 `
 export const StyledH1Container1 = styled.h1`
   display: flex;
@@ -61,7 +58,7 @@ export const StyledH1Container1 = styled.h1`
     font-size: clamp(18px, 2.9vw, 20px);
     margin-top: 0;
     max-width: 250px;
-    padding-top: 30px
+    padding-top: 30px;
   }
 `
 export const StyledPContainer1 = styled.p`
@@ -80,9 +77,8 @@ export const StyledPContainer1 = styled.p`
     font-size: 10px;
     text-align: center;
     line-height: 1.2;
-   justify-content: center;
-   max-width: 350px;
-    
+    justify-content: center;
+    max-width: 350px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: clamp(10px, 1.5vw, 12px);
@@ -95,7 +91,7 @@ export const Image1 = styled.img`
   height: auto;
   object-fit: contain;
   margin-top: 0;
- 
+
   left: 1.56vw;
   @media (max-width: 480px) {
     width: 100%;
@@ -107,7 +103,6 @@ export const Image1 = styled.img`
     position: absolute;
     left: 40vw;
     bottom: 1vh;
-  
   }
 `
 export const Container2 = styled.div`
@@ -175,7 +170,6 @@ export const StyledH2Container2 = styled.h2`
     margin: 0;
     padding: 0;
     max-width: 31.57vw;
-
   }
 `
 export const OverlayContainer = styled.div`
@@ -207,18 +201,17 @@ export const OverlayContainer = styled.div`
     }
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    top: 0.83vh
-
+    top: 0.83vh;
   }
 `
 
 export const SquareContainer = styled.div`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-@media (max-width: 480px) {
+  @media (max-width: 480px) {
     gap: 10px;
-    width: 210px
+    width: 210px;
   }
 `
 
@@ -254,8 +247,7 @@ export const RectangleContainer = styled.div`
   margin-top: 8.958vw;
   padding-left: 1.56vw;
   width: 100%;
-  
- 
+
   @media (max-width: 480px) {
     position: static;
     gap: 10px;
@@ -300,9 +292,9 @@ export const TextColumn = styled.div`
   flex-direction: column;
   margin-top: 1.04vw;
   position: relative;
-  
+
   @media (max-width: 480px) {
-   margin-top: 0;
+    margin-top: 0;
   }
 `
 
@@ -324,6 +316,22 @@ export const TextWrapper = styled.div`
     font-size: 14px;
   } */
 `
+export const StyledH3 = styled.h2`
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.458vw;
+  font-weight: 600;
+  color: #373e3a;
+  margin-top: 4.166vw;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    margin-top: 0px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 1rem;
+    /* margin-top: 0px; */
+  }
+`
 
 export const Container3 = styled.div`
   display: flex;
@@ -344,13 +352,7 @@ export const Image3 = styled.img`
   width: 18.75vw;
   height: auto;
   margin: 0.31vw;
-  /* @media (max-width: 1200px) {
-    width: 300px;
-  }
-  @media (max-width: 900px) {
-    width: 200px;
-  } */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `
@@ -362,9 +364,9 @@ export const ImageLogo = styled.img`
   @media (max-width: 480px) {
     width: 50px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 70px;
-  } */
+  }
 `
 
 export const LogoContainer = styled.div`
@@ -377,23 +379,6 @@ export const LogoContainer = styled.div`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     margin-top: 30px;
-  } */
-`
-
-export const StyledH3 = styled.h2`
-  text-align: center;
-  font-family: Inter;
-  font-size: 1.458vw;
-  font-weight: 600;
-  color: #373e3a;
-  margin-top: 4.166vw;
-  @media (max-width: 480px) {
-    font-size: 12px;
-    margin-top: 0px;
-  }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 20px;
-    margin-top: 0px;
   } */
 `
 
@@ -411,18 +396,30 @@ export const StyledPContainer4 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   padding: 0 3.125vw;
-  @media (max-width: 480px) {
-    font-size: 10px;
+  @media (max-width: 768px) {
+    font-size: clamp(12px, 2vw, 14px);
     flex-direction: column;
     align-items: center;
     gap: 1.04vw;
-    max-width: 300px;
+    max-width: 600px;
     text-align: center;
   }
   /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 16px;
     padding: 0 45px;
   } */
+`
+
+export const ButtonControl = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 1.04vw;
+  margin-top: 0.52vw;
+  margin-bottom: 2.6vw;
+  width: 11.458vw;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const StyledFAQHeading = styled.h1`
@@ -437,10 +434,10 @@ export const StyledFAQHeading = styled.h1`
     font-size: 16px;
     margin-top: 10px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 20px;
-    margin-top: 30px;
-  } */
+    /* margin-top: 30px; */
+  }
 `
 
 export const StyledFAQSubHeading = styled.h3`
@@ -456,13 +453,10 @@ export const StyledFAQSubHeading = styled.h3`
     text-align: center;
     width: 100%;
     max-width: 200px;
- 
-    /* margin-bottom: -5px; */
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-    margin-bottom: -5px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 export const StyledPContainer5 = styled.div`
@@ -476,14 +470,80 @@ export const StyledPContainer5 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   position: relative;
+
   @media (max-width: 480px) {
     margin-top: 10px;
     overflow: visible;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-    margin-top: 10px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    overflow: visible;
+  }
+`
+
+export const InfoContainer = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 300px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    min-width: 450px;
+  }
+`
+
+export const StyledP = styled.p`
+  display: flex;
+  text-align: left;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.937vw;
+  color: #373e3a;
+  max-width: 36.458vw;
+  margin-top: 0.78vw;
+  position: relative;
+  padding: 1.56vw;
+  border-bottom: 0.1vw solid green;
+  color: #373e3a;
+  z-index: 2;
+  @media (max-width: 480px) {
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    line-height: 1.5;
+    font-size: 8px;
+    text-align: left;
+    padding-left: 12px;
+    
+  }
+  @media  (max-width: 768px) {
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 10px;
+    gap: 10px;
+    padding-left: 20px;
+  }
+`
+export const StyledSpan = styled.span`
+  color: #ba2d00;
+  position: absolute;
+  left: 0px;
+  font-family: "Merriweather", serif;
+  font-size: 0.83vw;
+  font-weight: 600;
+  font-feature-settings: "lnum";
+  border-bottom: 0.1vw solid green;
+  @media (max-width: 480px) {
+    font-size: 8px;
+    top: 5px;
+    left: -1px;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+    left: -1px;
+  }
 `
 export const BackgroundImage = styled.img`
   position: absolute;
@@ -505,15 +565,15 @@ export const StyledH5 = styled.h2`
   font-weight: 600;
   text-align: center;
   margin-top: 4.166vw;
+
   @media (max-width: 480px) {
     font-size: 12px;
     margin-top: 20px;
-   
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
-    margin-top: 60px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 16px;
+    margin-top: 30px;
+  }
 `
 
 export const StyledP5 = styled.h3`
@@ -525,9 +585,9 @@ export const StyledP5 = styled.h3`
   @media (max-width: 480px) {
     font-size: 10px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 export const StyledLink = styled(Link)`
@@ -543,49 +603,10 @@ export const StyledLink = styled(Link)`
     font-size: 7px;
     margin-left: 1px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-  } */
-`
-
-export const InfoContainer = styled.div`
-
-@media (max-width: 480px) {
-    display: flex;
-flex-direction: column;
-width: 100%;
-min-width: 300px;
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 12px;
+    margin-top: 10px;
   }
-`
-
-export const StyledP = styled.p`
-  display: flex;
-  text-align: left;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.937vw;
-  color: #373e3a;
-  max-width: 36.458vw;
-  margin-top: 0.78vw;
-  position: relative;
-  padding: 1.56vw;
-  border-bottom: 0.1vw solid green;
-  color: #373e3a;
-  z-index: 2;
-  @media (max-width: 480px) {
-   align-items: center;
-   width: 100%;
-   max-width: 480px;
-   line-height: 1.5;
-   font-size: 8px;
-   text-align: left;
-   padding-left: 12px;
-   /* margin-left: 20px; */
-  
-  }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-    padding: 15px;
-  } */
 `
 
 export const Icon6Styled = styled.img`
@@ -599,40 +620,10 @@ export const Icon6Styled = styled.img`
     top: 0px;
     margin-left: 7px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    width: 18px;
-    top: -24px;
-  } */
-`
-
-export const StyledSpan = styled.span`
-  color: #ba2d00;
-  position: absolute;
-  left: 0px;
-  font-family: "Merriweather", serif;
-  font-size: 0.83vw;
-  font-weight: 600;
-  font-feature-settings: "lnum";
-  border-bottom: 0.1vw solid green;
-  @media (max-width: 480px) {
-    font-size: 8px;
-    top: 5px;
-    left: -1px;
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 16px;
+    top: -5px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-  } */
-`
-export const ButtonControl = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 1.04vw;
-  margin-top: 0.52vw;
-  margin-bottom: 2.6vw;
-  width: 11.458vw;
-  @media (max-width: 481px) {
-    width: 100%;
-  } 
 `
 
 
@@ -646,7 +637,7 @@ export const Icon = styled.img`
   }
 
   /* @media (min-width: 481px) and (max-width: 768px) {
-    width: 22px;
+    width: 20px;
   } */
 `
 
@@ -658,7 +649,7 @@ export const StyledEmail = styled.p`
   @media (max-width: 480px) {
     font-size: 10px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
-  } */
+  }
 `

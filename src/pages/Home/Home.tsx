@@ -155,7 +155,7 @@ function Home() {
         <BackgroundImage src={Img1} alt="Img1"/>
         <InfoContainer>
           <StyledP>
-            <StyledSpan>01</StyledSpan> Was ist LeafGrow? LeafGrow ist ein
+            <StyledSpan>01</StyledSpan>&nbsp; Was ist LeafGrow? LeafGrow ist ein
             persönlicher Assistent, der Ihnen hilft, zu Hause Unkraut anzubauen.
             Er bietet Anleitungen zum Pflanzen, Gießen und Ernten sowie Tipps
             zur Optimierung der Wachstumsbedingungen.
