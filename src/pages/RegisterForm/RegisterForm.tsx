@@ -91,13 +91,15 @@ function RegisterForm() {
     },
   })
   const addUser = () => {
+    console.log(user?.email);
     dispatch(
       authSliceActions.registerUser({
         username: formik.values[FIELD_NAMES.USERNAME as keyof RegisterFormValues].toString(),
-        email: formik.values[FIELD_NAMES.EMAIL as keyof RegisterFormValues]?.toString().toLowerCase(),
+        email: formik.values[FIELD_NAMES.EMAIL as keyof RegisterFormValues].toString().toLowerCase(),
         password: formik.values[FIELD_NAMES.PASSWORD as keyof RegisterFormValues].toString(),
       }),
     )
+    console.log(user?.email);
   }
 
   const showRegisterForm = () => {

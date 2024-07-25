@@ -1,9 +1,9 @@
-export enum FIELD_NAMES  {
-  USERNAME = "username",
-  EMAIL =  "email",
-  PASSWORD = "password",
-  CHECKBOX = "checkbox",
-  AGE_CHECKBOX = "ageCheckbox",
+export const FIELD_NAMES  = {
+  USERNAME: "username",
+  EMAIL: "email",
+  PASSWORD: "password",
+  CHECKBOX: "checkbox",
+  AGE_CHECKBOX: "ageCheckbox",
 };
 
 export type RegisterFormValues = {
