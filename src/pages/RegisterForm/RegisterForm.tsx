@@ -91,7 +91,6 @@ function RegisterForm() {
     },
   })
   const addUser = () => {
-    console.log(user?.email);
     dispatch(
       authSliceActions.registerUser({
         username: formik.values[FIELD_NAMES.USERNAME as keyof RegisterFormValues].toString(),
@@ -101,6 +100,12 @@ function RegisterForm() {
     )
     console.log(user?.email);
   }
+
+  useEffect(() => {
+    if (user) {
+      console.log("User email после регистрации:", user.email);
+    }
+  }, [user]);
 
   const showRegisterForm = () => {
     setIsRegister(false)
