@@ -7,9 +7,9 @@ export enum FIELD_NAMES  {
 };
 
 export type RegisterFormValues = {
-  [FIELD_NAMES.USERNAME]: string;
-  [FIELD_NAMES.EMAIL]: string;
-  [FIELD_NAMES.PASSWORD]: string;
-  [FIELD_NAMES.CHECKBOX]: boolean;
-  [FIELD_NAMES.AGE_CHECKBOX]: boolean;
+  username: string;
+  email: string;
+  password: string;
+  checkbox: boolean;
+  ageCheckbox: boolean;
 };
