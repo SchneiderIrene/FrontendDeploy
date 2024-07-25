@@ -4,7 +4,7 @@ export const AccountWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 125px;
+  /* padding-top: 0px; */
   gap: 65px;
   flex: 1;
   @media (max-width: 480px) {
@@ -12,10 +12,12 @@ export const AccountWrapper = styled.div`
     justify-content: start;
     gap: 32.5px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    padding-top: 93.75px;
-    gap: 48.75px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-top: 13vw;
+    gap: 6.5vw;
+    max-width: 100vw;
+    width: 100%;
+  }
 `
 
 export const AccountContainer = styled.div`
@@ -24,12 +26,13 @@ export const AccountContainer = styled.div`
   justify-content: center;
   gap: 147px;
   @media (max-width: 480px) {
-    gap: 73.5px;
+    gap: 14.5vw;
     flex-direction: column;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    gap: 110.25px;
+    gap: 13vw;
     flex-direction: column;
+    
   }
 `
 
@@ -56,10 +59,10 @@ export const DeleteLogOutContainer = styled.div`
     width: 240px;
     gap: 40px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 360px;
-    gap: 60px;
-  } */
+    gap: 40px;
+  }
 `
 
 export const TextDeleteLogOut = styled.p`
@@ -102,11 +105,11 @@ export const PasswortChangeContainer = styled.div`
     height: 239.5px;
     gap: 12px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
     width: 360px;
     height: 359.25px;
     gap: 18px;
-  } */
+  }
 `
 
 export const TitleInformation = styled.p`

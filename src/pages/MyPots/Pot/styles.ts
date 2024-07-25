@@ -24,11 +24,11 @@ export const ButtonContainer = styled.div`
   width: 100%;
   height: 3.125vw;
   @media (max-width: 768px) {
-    padding-top: 10px;
-    gap: 10px;
-    height: 12.5vw;
+    /* padding-top: 0; */
+    gap: 1vw;
+    height: 13vw;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
   }
 `
 
@@ -47,14 +47,14 @@ export const PotContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 2vw;
   width: 100%;
-  @media (max-width: 480px) {
-    gap: 20px;
+  @media (max-width: 768px) {
+    gap: 4vw;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     gap: 30px;
-  }
+  } */
 `
 
 export const StyledP = styled.p`
@@ -64,17 +64,18 @@ export const StyledP = styled.p`
   font-weight: 600;
   text-align: left;
   @media (max-width: 480px) {
-    font-size: 6px;
+    font-size: 2vw;
     line-height: 1.2;
     padding: 0px;
-    text-align: center;
+    width: 100%;
+    text-align: left;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-    text-align: center;
+    font-size: 2vw;
+    text-align: left;
     line-height: 1.2;
-
-    /* padding: 0px; */
+    padding: 0px;
+    width: 100%;
   }
 `
 
