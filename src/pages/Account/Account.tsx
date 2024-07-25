@@ -107,6 +107,7 @@ const Account = () => {
     email: Yup.string()
     .required("E-Mail-Adresse ist erforderlich")
     .email("Muss eine gültige E-Mail-Adresse sein")
+    .transform((value) => (value ? value.toLowerCase() : value))
     .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Ungültige E-Mail")
   })
 

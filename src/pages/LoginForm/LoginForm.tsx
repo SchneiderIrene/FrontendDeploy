@@ -42,7 +42,8 @@ const LoginForm = () => {
   const validationSchema = Yup.object().shape({
     [FIELD_NAMES.EMAIL]: Yup.string()
       .required("E-Mail-Adresse ist erforderlich")
-      .email("Muss eine gültige E-Mail-Adresse sein"),
+      .email("Muss eine gültige E-Mail-Adresse sein")
+      .transform((value) => (value ? value.toLowerCase() : value)),
     [FIELD_NAMES.PASSWORD]: Yup.string().required("Passwort ist erforderlich"),
   })
 
