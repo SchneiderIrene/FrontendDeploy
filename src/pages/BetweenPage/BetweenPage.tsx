@@ -36,7 +36,7 @@ function BetweenPage() {
   // })
 
   const resetEmail = (email : string) => {
-    dispatch(authSliceActions.resetEmail(email))
+    dispatch(authSliceActions.resetEmail(email.toLowerCase()))
     navigate("/")
   }
 
@@ -46,7 +46,7 @@ function BetweenPage() {
         {status === "error" && errorConfirm ? (
           <>
         <MessageErrorRegisterConfirm>{errorConfirm.message}</MessageErrorRegisterConfirm>
-        <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=> user?.email && resetEmail(user.email.toLowerCase())}/>
+        <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=> user?.email && resetEmail(user.email)}/>
           </>) : (
           <> 
         <MessageSuccessRegister>
