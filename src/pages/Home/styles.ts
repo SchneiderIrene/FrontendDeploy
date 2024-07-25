@@ -52,7 +52,7 @@ export const StyledH1Container1 = styled.h1`
     font-size: 20px;
     margin-top: 0;
     max-width: 600px;
-    text-align: center;
+    text-align: left;
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: clamp(18px, 2.9vw, 20px);
@@ -75,9 +75,9 @@ export const StyledPContainer1 = styled.p`
   overflow: hidden;
   @media (max-width: 480px) {
     font-size: 10px;
-    text-align: center;
+    text-align: left;
     line-height: 1.2;
-    justify-content: center;
+    justify-content: left;
     max-width: 350px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
@@ -101,7 +101,7 @@ export const Image1 = styled.img`
     width: 100%;
     max-width: 31vw;
     position: absolute;
-    left: 40vw;
+    left: 44vw;
     bottom: 1vh;
   }
 `
@@ -158,7 +158,7 @@ export const StyledH2Container2 = styled.h2`
   z-index: 1;
   @media (max-width: 480px) {
     max-width: 500px;
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     margin-top: 14px;
     margin-right: 0;
@@ -166,7 +166,7 @@ export const StyledH2Container2 = styled.h2`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: clamp(8px, 1.3vw, 10px);
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
     max-width: 31.57vw;
@@ -323,14 +323,18 @@ export const StyledH3 = styled.h2`
   font-weight: 600;
   color: #373e3a;
   margin-top: 4.166vw;
-  @media (max-width: 480px) {
-    font-size: 10px;
-    margin-top: 0px;
+  @media (max-width: 768px) {
+    display: flex;
+    text-align: left;
+    max-width: 71vw;
+    width: 100%;
+    font-size: 3vw;
+    margin-top: 1.6vw;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  /* @media (min-width: 481px) and (max-width: 768px) {
     font-size: 1rem;
     /* margin-top: 0px; */
-  }
+  } */
 `
 
 export const Container3 = styled.div`
@@ -396,18 +400,25 @@ export const StyledPContainer4 = styled.div`
   word-wrap: break-word;
   overflow: hidden;
   padding: 0 3.125vw;
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    font-size: clamp(11px, 2vw, 14px);
+    flex-direction: column;
+    align-items: start;
+    gap: 1.04vw;
+    max-width: 80vw;
+    text-align: left;
+    /* padding: 20px; */
+    
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
     font-size: clamp(12px, 2vw, 14px);
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 1.04vw;
-    max-width: 600px;
-    text-align: center;
+    max-width: 100vw;
+    text-align: left;
+    padding: 0;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 16px;
-    padding: 0 45px;
-  } */
 `
 
 export const ButtonControl = styled.div`
@@ -419,6 +430,7 @@ export const ButtonControl = styled.div`
   width: 11.458vw;
   @media (max-width: 768px) {
     width: 100%;
+    margin-left: 0;
   }
 `
 
@@ -448,15 +460,18 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 0.937vw;
   font-weight: 450;
   line-height: normal;
-  @media (max-width: 480px) {
-    font-size: 8px;
-    text-align: center;
+  @media (max-width: 768px) {
+    font-size: 2.1vw;
+    text-align: left;
     width: 100%;
-    max-width: 200px;
+    max-width: 73vw;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 12px;
-  }
+  /* @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 2.3vw;
+    text-align: left;
+    width: 100%;
+    max-width: 73vw;
+  } */
 `
 
 export const StyledPContainer5 = styled.div`
@@ -472,7 +487,7 @@ export const StyledPContainer5 = styled.div`
   position: relative;
 
   @media (max-width: 480px) {
-    margin-top: 10px;
+    margin-top: 2vw;
     overflow: visible;
   }
   @media (min-width: 481px) and (max-width: 768px) {
@@ -481,14 +496,14 @@ export const StyledPContainer5 = styled.div`
 `
 
 export const InfoContainer = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 300px;
+    min-width: 80vw;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-    min-width: 450px;
+    min-width: 76vw;
   }
 `
 
@@ -508,16 +523,16 @@ export const StyledP = styled.p`
   @media (max-width: 480px) {
     align-items: center;
     width: 100%;
-    max-width: 480px;
+    max-width: 100vw;
     line-height: 1.5;
-    font-size: 8px;
+    font-size: 10px;
     text-align: left;
     padding-left: 12px;
     
   }
-  @media  (max-width: 768px) {
+  @media  (min-width: 481px) and (max-width: 768px) {
     width: 100%;
-    max-width: 600px;
+    max-width: 80vw;
     line-height: 1.5;
     font-size: 12px;
     text-align: left;

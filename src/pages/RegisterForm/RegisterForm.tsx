@@ -101,11 +101,6 @@ function RegisterForm() {
     console.log(user?.email);
   }
 
-  useEffect(() => {
-    if (user) {
-      console.log("User email после регистрации:", user.email);
-    }
-  }, [user]);
 
   const showRegisterForm = () => {
     setIsRegister(false)
