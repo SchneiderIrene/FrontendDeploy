@@ -94,9 +94,9 @@ function RegisterForm() {
   const addUser = () => {
     dispatch(
       authSliceActions.registerUser({
-        username: formik.values.username,
-        email: formik.values.email,
-        password: formik.values.password,
+        username: formik.values[FIELD_NAMES.USERNAME as keyof RegisterFormValues].toString(),
+        email: formik.values[FIELD_NAMES.EMAIL as keyof RegisterFormValues].toString().toLowerCase(),
+        password: formik.values[FIELD_NAMES.PASSWORD as keyof RegisterFormValues].toString(),
       }),
     )
   }
@@ -146,8 +146,8 @@ function RegisterForm() {
               placeholder="Benutzername eingeben"
               label="Benutzername"
               onInputChange={formik.handleChange}
-              value={formik.values.username}
-              error={formik.errors.username }
+              value={formik.values[FIELD_NAMES.USERNAME as keyof RegisterFormValues] as string}
+              error={formik.errors[FIELD_NAMES.USERNAME as keyof RegisterFormValues] as string }
               onBlur={formik.handleBlur}
               onChange={formik.handleBlur}
             />
@@ -157,8 +157,8 @@ function RegisterForm() {
               placeholder="E-Mail-Adresse eingeben"
               label="E-Mail-Adresse"
               onInputChange={formik.handleChange}
-              value={formik.values.email}
-              error={formik.errors.email }
+              value={formik.values[FIELD_NAMES.EMAIL as keyof RegisterFormValues] as string}
+              error={formik.errors[FIELD_NAMES.EMAIL as keyof RegisterFormValues] as string}
               onBlur={formik.handleBlur}
             />
             <Input
@@ -167,8 +167,8 @@ function RegisterForm() {
               placeholder="Passwort eingeben"
               label="Passwort"
               onInputChange={formik.handleChange}
-              value={formik.values.password}
-              error={formik.errors.password}
+              value={formik.values[FIELD_NAMES.PASSWORD as keyof RegisterFormValues] as string}
+              error={formik.errors[FIELD_NAMES.PASSWORD as keyof RegisterFormValues] as string}
               onBlur={formik.handleBlur}
             />
           </InputsContainer>

@@ -26,7 +26,8 @@ import {
   Title,
   TitleContainerPasswordChangeModal,
   TitleInformation,
-  CloseButton
+  CloseButton,
+  ButtonControlDeleteLogout
 } from "./styles"
 import {
   authSliceActions,
@@ -148,7 +149,7 @@ const Account = () => {
   }
 
   const deleteUserByEmail = (email : string) =>{
-    dispatch(authSliceActions.deleteUserByEmail(email))
+    dispatch(authSliceActions.deleteUserByEmail(email.toLowerCase()))
   }
 
   return (
@@ -247,11 +248,14 @@ const Account = () => {
             <TextModal>
               Bist du sicher, dass du dich abmelden möchtest?
             </TextModal>
-            <Button
+            <ButtonControlDeleteLogout>
+              <Button
               name="Abmelden"
               bgColorIsRed
               onButtonClick={logoutUser}
             />
+            </ButtonControlDeleteLogout>
+            
           </ModalContainerDeleteLogOut>
         </Modal>
         <Modal isOpen={isDeleteModalOpen} onClose={handleCloseDeleteModal}>
@@ -260,11 +264,14 @@ const Account = () => {
             <TextModal>
               Bist du sicher, dass du dein Konto löschen möchtest?
             </TextModal>
-            <Button
+            <ButtonControlDeleteLogout>
+              <Button
               name="Konto löschen"
               bgColorIsRed={true}
               onButtonClick={deleteAccount}
             />
+            </ButtonControlDeleteLogout>
+            
           </ModalContainerDeleteLogOut>
         </Modal>
 

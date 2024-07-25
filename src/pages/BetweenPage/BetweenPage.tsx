@@ -36,7 +36,7 @@ function BetweenPage() {
   // })
 
   const resetEmail = (email : string) => {
-    dispatch(authSliceActions.resetEmail(email))
+    dispatch(authSliceActions.resetEmail(email.toLowerCase()))
     navigate("/")
   }
 
