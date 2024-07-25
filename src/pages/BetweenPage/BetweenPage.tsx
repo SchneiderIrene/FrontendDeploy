@@ -46,7 +46,7 @@ function BetweenPage() {
         {status === "error" && errorConfirm ? (
           <>
         <MessageErrorRegisterConfirm>{errorConfirm.message}</MessageErrorRegisterConfirm>
-        <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=> user?.email && resetEmail(user.email)}/>
+        <Button  name="Erneut senden" bgColorIsRed onButtonClick={()=> user?.email && resetEmail(user.email.toLowerCase())}/>
           </>) : (
           <> 
         <MessageSuccessRegister>
