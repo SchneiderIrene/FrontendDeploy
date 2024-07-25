@@ -9,6 +9,7 @@ top: 550px;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
+  z-index: 5000;
 
   @keyframes spin {
     to {

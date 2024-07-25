@@ -278,7 +278,7 @@ export const ModalContainerDeleteLogOut = styled.div`
   background-color: rgba(255, 254, 239, 1);
   padding: 69px 96px;
   width: 863px;
-  height: 362px;
+  height: 462px;
   border: 2px solid rgba(2, 88, 41, 1);
   @media (max-width: 768px) {
     padding: 7px 10vw;
@@ -290,6 +290,11 @@ export const ModalContainerDeleteLogOut = styled.div`
     width: 647.25px;
     height: 271.5px;
   } */
+`
+export const ButtonControlDeleteLogout = styled.div`
+display: flex;
+max-width: 630px;
+width: 100%;
 `
 
 export const TextModal = styled.p`
@@ -322,7 +327,7 @@ export const FormContainer = styled.form`
   flex-direction: column;
   gap: 10px;
   width: 480px;
-  height: 202px;
+  height: 302px;
   @media (max-width: 768px) {
     gap: 1.04vw;
     min-width: 50vw;
