@@ -53,8 +53,7 @@ export const Container = styled.div`
     position: limk;
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 1020px) {
     align-items: center;
     padding: 25px;
     &:first-of-type {
@@ -98,9 +97,9 @@ export const StyledPCont2 = styled.p<{ isLogin: boolean }>`
   @media (max-width: 768px) {
     font-size: 3vw;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 14px;
-  } */
+  @media (min-width: 768px) and (max-width: 1020px) {
+    font-size: 1.8vw;
+  }
 `
 
 export const Image = styled.img`
@@ -133,6 +132,10 @@ export const StyledH1 = styled.h1`
     font-size: 3.33vw;
     margin-top: 0px;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 2vw;
+    margin-top: 0px;
+  }
 `
 
 export const StyledH3 = styled.h3<{ isLogin: boolean }>`
@@ -149,10 +152,10 @@ export const StyledH3 = styled.h3<{ isLogin: boolean }>`
     text-align: left;
     margin-top: 10px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 3.33vw;
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 2vw;
     margin-top: 15px;
-  } */
+  }
 `
 
 export const StyledP = styled.p<{ isLogin: boolean }>`
@@ -172,11 +175,9 @@ export const StyledP = styled.p<{ isLogin: boolean }>`
     /* margin-top: 10px; */
     /* padding: 8px 8px 0 8px; */
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
-    margin-top: 15px;
-    padding: 12px 12px 0 12px;
-  } */
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 1.5vw;
+  }
 `
 
 export const ModalContainer = styled.div`
@@ -217,10 +218,10 @@ export const ModalTextWrapper = styled.div`
     width: 200px;
     gap: 18px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    width: 333px;
-    gap: 27px;
-  } */
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 66vw;
+    gap: 6vw;
+  }
 `
 
 export const ArrowIcon = styled.span`
@@ -238,10 +239,12 @@ export const ModalText = styled.p`
   font-weight: 600;
   font-size: 1.25vw;
   color: rgba(55, 62, 58, 1);
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
      font-size: 12px;
+     text-align: left;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 20px;
-  } */
+  @media (min-width: 768px) and (max-width: 1020px) {
+    font-size: 18px;
+    text-align: left;
+  }
 `

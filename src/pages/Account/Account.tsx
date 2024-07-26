@@ -159,7 +159,7 @@ const Account = () => {
         <PasswortChangeContainer>
           <TitleInformation>
             Das Benutzername und die E-Mail-Adresse können nicht geändert
-            werden.
+            werden. &nbsp;
             <span style={{ fontWeight: "700" }}>
               Du kannst nur dein Passwort ändern.
             </span>

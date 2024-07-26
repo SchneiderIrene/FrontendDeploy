@@ -12,7 +12,7 @@ export const AccountWrapper = styled.div`
     justify-content: start;
     gap: 32.5px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     padding-top: 13vw;
     gap: 6.5vw;
     max-width: 100vw;
@@ -29,7 +29,7 @@ export const AccountContainer = styled.div`
     gap: 14.5vw;
     flex-direction: column;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     gap: 13vw;
     flex-direction: column;
     

@@ -20,7 +20,7 @@ export const StyledH2 = styled.h2`
     font-size: 12px;
     margin-bottom: 30px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 18px;
     margin-bottom: 45px;
   }
@@ -39,7 +39,7 @@ export const StyledP = styled.div`
     font-size: 10px;
     margin-left: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 15px;
     margin-left: 15px;
   }
@@ -58,7 +58,7 @@ export const SubP = styled.p`
     margin-left: 20px;
     margin-bottom: 5px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 15px;
     margin-left: 30px;
     margin-bottom: 7.5px;
@@ -78,7 +78,7 @@ export const Container1 = styled.div`
     gap: 5px;
     margin-bottom: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     gap: 7.5px;
     margin-bottom: 30px;
   }
@@ -98,7 +98,7 @@ export const Container2 = styled.div`
     gap: 10px;
     margin-bottom: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     gap: 15px;
     margin-bottom: 30px;
   }
@@ -118,7 +118,7 @@ export const Container3 = styled.div`
     gap: 10px;
     margin-bottom: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     gap: 15px;
     margin-bottom: 30px;
   }
