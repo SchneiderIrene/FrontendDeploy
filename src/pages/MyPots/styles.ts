@@ -13,15 +13,18 @@ export const MyPotsWrapper = styled.div`
   justify-content: center;
   flex: 1;
   padding: 0 20px;
+  @media (min-width: 769px) and (max-width: 1020px) {
+    padding: 0;
+  }
 `
 
 export const PotsContainer = styled.div<{ isLogin: boolean }>`
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 420px;
-  gap: 36px;
+  gap: 1.8vw;
   display: ${props => (props.isLogin ? "flex" : "none")};
   @media (max-width: 768px) {
     min-height: 210px;
@@ -31,17 +34,16 @@ export const PotsContainer = styled.div<{ isLogin: boolean }>`
     /* justify-content: end; */
     /* margin-top: 100px; */
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    height: 315px;
-    gap: 27px;
-    flex-direction: column;
-  } */
+  @media (min-width: 769px) and (max-width: 1020px) {
+    padding: 0;
+    width: 75vw;
+  }
 `
 
 export const PotCard = styled.div<PotCardProps>`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
   background-color: rgba(242, 242, 242, 1);
   width: 300px;
@@ -49,6 +51,7 @@ export const PotCard = styled.div<PotCardProps>`
   box-shadow: 4px 10px 4px rgba(55, 62, 58, 0.2);
   padding: 40px;
   background-color: rgba(255, 240, 212, 1);
+  position: relative;
   cursor: pointer;
   filter: ${({ activ }) => (activ ? "none" : "grayscale(100%)")};
   @media (max-width: 480px) {
@@ -60,21 +63,30 @@ export const PotCard = styled.div<PotCardProps>`
     height: 220px;
     width: 250px;
     padding: 20px;
-
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    height: 28vh;
+    width: 26vw;
+    padding: 2.6vw;
   }
 `
 export const PotImage = styled.img`
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 148px;
   height: 208px;
 
   @media (max-width: 480px) {
     width: 60px; 
     height: 100px; 
+    bottom: 10px;
   }
   @media (min-width: 481px) and (max-width: 768px) {
-   width: 100px; 
-   height: 150px;
+   width: 20vw; 
+   bottom: -10px;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+   width: 15vw;
   }
 `
 
@@ -95,9 +107,11 @@ export const PotTitle = styled.h3`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 27px;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 24px;
+  }
+
 `
-
-
 
 export const StyledLink = styled(NavLink)``
 
@@ -152,11 +166,10 @@ export const ModalTextWrapper = styled.div`
     width: 222px;
     gap: 18px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     width: 333px;
     gap: 27px;
-
-  } */
+  }
 `
 
 export const ArrowIcon = styled.span`
@@ -172,10 +185,11 @@ export const ModalText = styled.p`
   @media (max-width: 480px) {
     font-size: 12px;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 18px;
+  @media (min-width: 481px) and (max-width: 1020px) {
+    font-size: 2vw;
+    text-align: left;
 
-  } */
+  }
 `
 
 export const AdminButtonControl = styled.div`
@@ -228,10 +242,10 @@ export const TitleContent = styled.h2`
   font-size: 32px;
   color: rgba(55, 62, 58, 1);
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 14px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 24px;
+  @media (min-width: 481px) and (max-width: 1020px) {
+    font-size: 3vw;
   }
 `
 
@@ -240,7 +254,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 35px;
+  gap: 1.8vw;
   font-family: "Inter";
   color: rgba(55, 62, 58, 1);
   line-height: 3;
@@ -300,7 +314,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
       font-size: 12px;
     }
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     h1,
     h2,
     h3,

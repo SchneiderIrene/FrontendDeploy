@@ -29,10 +29,10 @@ export const Header = styled.header`
     gap: 4vw;
     justify-content: center;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 1020px) {
     height: 12vw;
     
-  } */
+  }
 `
 
 export const HeaderContentWrapper = styled.div`
@@ -44,7 +44,9 @@ export const HeaderContentWrapper = styled.div`
   @media (max-width: 480px) {
     padding: 1.04vw;
   }
-
+  @media (min-width: 769px) and (max-width: 1020px) {
+    
+  }
 
 `
 
@@ -74,6 +76,9 @@ export const StyledNavLink = styled(NavLink)`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 3.33vw;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 2vw;
+  }
 `
 
 export const NavContainer = styled.nav`
@@ -89,6 +94,7 @@ export const NavContainer = styled.nav`
   @media (min-width: 481px) and (max-width: 768px) {
     gap: 4vw;
   }
+  
 `
 
 export const HeaderLogoContainer = styled.div`
@@ -103,8 +109,10 @@ export const HeaderLogo = styled.img`
   @media (max-width: 768px) {
     width: 15vw;
   }
+  @media (min-width: 768px) and (max-width: 1020px) {
+    width: 10vw;
+  }
 `
-
 HeaderLogo.defaultProps = { src: LogoH }
 
 export const Main = styled.main`
@@ -193,6 +201,10 @@ export const UserName = styled.div`
    font-size: 18px;
    margin-right: 20px;
   }
+  @media (min-width: 768px) and (max-width: 1020px) {
+    margin: 0;
+    font-size: 2vw;
+  }
   
 `
 
@@ -204,8 +216,9 @@ export const AccountContainer = styled.div`
   @media (max-width: 480px) {
     margin-left: 80px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
-   
+  @media (min-width: 769px) and (max-width: 1020px) {
+    margin-left: 0;
+    gap: 30px;
   }
 `
 
@@ -217,6 +230,10 @@ export const StyledButton = styled.div`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     width: 30vw;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    width: 20vw;
+    margin-left: 5vw;
   }
 `
 
@@ -234,6 +251,9 @@ export const FooterLeftLink = styled(StyledLink)`
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 10px;
+  }
 `
 export const FooterText = styled.p`
   font-size: 0.729vw;
@@ -250,6 +270,9 @@ export const Copyright = styled.div`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     font-size: 12px;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 10px;
   }
 `
 

@@ -60,6 +60,12 @@ export const StyledH1Container1 = styled.h1`
     max-width: 250px;
     padding-top: 30px;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: clamp(20px, 3vw, 28px);
+    margin-top: 0;
+    max-width: 40vw;
+    padding-top: 30px;
+  }
 `
 export const StyledPContainer1 = styled.p`
   display: flex;
@@ -84,6 +90,12 @@ export const StyledPContainer1 = styled.p`
     font-size: clamp(10px, 1.5vw, 12px);
     max-width: 300px;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-top: 0;
+    max-width: 40vw;
+    padding-top: 2.5vw;
+  }
 `
 
 export const Image1 = styled.img`
@@ -103,6 +115,10 @@ export const Image1 = styled.img`
     position: absolute;
     left: 44vw;
     bottom: 1vh;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    width: 100%;
+    max-width: 32vw;
   }
 `
 export const Container2 = styled.div`
@@ -125,6 +141,11 @@ export const Container2 = styled.div`
     align-items: start;
     margin: 0;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    align-items: start;
+    padding: 0;
+    gap: 1.2vw;
+  }
 `
 
 export const Image2 = styled.img`
@@ -138,7 +159,7 @@ export const Image2 = styled.img`
     max-width: 240px;
     display: none;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     width: 100%;
     max-width: 40vw;
   }
@@ -170,6 +191,15 @@ export const StyledH2Container2 = styled.h2`
     margin: 0;
     padding: 0;
     max-width: 31.57vw;
+  }
+
+  @media (min-width: 768px) and (max-width: 1020px) {
+    font-size: clamp(10px, 2vw, 11px);
+    text-align: left;
+    /* margin-left: 20px; */
+    margin: 0;
+    padding-left: 0px;
+    max-width: 100vw;
   }
 `
 export const OverlayContainer = styled.div`
@@ -203,7 +233,21 @@ export const OverlayContainer = styled.div`
   @media (min-width: 481px) and (max-width: 768px) {
     top: 0.83vh;
   }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    
+  }
 `
+export const Icon = styled.img`
+  width: 1.875vw;
+  height: auto;
+
+  @media (max-width: 480px) {
+    width: 10px;
+  }
+  /* @media (min-width: 769px) and (max-width: 1020px) {
+    width: 20px;
+  } */
+  `
 
 export const SquareContainer = styled.div`
   display: flex;
@@ -212,6 +256,9 @@ export const SquareContainer = styled.div`
   @media (max-width: 480px) {
     gap: 10px;
     width: 210px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* width: 410px; */
   }
 `
 
@@ -236,6 +283,9 @@ export const Square = styled.div`
     margin-left: 0;
     padding: 10px;
     margin-bottom: 20px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  
   }
 `
 
@@ -331,10 +381,12 @@ export const StyledH3 = styled.h2`
     font-size: 3vw;
     margin-top: 1.6vw;
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 1020px) {
     font-size: 1rem;
-    /* margin-top: 0px; */
-  } */
+    text-align: left;
+    margin-left: 0;
+   width: 100%;
+  }
 `
 
 export const Container3 = styled.div`
@@ -350,6 +402,9 @@ export const Container3 = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+   
+  }
 `
 
 export const Image3 = styled.img`
@@ -358,6 +413,9 @@ export const Image3 = styled.img`
   margin: 0.31vw;
   @media (max-width: 768px) {
     width: 100%;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    width: 23vw;
   }
 `
 
@@ -370,6 +428,9 @@ export const ImageLogo = styled.img`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     width: 70px;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    width: 100px;
   }
 `
 
@@ -419,6 +480,13 @@ export const StyledPContainer4 = styled.div`
     text-align: left;
     padding: 0;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: clamp(12px, 2vw, 14px);
+    gap: 1.04vw;
+    max-width: 100vw;
+    text-align: left;
+    padding: 0;
+  }
 `
 
 export const ButtonControl = styled.div`
@@ -432,6 +500,11 @@ export const ButtonControl = styled.div`
     width: 100%;
     margin-left: 0;
   }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    max-width: 30vw;
+    width: 100%;
+    margin: 0;
+  }
 `
 
 export const StyledFAQHeading = styled.h1`
@@ -442,13 +515,9 @@ export const StyledFAQHeading = styled.h1`
   font-size: 1.25vw;
   font-weight: 600;
   line-height: normal;
-  @media (max-width: 480px) {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 20px;
-    /* margin-top: 30px; */
+  @media (max-width: 1020px) {
+    margin-top: 2vw;
+    font-size: clamp(20px, 2.6vw, 24px);
   }
 `
 
@@ -460,17 +529,18 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 0.937vw;
   font-weight: 450;
   line-height: normal;
-  @media (max-width: 768px) {
-    font-size: 2.1vw;
-    text-align: left;
-    width: 100%;
-    max-width: 73vw;
+  @media (max-width: 1020px) {
+    font-size: clamp(10px, 2.8vw, 14px);
+    text-align: center;
+    justify-content: center;
+    width: 84.5%;
+    /* max-width: 50vw; */
   }
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    font-size: 2.3vw;
-    text-align: left;
+  /* @media (min-width: 769px) and (max-width: 1020px) {
+    font-size: 0.9rem;
     width: 100%;
     max-width: 73vw;
+    justify-content: center;
   } */
 `
 
@@ -490,8 +560,9 @@ export const StyledPContainer5 = styled.div`
     margin-top: 2vw;
     overflow: visible;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     overflow: visible;
+    max-width: 100vw;
   }
 `
 
@@ -504,6 +575,9 @@ export const InfoContainer = styled.div`
   }
   @media (min-width: 481px) and (max-width: 768px) {
     min-width: 76vw;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    
   }
 `
 
@@ -534,6 +608,16 @@ export const StyledP = styled.p`
     width: 100%;
     max-width: 80vw;
     line-height: 1.5;
+    font-size: 2.4vw;
+    text-align: left;
+    margin-left: 10px;
+    gap: 10px;
+    padding-left: 20px;
+  }
+  @media (min-width: 769px) and (max-width: 1020px) {
+    width: 100%;
+    max-width: 50vw;
+    line-height: 1.5;
     font-size: 12px;
     text-align: left;
     margin-left: 10px;
@@ -555,7 +639,7 @@ export const StyledSpan = styled.span`
     top: 5px;
     left: -1px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 12px;
     left: -1px;
   }
@@ -585,7 +669,7 @@ export const StyledH5 = styled.h2`
     font-size: 12px;
     margin-top: 20px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 16px;
     margin-top: 30px;
   }
@@ -600,7 +684,7 @@ export const StyledP5 = styled.h3`
   @media (max-width: 480px) {
     font-size: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 12px;
   }
 `
@@ -618,7 +702,7 @@ export const StyledLink = styled(Link)`
     font-size: 7px;
     margin-left: 1px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 12px;
     margin-top: 10px;
   }
@@ -635,25 +719,10 @@ export const Icon6Styled = styled.img`
     top: 0px;
     margin-left: 7px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     width: 16px;
     top: -5px;
   }
-`
-
-
-
-export const Icon = styled.img`
-  width: 1.875vw;
-  height: auto;
-
-  @media (max-width: 480px) {
-    width: 10px;
-  }
-
-  /* @media (min-width: 481px) and (max-width: 768px) {
-    width: 20px;
-  } */
 `
 
 export const StyledEmail = styled.p`
@@ -664,7 +733,7 @@ export const StyledEmail = styled.p`
   @media (max-width: 480px) {
     font-size: 10px;
   }
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 12px;
   }
 `
