@@ -31,7 +31,9 @@ export const Header = styled.header`
   }
   @media (min-width: 769px) and (max-width: 1020px) {
     height: 12vw;
-    
+  }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    height: 8vw;
   }
 `
 
@@ -79,6 +81,9 @@ export const StyledNavLink = styled(NavLink)`
   @media (min-width: 769px) and (max-width: 1020px) {
     font-size: 2vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    font-size: 1.5vw;
+  }
 `
 
 export const NavContainer = styled.nav`
@@ -111,6 +116,9 @@ export const HeaderLogo = styled.img`
   }
   @media (min-width: 768px) and (max-width: 1020px) {
     width: 10vw;
+  }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+   width: 8vw;
   }
 `
 HeaderLogo.defaultProps = { src: LogoH }
@@ -205,6 +213,9 @@ export const UserName = styled.div`
     margin: 0;
     font-size: 2vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    font-size: 1.5vw;
+  }
   
 `
 
@@ -216,7 +227,7 @@ export const AccountContainer = styled.div`
   @media (max-width: 480px) {
     margin-left: 80px;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     margin-left: 0;
     gap: 30px;
   }
@@ -231,7 +242,7 @@ export const StyledButton = styled.div`
   @media (min-width: 481px) and (max-width: 768px) {
     width: 30vw;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     width: 20vw;
     margin-left: 5vw;
   }

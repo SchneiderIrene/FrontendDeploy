@@ -60,7 +60,7 @@ export const StyledH1Container1 = styled.h1`
     max-width: 250px;
     padding-top: 30px;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     font-size: clamp(20px, 3vw, 28px);
     margin-top: 0;
     max-width: 40vw;
@@ -90,7 +90,7 @@ export const StyledPContainer1 = styled.p`
     font-size: clamp(10px, 1.5vw, 12px);
     max-width: 300px;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     font-size: clamp(12px, 1.5vw, 16px);
     margin-top: 0;
     max-width: 40vw;
@@ -146,6 +146,11 @@ export const Container2 = styled.div`
     padding: 0;
     gap: 1.2vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    align-items: start;
+    padding: 0;
+    margin: 0;
+  }
 `
 
 export const Image2 = styled.img`
@@ -162,6 +167,11 @@ export const Image2 = styled.img`
   @media (min-width: 481px) and (max-width: 1020px) {
     width: 100%;
     max-width: 40vw;
+  }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    width: 100%;
+    max-width: 35vw;
+   
   }
 `
 
@@ -201,6 +211,13 @@ export const StyledH2Container2 = styled.h2`
     padding-left: 0px;
     max-width: 100vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    font-size: clamp(12px, 2vw, 15px);
+    width: 100%;
+    text-align: left;
+    padding-left: 0px;
+    margin: 0;
+  }
 `
 export const OverlayContainer = styled.div`
   display: flex;
@@ -233,9 +250,10 @@ export const OverlayContainer = styled.div`
   @media (min-width: 481px) and (max-width: 768px) {
     top: 0.83vh;
   }
-  @media (min-width: 769px) and (max-width: 1024px) {
-    
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    top: -5vh;
   }
+
 `
 export const Icon = styled.img`
   width: 1.875vw;
@@ -381,7 +399,7 @@ export const StyledH3 = styled.h2`
     font-size: 3vw;
     margin-top: 1.6vw;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     font-size: 1rem;
     text-align: left;
     margin-left: 0;
@@ -417,6 +435,9 @@ export const Image3 = styled.img`
   @media (min-width: 769px) and (max-width: 1020px) {
     width: 23vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    width: 22vw;
+  }
 `
 
 export const ImageLogo = styled.img`
@@ -429,7 +450,7 @@ export const ImageLogo = styled.img`
   @media (min-width: 481px) and (max-width: 768px) {
     width: 70px;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     width: 100px;
   }
 `
@@ -480,7 +501,7 @@ export const StyledPContainer4 = styled.div`
     text-align: left;
     padding: 0;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     font-size: clamp(12px, 2vw, 14px);
     gap: 1.04vw;
     max-width: 100vw;
@@ -500,7 +521,7 @@ export const ButtonControl = styled.div`
     width: 100%;
     margin-left: 0;
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     max-width: 30vw;
     width: 100%;
     margin: 0;
@@ -515,7 +536,7 @@ export const StyledFAQHeading = styled.h1`
   font-size: 1.25vw;
   font-weight: 600;
   line-height: normal;
-  @media (max-width: 1020px) {
+  @media (max-width: 1400px) {
     margin-top: 2vw;
     font-size: clamp(20px, 2.6vw, 24px);
   }
@@ -529,7 +550,7 @@ export const StyledFAQSubHeading = styled.h3`
   font-size: 0.937vw;
   font-weight: 450;
   line-height: normal;
-  @media (max-width: 1020px) {
+  @media (max-width: 1400px) {
     font-size: clamp(10px, 2.8vw, 14px);
     text-align: center;
     justify-content: center;
@@ -560,7 +581,7 @@ export const StyledPContainer5 = styled.div`
     margin-top: 2vw;
     overflow: visible;
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     overflow: visible;
     max-width: 100vw;
   }

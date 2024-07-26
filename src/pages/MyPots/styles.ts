@@ -13,7 +13,7 @@ export const MyPotsWrapper = styled.div`
   justify-content: center;
   flex: 1;
   padding: 0 20px;
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     padding: 0;
   }
 `
@@ -34,7 +34,7 @@ export const PotsContainer = styled.div<{ isLogin: boolean }>`
     /* justify-content: end; */
     /* margin-top: 100px; */
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     padding: 0;
     width: 75vw;
   }
@@ -247,6 +247,9 @@ export const TitleContent = styled.h2`
   @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 3vw;
   }
+  @media (min-width: 481px) and (max-width: 1400px) {
+    font-size: 2vw;
+  }
 `
 
 export const Content = styled.div`
@@ -314,7 +317,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
       font-size: 12px;
     }
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     h1,
     h2,
     h3,
