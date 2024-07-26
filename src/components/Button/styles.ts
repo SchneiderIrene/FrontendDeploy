@@ -23,7 +23,7 @@ const getColor = (color: "red" | "grey" | "green" | undefined) => {
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`
   width: 100%;
-  height: 3.125vw;
+  height: 3.12vw;
   outline: none;
   border: none;
   /* padding: 10px; */
@@ -48,7 +48,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
     font-size: 11px;
     height: 30px;
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     font-size: 15px;
     height: 45px;
 

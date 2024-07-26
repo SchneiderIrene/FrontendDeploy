@@ -31,7 +31,7 @@ export const ButtonContainer = styled.div`
     justify-content: left;
    
   }
-  @media (min-width: 769px) and (max-width: 1020px) {
+  @media (min-width: 769px) and (max-width: 1400px) {
     margin-top: 4vw;
   }
 `
@@ -98,7 +98,7 @@ export const DayContainer = styled.div`
   @media (max-width: 480px) {
     gap: 25px;
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     gap: 35px;
   }
 `
@@ -115,6 +115,9 @@ export const StyledH3 = styled.h1`
   @media (min-width: 481px) and (max-width: 1020px) {
     font-size: 3vw;
   }
+  @media (min-width: 1021px) and (max-width: 1400px) {
+    font-size: 2vw;
+  }
 `
 
 export const Content = styled.div`
@@ -129,7 +132,7 @@ export const Content = styled.div`
   @media (max-width: 480px) {
     gap: 17.5px;
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     gap: 26.25px;
   }
 `
@@ -187,7 +190,7 @@ export const StyledReactMarkdown = styled(ReactMarkdown)`
       font-size: 12px;
     }
   }
-  @media (min-width: 481px) and (max-width: 1020px) {
+  @media (min-width: 481px) and (max-width: 1400px) {
     h1,
     h2,
     h3,
