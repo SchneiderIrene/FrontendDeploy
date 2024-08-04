@@ -25,6 +25,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   padding-top: 2.6vw;
+  padding-bottom: 2vw;
   box-sizing: border-box;
   border: 0.1vw solid green;
   position: relative;
@@ -53,9 +54,9 @@ export const Container = styled.div`
     position: limk;
   }
 
-  @media (max-width: 1020px) {
+  @media (max-width: 1600px) {
     align-items: center;
-    padding: 25px;
+    padding: 2vw;
     &:first-of-type {
       margin-top: -5.55vw;
       /* padding: 0 40px; */
