@@ -95,10 +95,10 @@ function MyPots() {
   }
 
   const scrollPot = (id: string) => {
-    //dispatch(potsSliceActions.potProfile())
     console.log("Scrolling to Pot with ID:", id);
-    dispatch(potsSliceActions.scrollPot(id))
-    //dispatch(potsSliceActions.potProfile())
+    dispatch(potsSliceActions.scrollPot(id)).then(() => {
+      dispatch(potsSliceActions.potProfile());
+    });
   }
 
   const deletePot = (id: string)=>{
