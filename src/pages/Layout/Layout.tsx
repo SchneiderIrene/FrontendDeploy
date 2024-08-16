@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { LayoutProps } from "./types"
 import { MdAccountCircle } from "react-icons/md"
 
@@ -29,7 +29,7 @@ import {
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import Button from "components/Button/Button"
 import Modal from "components/Modal/Modal"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate()
@@ -52,6 +52,15 @@ function Layout({ children }: LayoutProps) {
     dispatch(authSliceActions.resetErrorField())
     navigate("/login")
   }
+
+  const location = useLocation();
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    return () => {
+      window.history.scrollRestoration = 'auto'; // Восстанавливаем стандартное поведение при демонтировании
+    };
+  }, [location.pathname]);
 
   return (
     <LayoutWrapper>
