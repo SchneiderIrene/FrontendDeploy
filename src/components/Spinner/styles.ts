@@ -8,18 +8,23 @@ export const Overlay = styled.div`
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
   z-index: 4999; /* Оверлей позади спиннера */
-`;
+`
+
+export const SpinnerContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5000;
+`
 
 export const SpinnerComponent = styled.div`
-position: fixed;
-top: 45vw;
-  border: 0.3vw solid rgba(0, 0, 0, 0.1);
+  border: 0.7vw solid rgba(0, 0, 0, 0.1);
   border-left-color: rgba(2, 88, 41, 1);
   border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
+  width: 7.5vw;
+  height: 7.5vw;
   animation: spin 1s linear infinite;
-  z-index: 5000;
 
   @keyframes spin {
     to {
@@ -28,7 +33,8 @@ top: 45vw;
   }
 
   @media (max-width: 480px) {
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
+    border: 1.8vw solid rgba(0, 0, 0, 0.1);
   }
 `
