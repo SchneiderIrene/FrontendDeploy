@@ -19,8 +19,9 @@ export const SpinnerContainer = styled.div`
 `
 
 export const SpinnerComponent = styled.div`
-  border: 0.7vw solid rgba(0, 0, 0, 0.1);
+  border: 0.5vw solid rgba(0, 0, 0, 0.1);
   border-left-color: rgba(2, 88, 41, 1);
+  border-bottom-color: rgba(2, 88, 41, 1);
   border-radius: 50%;
   width: 7.5vw;
   height: 7.5vw;
@@ -32,9 +33,15 @@ export const SpinnerComponent = styled.div`
     }
   }
 
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 10vw;
+    height: 10vw;
+    border: 1vw solid rgba(0, 0, 0, 0.1);
+  }
+
   @media (max-width: 480px) {
-    width: 20vw;
-    height: 20vw;
-    border: 1.8vw solid rgba(0, 0, 0, 0.1);
+    width: 15vw;
+    height: 15vw;
+    border: 1vw solid rgba(0, 0, 0, 0.1);
   }
 `
