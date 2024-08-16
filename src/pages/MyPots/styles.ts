@@ -12,7 +12,9 @@ export const MyPotsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
+  width: 100%;
   padding: 0 20px;
+  position: relative;
   @media (min-width: 769px) and (max-width: 1400px) {
     padding: 0;
   }
@@ -194,10 +196,19 @@ export const ModalText = styled.p`
 
 export const AdminButtonControl = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  gap: 10px;
+  /* gap: 10px; */
 `
-
+export const ButtonBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2vw;
+`
 export const AdminPotContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -206,6 +217,8 @@ export const AdminPotContainer = styled.div`
   width: 100%;
   gap: 40px;
   min-height: 1100px;
+
+  
   @media (max-width: 480px) {
     min-height: 550px;
     gap: 20px;
@@ -216,12 +229,7 @@ export const AdminPotContainer = styled.div`
   }
 `
 
-export const ButtonBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-`
+
 
 export const AdminContentContainer = styled.div`
   display: flex;

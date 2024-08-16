@@ -111,7 +111,7 @@ function MyPots() {
 
   return (
     <MyPotsWrapper>
-      {status === "loading" || statusPot === 'loading' && <Spinner/>}
+      {(status === "loading" || statusPot === 'loading') && <Spinner/>}
       {user && user.email == "leafgrow.project@gmail.com" ? (
         <AdminPotContainer>
           {status === "loading" && <Spinner/>}
