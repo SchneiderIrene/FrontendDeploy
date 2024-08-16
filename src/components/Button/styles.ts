@@ -52,11 +52,11 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
     font-size: 15px;
     height: 7.5vw;
 
-  /* &:focus {
+    /* &:focus {
     outline: none;
   } */
-}
-/* @media (min-width: 769px) and (max-width: 1020px) {
+  }
+  /* @media (min-width: 769px) and (max-width: 1020px) {
     font-size: 15px;
     height: 45px;
 } */
