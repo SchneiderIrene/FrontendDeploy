@@ -19,7 +19,6 @@ top: 45vw;
   width: 5vw;
   height: 5vw;
   animation: spin 1s linear infinite;
-  background-color: rgba(0, 0, 0, 0.8);
   z-index: 5000;
 
   @keyframes spin {
