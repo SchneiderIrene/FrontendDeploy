@@ -1,7 +1,11 @@
-import { SpinnerComponent } from "./styles"
+import { Overlay, SpinnerComponent } from "./styles"
 
 function Spinner() {
-  return <SpinnerComponent></SpinnerComponent>
+  return (
+<Overlay>
+    <SpinnerComponent/>
+  </Overlay>
+  )
 }
 
 export default Spinner
