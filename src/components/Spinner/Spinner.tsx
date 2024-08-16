@@ -1,9 +1,11 @@
-import { Overlay, SpinnerComponent } from "./styles"
+import { Overlay, SpinnerComponent, SpinnerContainer } from "./styles"
 
 function Spinner() {
   return (
 <Overlay>
+  <SpinnerContainer>
     <SpinnerComponent/>
+  </SpinnerContainer>
   </Overlay>
   )
 }
